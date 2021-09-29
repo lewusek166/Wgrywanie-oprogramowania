@@ -25,27 +25,30 @@ namespace Wgrywanie_Oprogramowania_JH
 
             if (allDrives[2].IsReady && allDrives[2].Name == "E:\\")
             {
-    
-                        if (System.IO.Directory.Exists(@"E:\"))
-                        {
-                            try
-                            {
-                                System.IO.Directory.Delete(@"E:\", true);
-                            }
 
-                            catch (System.IO.IOException x)
-                            {
-                                
-                            }
-                        
-            }else
+                if (System.IO.Directory.Exists(@"E:\"))
+                {
+                    try
+                    {
+                        System.IO.Directory.Delete(@"E:\", true);
+                    }
+
+                    catch (System.IO.IOException x)
+                    {
+
+                    }
+
+                }
+            }
+            else
             {
-                var result = MessageBox.Show("Nie włożono karty SD !!!", "UWAGA", MessageBoxButtons.OK, MessageBoxIcon.Error);  
+                var result = MessageBox.Show("Nie włożono karty SD !!!", "UWAGA", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
 
+            
+
+
         }
-
-
     }
 }

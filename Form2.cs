@@ -39,7 +39,7 @@ namespace Wgrywanie_Oprogramowania_JH
             user = new string[10];
             roz = 0;
             
-            string path = @"C:\Users\plpha\source\repos\Wgrywanie oprogramowania\users\konta.txt";
+            string path = @".\Wgrywanie oprogramowania\users\konta.txt";
             using (StreamReader sr = File.OpenText(path))
             {         
                 string s = "";

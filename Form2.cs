@@ -39,7 +39,7 @@ namespace Wgrywanie_Oprogramowania_JH
             user = new string[10];
             roz = 0;
             
-            string path = @".\Wgrywanie oprogramowania\users\konta.txt";
+            string path = @"C:\Users\plpha\source\repos\Wgrywanie oprogramowania\users\konta.txt";
             using (StreamReader sr = File.OpenText(path))
             {         
                 string s = "";
@@ -52,15 +52,18 @@ namespace Wgrywanie_Oprogramowania_JH
             }
             bool gitesLogo = false;
             bool gitesPass = false;
-            for(int i = 0; i < 10; i++)
+            string zalogowany;
+            for (int i = 0; i < 10; i++)
             {
                 if (textBox1.Text == user[i])
-                {
+                { zalogowany ="Jesteś zalogowany jako : "+ user[i];
+                    
                     gitesLogo = true;
                     if (textBox2.Text == user[i + 1])
                     {
                         this.Visible = false;
                         Form1 f1 = new Form1();
+                        f1.label2.Text = zalogowany;
                         f1.ShowDialog();
                         gitesPass = true;
                     }

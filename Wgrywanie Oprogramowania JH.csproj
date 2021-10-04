@@ -99,6 +99,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="JPG\karta.jfif" />
+    <Content Include="JPG\sd.jpg" />
     <None Include="JPG\kolmorgen.jpg" />
     <None Include="JPG\beckhoff.jpg" />
     <Content Include="JPG\cvc.jpg" />

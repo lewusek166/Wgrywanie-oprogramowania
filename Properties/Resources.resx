@@ -124,10 +124,16 @@
   <data name="JH Start" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\JPG\JH Start.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="kolmorgen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\JPG\kolmorgen.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="cvc" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\JPG\cvc.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="kolmorgen" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\JPG\kolmorgen.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="karta" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\JPG\karta.jfif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sd" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\JPG\sd.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

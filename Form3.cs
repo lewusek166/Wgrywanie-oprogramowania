@@ -8,10 +8,11 @@ namespace Wgrywanie_Oprogramowania_JH
 {
     public partial class Form3 : Form
     {
+        
         int etap;
         public Form3()
         {
-            etap = 0;
+            etap = 2;
             InitializeComponent();      
         }
         private void Button1_Click(object sender, EventArgs e)
@@ -122,6 +123,8 @@ namespace Wgrywanie_Oprogramowania_JH
             if (etap == 4)
             {
                 Form1.ActiveForm.Visible = true;
+                
+               
                 this.Close();
             }
 

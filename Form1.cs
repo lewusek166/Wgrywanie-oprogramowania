@@ -25,6 +25,9 @@ namespace Wgrywanie_Oprogramowania_JH
         {
             Form3 f3 = new Form3();
             f3.ShowDialog();
+            button1.Enabled = false;
+            button1.BackColor = System.Drawing.Color.Green;
+            button2.Enabled = true;
         }
         public string GetTime()
         {

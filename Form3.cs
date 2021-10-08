@@ -26,6 +26,8 @@ namespace Wgrywanie_Oprogramowania_JH
                 button2.Invoke(new MethodInvoker(delegate { label1.Text = "Wgrywanie Danych"; }));
                 button2.Invoke(new MethodInvoker(delegate { checkBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255))))); }));
                 button2.Invoke(new MethodInvoker(delegate { button2.Enabled = false; }));
+                button2.Invoke(new MethodInvoker(delegate { pictureBox1.Image = global::Wgrywanie_Oprogramowania_JH.Properties.Resources.wgrywanie; }));
+                button2.Invoke(new MethodInvoker(delegate { pictureBox2.Image = global::Wgrywanie_Oprogramowania_JH.Properties.Resources.pobrane; }));
                 foreach (string dirPath in Directory.GetDirectories(sourcePath, "*", SearchOption.AllDirectories))
                 {
                 Directory.CreateDirectory(dirPath.Replace(sourcePath, targetPath));
@@ -96,7 +98,8 @@ namespace Wgrywanie_Oprogramowania_JH
                 if (allDrives[2].IsReady && allDrives[2].Name == "E:\\")
                 {
                     label1.Text = "Usuwanie nieaktualnych danych z karty SD";
-
+                    pictureBox1.Image = global::Wgrywanie_Oprogramowania_JH.Properties.Resources.kasowanie;
+                    pictureBox2.Image = global::Wgrywanie_Oprogramowania_JH.Properties.Resources.kasowanie2;
                     if (System.IO.Directory.Exists(@"E:\"))
                     {
                         RemoveDirectories(@"E:\");  
@@ -105,8 +108,9 @@ namespace Wgrywanie_Oprogramowania_JH
                 else
                 {
                 var result = MessageBox.Show("Nie włożono karty SD !!!", "UWAGA", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                
+                    etap = 0;
+                    button2.Enabled = true;
+                }  
             }
             if (etap == 2)
             {
@@ -116,15 +120,13 @@ namespace Wgrywanie_Oprogramowania_JH
             }
             if (etap == 3)
             {
-                label1.Text = "Wyjmij karte SD z komputera";
+                label1.Text = "Wyjmij karte SD z komputera oraz włóż ją spowrotem w to samo mejsce w beckhof(ie)";
+                pictureBox1.Image = global::Wgrywanie_Oprogramowania_JH.Properties.Resources.beckWl;
                 button2.Text = "Przejście do kolejnego modułu programowania skrzynek JH";
                 button2.Enabled = true;
             }
             if (etap == 4)
             {
-                Form1.ActiveForm.Visible = true;
-                
-               
                 this.Close();
             }
 

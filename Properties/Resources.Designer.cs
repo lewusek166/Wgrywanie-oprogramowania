@@ -73,6 +73,26 @@ namespace Wgrywanie_Oprogramowania_JH.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap beckWl {
+            get {
+                object obj = ResourceManager.GetObject("beckWl", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap beckWy {
+            get {
+                object obj = ResourceManager.GetObject("beckWy", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cvc {
             get {
                 object obj = ResourceManager.GetObject("cvc", resourceCulture);
@@ -103,6 +123,26 @@ namespace Wgrywanie_Oprogramowania_JH.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap kasowanie {
+            get {
+                object obj = ResourceManager.GetObject("kasowanie", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap kasowanie2 {
+            get {
+                object obj = ResourceManager.GetObject("kasowanie2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap kolmorgen {
             get {
                 object obj = ResourceManager.GetObject("kolmorgen", resourceCulture);
@@ -113,9 +153,29 @@ namespace Wgrywanie_Oprogramowania_JH.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pobrane {
+            get {
+                object obj = ResourceManager.GetObject("pobrane", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap sd {
             get {
                 object obj = ResourceManager.GetObject("sd", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap wgrywanie {
+            get {
+                object obj = ResourceManager.GetObject("wgrywanie", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

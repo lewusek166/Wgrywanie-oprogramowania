@@ -25,6 +25,7 @@ namespace Wgrywanie_Oprogramowania_JH
         {
             Form3 f3 = new Form3();
             f3.ShowDialog();
+            
             button1.Enabled = false;
             button1.BackColor = System.Drawing.Color.Green;
             button2.Enabled = true;
@@ -51,6 +52,11 @@ namespace Wgrywanie_Oprogramowania_JH
         private void Timer1_Tick(object sender, EventArgs e)
         {
             label3.Text = GetTime();
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

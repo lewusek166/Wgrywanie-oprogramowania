@@ -103,9 +103,9 @@ namespace Wgrywanie_Oprogramowania_JH.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap JH_Start {
+        internal static System.Drawing.Bitmap Folie6 {
             get {
-                object obj = ResourceManager.GetObject("JH Start", resourceCulture);
+                object obj = ResourceManager.GetObject("Folie6", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +113,19 @@ namespace Wgrywanie_Oprogramowania_JH.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap karta {
+        internal static System.Drawing.Bitmap Folie8 {
             get {
-                object obj = ResourceManager.GetObject("karta", resourceCulture);
+                object obj = ResourceManager.GetObject("Folie8", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap JH_Start {
+            get {
+                object obj = ResourceManager.GetObject("JH Start", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

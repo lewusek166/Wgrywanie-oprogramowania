@@ -108,6 +108,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="JPG\Folie6.JPG" />
+    <Content Include="JPG\Folie8.JPG" />
     <Content Include="JPG\pobrane.jpg" />
     <Content Include="JPG\wgrywanie.JPG" />
     <None Include="JPG\beckWl.jpg" />

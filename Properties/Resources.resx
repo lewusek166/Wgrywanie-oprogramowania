@@ -121,8 +121,8 @@
   <data name="beckWl" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\JPG\beckWl.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="kasowanie2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\JPG\kasowanie2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="JH Start" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\JPG\JH Start.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pobrane" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\JPG\pobrane.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -130,8 +130,11 @@
   <data name="beckWy" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\JPG\beckWy.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="JH Start" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\JPG\JH Start.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="sd" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\JPG\sd.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Folie8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\JPG\Folie8.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="kolmorgen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\JPG\kolmorgen.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -148,7 +151,10 @@
   <data name="kasowanie" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\JPG\kasowanie.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="sd" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\JPG\sd.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="kasowanie2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\JPG\kasowanie2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Folie6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\JPG\Folie6.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -118,26 +118,26 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="beckWl" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\JPG\beckWl.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="JH Start" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\JPG\JH Start.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pobrane" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\JPG\pobrane.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="beckWy" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\JPG\beckWy.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="sd" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\JPG\sd.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Folie6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\JPG\Folie6.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Folie8" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\JPG\Folie8.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="kolmorgen" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\JPG\kolmorgen.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="beckWl" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\JPG\beckWl.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="manual" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\JPG\manual.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="manual3-4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\JPG\manual3-4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="manual4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\JPG\manual4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="wgrywanie" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\JPG\wgrywanie.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,16 +145,37 @@
   <data name="beckhoff" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\JPG\beckhoff.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cvc" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\JPG\cvc.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="X301" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\JPG\X301.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sd" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\JPG\sd.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="beckWy" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\JPG\beckWy.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="kolmorgen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\JPG\kolmorgen.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pobrane" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\JPG\pobrane.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="manual2-3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\JPG\manual2-3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="kasowanie" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\JPG\kasowanie.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="testerOn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\JPG\testerOn.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="kasowanie2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\JPG\kasowanie2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Folie6" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\JPG\Folie6.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cvc" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\JPG\cvc.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="diodyTester" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\JPG\diodyTester.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -30,11 +30,12 @@ namespace Wgrywanie_Oprogramowania_JH
             {
                 case 1:
                     {
-                        label1.Text = "Uruchom tester i naciśnik OK";
-                        pictureBox1.Image = global::Wgrywanie_Oprogramowania_JH.Properties.Resources.pobrane;
+                        label1.Text = "Uruchamiamy Tester: Przełączamy przełącznik na pozycję 1  Muszą zapalić się wszystkie diody sygnalizacyjne. Następnie klikamy OK";
+                        pictureBox1.Image = global::Wgrywanie_Oprogramowania_JH.Properties.Resources.testerOn;
                         checkBox1.BackColor = Color.Green;
                         checkBox2.BackColor = Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
                         checkBox1.CheckState = CheckState.Checked;
+                        progressBar1.PerformStep();
                         break;
                     }
                 case 2:
@@ -44,6 +45,7 @@ namespace Wgrywanie_Oprogramowania_JH
                         checkBox2.BackColor = Color.Green;
                         checkBox3.BackColor = Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
                         checkBox2.CheckState = CheckState.Checked;
+                        progressBar1.PerformStep();
                         break;
                     } 
                 case 3:
@@ -53,27 +55,58 @@ namespace Wgrywanie_Oprogramowania_JH
                         checkBox3.BackColor = Color.Green;
                         checkBox4.BackColor = Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
                         checkBox3.CheckState = CheckState.Checked;
+                        progressBar1.PerformStep();
                         break;
                     }
+                
                 case 4:
                     {
-                        label1.Text = "W okienku które nam się pojawiło klikamy Manuelle Signale";
-                        Screen sc = new Screen();
-                        sc.
+                        label1.Text = "W okienku które nam się pojawiło klikamy Manuelle Signale oraz przeciągamy okno na drógi monitor i maksymalizujemy aby ułatwić sobie pracę. Następnie klikamy OK";
                         Process.Start(@"C:\Users\plpha\Desktop\NavKitTester2\program\NavKitTester2.exe");
-                        pictureBox1.Image = global::Wgrywanie_Oprogramowania_JH.Properties.Resources.pobrane;
-                        checkBox4.BackColor = Color.Green;
-                        checkBox5.BackColor = Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-                        checkBox4.CheckState = CheckState.Checked;
+                        pictureBox1.Image = global::Wgrywanie_Oprogramowania_JH.Properties.Resources.manual;
                         break;
                     }
                 case 5:
                     {
-                        label1.Text = "Uruchom tester i naciśnik OK";
-                        pictureBox1.Image = global::Wgrywanie_Oprogramowania_JH.Properties.Resources.pobrane;
+                        label1.Text = "Klikamy na przycisk tak jak na zdjęciu i czekamy aż zapali się na zielono. Następnie klikamy OK";
+                        pictureBox1.Image = global::Wgrywanie_Oprogramowania_JH.Properties.Resources.manual2_3;
+                        break;
+                    }
+                case 6:
+                    {
+                        label1.Text = "Kułeczkiem na myszce zjeżdzamy na dół, aż do pozycji które są podkreślone na zielono na zdjęciu. Następnie klikamy OK";
+                        pictureBox1.Image = global::Wgrywanie_Oprogramowania_JH.Properties.Resources.manual3_4;
+                        break;
+                    }
+                case 7:
+                    {
+                        label1.Text = "Klikamy na 3 pozycję zaznaczone na zdjęciu. Muszą zaplaić się na zielono. Uwaga nie przestrasz sie ponieważ uruchomi się skrzynia testowana. Następnie zamykamy 'X' tak jak na zdjęciu. Następnie klikamy OK";
+                        pictureBox1.Image = global::Wgrywanie_Oprogramowania_JH.Properties.Resources.manual4;
                         checkBox4.BackColor = Color.Green;
                         checkBox5.BackColor = Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
                         checkBox4.CheckState = CheckState.Checked;
+                        progressBar1.PerformStep();
+                        break;
+                    }
+                case 8:
+                    {
+                        label1.Text = " Na testerze muszą zapalić się 3 diody. Następnie klikamy OK";
+                        pictureBox1.Image = global::Wgrywanie_Oprogramowania_JH.Properties.Resources.diodyTester;
+                        checkBox5.BackColor = Color.Green;
+                        checkBox6.BackColor = Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+                        checkBox5.CheckState = CheckState.Checked;
+                        progressBar1.PerformStep();
+                        break;
+                    }
+                case 9:
+                    {
+                        string target = "https://192.168.100.200";
+                        System.Diagnostics.Process.Start(target);
+                        label1.Text = "Uruchomila sie strona, przeciągamy przeglądarke internetową na drógi monitor aby ułatwić sobie pracę. Czy zgadza się z zdjęciem ?. Jeśli tak klikamy OK";
+                        checkBox6.BackColor = Color.Green;
+                        checkBox7.BackColor = Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+                        checkBox6.CheckState = CheckState.Checked;
+                        progressBar1.PerformStep();
                         break;
                     }
 

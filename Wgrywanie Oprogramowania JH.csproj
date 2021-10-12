@@ -108,9 +108,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="JPG\manual4.jpg" />
+    <Content Include="JPG\X301.jpg" />
+    <None Include="JPG\diodyTester.jpg" />
     <Content Include="JPG\Folie6.JPG" />
     <Content Include="JPG\Folie8.JPG" />
+    <Content Include="JPG\manual.JPG" />
+    <None Include="JPG\manual2-3.jpg" />
+    <None Include="JPG\manual3-4.png" />
     <Content Include="JPG\pobrane.jpg" />
+    <Content Include="JPG\testerOn.jpg" />
+    <Content Include="JPG\w lewo.jpg" />
     <Content Include="JPG\wgrywanie.JPG" />
     <None Include="JPG\beckWl.jpg" />
     <None Include="JPG\beckWy.jpg" />

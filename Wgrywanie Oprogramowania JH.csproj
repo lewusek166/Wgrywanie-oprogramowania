@@ -108,6 +108,20 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="JPG\cvc -14.png" />
+    <Content Include="JPG\cvc-1.png" />
+    <Content Include="JPG\cvc-10.png" />
+    <Content Include="JPG\cvc-11.png" />
+    <Content Include="JPG\cvc-12.png" />
+    <Content Include="JPG\cvc-13.png" />
+    <Content Include="JPG\cvc-15.png" />
+    <Content Include="JPG\cvc-16.png" />
+    <Content Include="JPG\cvc-2-3.png" />
+    <Content Include="JPG\cvc-33.png" />
+    <Content Include="JPG\cvc-4.png" />
+    <Content Include="JPG\cvc-6.png" />
+    <Content Include="JPG\cvc-7.png" />
+    <Content Include="JPG\cvc-9.png" />
     <Content Include="JPG\manual4.jpg" />
     <Content Include="JPG\X301.jpg" />
     <None Include="JPG\diodyTester.jpg" />

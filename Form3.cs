@@ -12,7 +12,7 @@ namespace Wgrywanie_Oprogramowania_JH
         int etap;
         public Form3()
         {
-            etap = 2;
+            etap = 0;
             InitializeComponent();      
         }
         private void Button1_Click(object sender, EventArgs e)

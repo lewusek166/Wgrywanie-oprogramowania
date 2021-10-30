@@ -183,6 +183,16 @@ namespace Wgrywanie_Oprogramowania_JH.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cvc_17 {
+            get {
+                object obj = ResourceManager.GetObject("cvc-17", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cvc_2_3 {
             get {
                 object obj = ResourceManager.GetObject("cvc-2-3", resourceCulture);
@@ -346,6 +356,16 @@ namespace Wgrywanie_Oprogramowania_JH.Properties {
         internal static System.Drawing.Bitmap manual4 {
             get {
                 object obj = ResourceManager.GetObject("manual4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ok {
+            get {
+                object obj = ResourceManager.GetObject("ok", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

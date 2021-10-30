@@ -70,6 +70,12 @@
     <Compile Include="Form4.Designer.cs">
       <DependentUpon>Form4.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form5.Designer.cs">
+      <DependentUpon>Form5.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -116,6 +122,7 @@
     <Content Include="JPG\cvc-13.png" />
     <Content Include="JPG\cvc-15.png" />
     <Content Include="JPG\cvc-16.png" />
+    <Content Include="JPG\cvc-17.png" />
     <Content Include="JPG\cvc-2-3.png" />
     <Content Include="JPG\cvc-33.png" />
     <Content Include="JPG\cvc-4.png" />
@@ -123,6 +130,7 @@
     <Content Include="JPG\cvc-7.png" />
     <Content Include="JPG\cvc-9.png" />
     <Content Include="JPG\manual4.jpg" />
+    <Content Include="JPG\ok.jpg" />
     <Content Include="JPG\X301.jpg" />
     <None Include="JPG\diodyTester.jpg" />
     <Content Include="JPG\Folie6.JPG" />

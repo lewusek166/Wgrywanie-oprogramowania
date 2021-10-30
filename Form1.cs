@@ -15,14 +15,40 @@ namespace Wgrywanie_Oprogramowania_JH
         int godz = 0;
         int min = 0;
         int sec = 0;
+        int rezultatWgrywania = 0;
+        string res;
         public Form1()
         {
             InitializeComponent();
             timer1.Start();
             
         }
+        void Raport(string raport,int rezultat,string patch)
+        {
+            DateTime data = DateTime.Now;
+            switch (rezultat)
+            {
+                case 0: res = "Przerwano Wgrywanie{0}"; break;
+                case 1: res = "Beckhoff PASS {0}CVC FAILL {0}OPT FAILL"; break;
+                case 2: res = "Beckhoff PASS {0}CVC FAILL {0}OPT PASS"; break;
+                case 3: res = "Beckhoff PASS {0}CVC PASS {0}OPT PASS"; break;
+            }
+            raport =  ("Wgrywanie oprogramowania " +
+                      "{0}" + "EKS215A " + 
+                      "{0) --------------- " + 
+                      "{0}" + data.ToLongDateString() + 
+                      "{0} Operator : " + label2.Text.Substring(25, 4) + 
+                      "{0} Czas pracy operatora : " + label3.Text + 
+                      "{0} --------------------------" + "" +
+                      "{0} REZULTAT " + 
+                      "{0} "+ res +
+                      "{0}--------------------------- ");
+            
+
+        }
         private void Button1_Click(object sender, EventArgs e)
         {
+            rezultatWgrywania = 1;
             Form3 f3 = new Form3();
             f3.ShowDialog();
             
@@ -56,8 +82,27 @@ namespace Wgrywanie_Oprogramowania_JH
 
         private void Button2_Click(object sender, EventArgs e)
         {
+            rezultatWgrywania = 2;
             Form4 f4 = new Form4();
             f4.ShowDialog();
+            button2.Enabled = false;
+            button2.BackColor = System.Drawing.Color.Green;
+            button3.Enabled = true;
+        }
+
+        private void Button3_Click(object sender, EventArgs e)
+        {
+            rezultatWgrywania = 3;
+            Form5 f5 = new Form5();
+            f5.ShowDialog();
+            button3.Enabled = false;
+            button3.BackColor = System.Drawing.Color.Green;
+            button4.Enabled = true;
+        }
+
+        private void Button5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

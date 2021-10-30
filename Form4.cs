@@ -66,7 +66,7 @@ namespace Wgrywanie_Oprogramowania_JH
                 case 4:
                     {
                         label1.Text = "W okienku które nam się pojawiło klikamy Manuelle Signale oraz przeciągamy okno na drógi monitor i maksymalizujemy aby ułatwić sobie pracę. Następnie klikamy OK";
-                        Process.Start(@"C:\Users\plpha\Desktop\NavKitTester2\program\NavKitTester2.exe");
+                        Process.Start(@"C:\Users\plpha\Desktop\NavKitTester2\program\NavKitTester2.exe");////////////////
                         pictureBox1.Image = global::Wgrywanie_Oprogramowania_JH.Properties.Resources.manual;
                         break;
                     }
@@ -129,6 +129,10 @@ namespace Wgrywanie_Oprogramowania_JH
                     {
                         label1.Text = "Czekamy aż zakończy się wgrywanie danch. Po jego zakończeniu powinna otorzyć się strona taka jak na zdjęciu. Jeśli wszystko się zgadza kilkamy OK ";
                         pictureBox1.Image = global::Wgrywanie_Oprogramowania_JH.Properties.Resources.cvc_7;
+                        checkBox7.BackColor = Color.Green;
+                        checkBox8.BackColor = Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+                        checkBox7.CheckState = CheckState.Checked;
+                        progressBar1.PerformStep();
                         break;
                     }
                 case 13:
@@ -165,6 +169,10 @@ namespace Wgrywanie_Oprogramowania_JH
                     {
                         label1.Text = "Wykonujemy wszystko tak jak na zdjęciu. Następnie klikamy OK";
                         pictureBox1.Image = global::Wgrywanie_Oprogramowania_JH.Properties.Resources.cvc_13;
+                        checkBox8.BackColor = Color.Green;
+                        checkBox9.BackColor = Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+                        checkBox8.CheckState = CheckState.Checked;
+                        progressBar1.PerformStep();
                         break;
                     }
                 case 19:
@@ -183,15 +191,36 @@ namespace Wgrywanie_Oprogramowania_JH
                     {
                         label1.Text = "Sprawdzamy czy strona internetowa zgadza się ze zdjęciem'. Następnie klikamy OK";
                         pictureBox1.Image = global::Wgrywanie_Oprogramowania_JH.Properties.Resources.cvc_16;
+                        checkBox9.BackColor = Color.Green;
+                        checkBox10.BackColor = Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+                        checkBox9.CheckState = CheckState.Checked;
+                        progressBar1.PerformStep();
                         break;
                     }
                 case 22:
                     {
                         label1.Text = "Otworzyła się następna strona interentowa sprawdzamy czy zgadza się ze zdjęciem'. Następnie klikamy OK";
                         Process.Start("http://192.168.100.100/cgi-bin/login.cgi?request=/cgi-bin/backupfile.cgi");
-                        pictureBox1.Image = global::Wgrywanie_Oprogramowania_JH.Properties.Resources.cvc_15;
+                        pictureBox1.Image = global::Wgrywanie_Oprogramowania_JH.Properties.Resources.cvc_17;
+                        checkBox10.BackColor = Color.Green;
+                        checkBox10.CheckState = CheckState.Checked;
+                        progressBar1.PerformStep();
                         break;
                     }
+                case 23:
+                    {
+                        label1.Text = "CVC zaprogramowane!!!";
+                        button1.Text = "Przejście do kolejnego modułu programowania skrzynek JH";
+                        pictureBox1.Image = global::Wgrywanie_Oprogramowania_JH.Properties.Resources.ok;
+                        break;
+                    }
+                case 24:
+                    {
+                        this.Close();
+
+                        break;
+                    }
+
 
             }
         }

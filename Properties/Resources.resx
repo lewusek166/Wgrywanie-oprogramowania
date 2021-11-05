@@ -142,6 +142,9 @@
   <data name="X301" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\JPG\X301.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="testerOn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\JPG\testerOn.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="kolmorgen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\JPG\kolmorgen.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -166,8 +169,8 @@
   <data name="cvc-12" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\JPG\cvc-12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="testerOn" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\JPG\testerOn.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="opt1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\JPG\opt1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cvc-17" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\JPG\cvc-17.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -196,6 +199,9 @@
   <data name="pobrane" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\JPG\pobrane.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ok" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\JPG\ok.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="beckWy" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\JPG\beckWy.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -211,6 +217,9 @@
   <data name="cvc-2-3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\JPG\cvc-2-3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="opt2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\JPG\opt2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="cvc-13" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\JPG\cvc-13.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -220,10 +229,13 @@
   <data name="manual" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\JPG\manual.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="opt3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\JPG\opt3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="cvc" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\JPG\cvc.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ok" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\JPG\ok.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="opt4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\JPG\opt4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

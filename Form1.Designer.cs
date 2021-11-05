@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -40,14 +41,18 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -66,6 +71,7 @@
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.button4, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.button5, 2, 3);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -199,11 +205,6 @@
             this.label3.TabIndex = 1;
             this.label3.Text = "00:00:00";
             // 
-            // timer1
-            // 
-            this.timer1.Interval = 1000;
-            this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
-            // 
             // button4
             // 
             this.button4.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -228,6 +229,50 @@
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.Button5_Click);
             // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 1;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Controls.Add(this.label4, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.label5, 0, 1);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 2;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(260, 42);
+            this.tableLayoutPanel3.TabIndex = 11;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.label4.Location = new System.Drawing.Point(3, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(254, 21);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "label4";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.label5.Location = new System.Drawing.Point(3, 21);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(254, 21);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "label5";
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -236,6 +281,8 @@
             this.ClientSize = new System.Drawing.Size(800, 480);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.IsMdiContainer = true;
             this.Name = "Form1";
             this.Text = "Wgrywanie Oprogramowania JH";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -246,6 +293,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -266,6 +315,9 @@
         public System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        public System.Windows.Forms.Label label4;
+        public System.Windows.Forms.Label label5;
     }
 }
 

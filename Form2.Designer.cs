@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -44,6 +45,11 @@
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -51,6 +57,7 @@
             this.tableLayoutPanel6.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
+            this.tableLayoutPanel8.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -60,6 +67,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel7, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel8, 0, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -268,6 +276,80 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.Button2_Click);
             // 
+            // tableLayoutPanel8
+            // 
+            this.tableLayoutPanel8.ColumnCount = 2;
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.74811F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.25189F));
+            this.tableLayoutPanel8.Controls.Add(this.checkBox1, 0, 0);
+            this.tableLayoutPanel8.Controls.Add(this.checkBox2, 1, 0);
+            this.tableLayoutPanel8.Controls.Add(this.label4, 0, 1);
+            this.tableLayoutPanel8.Controls.Add(this.textBox3, 1, 1);
+            this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(3, 236);
+            this.tableLayoutPanel8.Name = "tableLayoutPanel8";
+            this.tableLayoutPanel8.RowCount = 2;
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(794, 136);
+            this.tableLayoutPanel8.TabIndex = 3;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Checked = true;
+            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.checkBox1.FlatAppearance.BorderSize = 0;
+            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.checkBox1.ForeColor = System.Drawing.Color.ForestGreen;
+            this.checkBox1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.checkBox1.Location = new System.Drawing.Point(3, 3);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(389, 62);
+            this.checkBox1.TabIndex = 0;
+            this.checkBox1.Text = "51882483#01 (z nadstawką)";
+            this.checkBox1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.CheckBox1_CheckedChanged);
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.Appearance = System.Windows.Forms.Appearance.Button;
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.checkBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.checkBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.checkBox2.Location = new System.Drawing.Point(398, 3);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(393, 62);
+            this.checkBox2.TabIndex = 1;
+            this.checkBox2.Text = "51807100#E (bez nadstawki)";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.CheckBox2_CheckedChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label4.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label4.Location = new System.Drawing.Point(77, 68);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(315, 68);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Zlecenie Numer";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.textBox3.Location = new System.Drawing.Point(398, 71);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(181, 53);
+            this.textBox3.TabIndex = 3;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -275,6 +357,7 @@
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form2";
             this.Text = "Wgrywanie oprogramowania JH";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -290,6 +373,8 @@
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel5.PerformLayout();
             this.tableLayoutPanel7.ResumeLayout(false);
+            this.tableLayoutPanel8.ResumeLayout(false);
+            this.tableLayoutPanel8.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -312,5 +397,10 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label haslo;
         private System.Windows.Forms.Label logo;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBox3;
     }
 }

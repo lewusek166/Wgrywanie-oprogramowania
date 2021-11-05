@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,33 +18,58 @@ namespace Wgrywanie_Oprogramowania_JH
         int sec = 0;
         int rezultatWgrywania = 0;
         string res;
+        int raportNumer = 0;
         public Form1()
         {
             InitializeComponent();
             timer1.Start();
             
         }
-        void Raport(string raport,int rezultat,string patch)
+        public void Raport(int rezultat,string patch)
         {
+            raportNumer++;
+            string raport;
             DateTime data = DateTime.Now;
+            string path;
             switch (rezultat)
             {
-                case 0: res = "Przerwano Wgrywanie{0}"; break;
-                case 1: res = "Beckhoff PASS {0}CVC FAILL {0}OPT FAILL"; break;
-                case 2: res = "Beckhoff PASS {0}CVC FAILL {0}OPT PASS"; break;
-                case 3: res = "Beckhoff PASS {0}CVC PASS {0}OPT PASS"; break;
+                case 0: res = "Przerwano Wgrywanie"; break;
+                case 1: res = "Beckhoff PASS \nCVC FAILL \nOPT FAILL"; break;
+                case 2: res = "Beckhoff PASS \nCVC FAILL \nOPT PASS"; break;
+                case 3: res = "Beckhoff PASS \nCVC PASS \nOPT PASS"; break;
             }
-            raport =  ("Wgrywanie oprogramowania " +
-                      "{0}" + "EKS215A " + 
-                      "{0) --------------- " + 
-                      "{0}" + data.ToLongDateString() + 
-                      "{0} Operator : " + label2.Text.Substring(25, 4) + 
-                      "{0} Czas pracy operatora : " + label3.Text + 
-                      "{0} --------------------------" + "" +
-                      "{0} REZULTAT " + 
-                      "{0} "+ res +
-                      "{0}--------------------------- ");
+            raport =  ("Wgrywanie oprogramowania \n" +
+                      "EKS215A \n" + 
+                      label4.Text+"\n"+
+                      label5.Text+"\n"+
+                      "-------------------------- \n" + 
+                       data+"\n" + 
+                      "Operator : " + label2.Text.Substring(25, 4) +"\n"+ 
+                      "Czas pracy operatora : " + label3.Text +"\n" +
+                      "-------------------------- \n" + 
+                      "REZULTAT \n" +
+                      "-------------------------- \n"+
+                      "" + res +"\n"+
+                      "--------------------------- ");
+
+            patch = patch + data.ToShortDateString()+"-"+label5.Text.Substring(12);
+            if (!Directory.Exists(patch))
+            {
+                Directory.CreateDirectory(patch);
+            }
             
+
+            path = patch+ "\\" + raportNumer.ToString() + ".txt";
+            while (File.Exists(path))
+            {
+                raportNumer++;
+                path =  patch +"\\" + raportNumer.ToString() + ".txt";
+            }
+                using (StreamWriter sw = File.CreateText(path))
+            {
+                sw.WriteLine(raport);
+            }
+
 
         }
         private void Button1_Click(object sender, EventArgs e)
@@ -102,7 +128,9 @@ namespace Wgrywanie_Oprogramowania_JH
 
         private void Button5_Click(object sender, EventArgs e)
         {
-
+            Raport(3, @"C:\Raporty JH\");
+            Application.Exit();
+            
         }
     }
 }

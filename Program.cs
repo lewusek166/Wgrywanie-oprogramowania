@@ -16,7 +16,7 @@ namespace Wgrywanie_Oprogramowania_JH
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form2());
+            Application.Run(new Form5());
         }
     }
 }

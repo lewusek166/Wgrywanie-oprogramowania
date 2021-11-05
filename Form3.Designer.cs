@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
@@ -59,21 +60,21 @@
             this.tableLayoutPanel5.Controls.Add(this.progressBar1, 0, 1);
             this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel6, 0, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 61);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 70);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 2;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(634, 283);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(634, 309);
             this.tableLayoutPanel5.TabIndex = 6;
             // 
             // progressBar1
             // 
             this.progressBar1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.progressBar1.Location = new System.Drawing.Point(3, 257);
+            this.progressBar1.Location = new System.Drawing.Point(3, 281);
             this.progressBar1.Maximum = 345;
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(628, 23);
+            this.progressBar1.Size = new System.Drawing.Size(628, 25);
             this.progressBar1.Step = 1;
             this.progressBar1.TabIndex = 1;
             // 
@@ -89,7 +90,7 @@
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(628, 248);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(628, 272);
             this.tableLayoutPanel6.TabIndex = 2;
             // 
             // pictureBox1
@@ -98,7 +99,7 @@
             this.pictureBox1.Image = global::Wgrywanie_Oprogramowania_JH.Properties.Resources.beckWy;
             this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(308, 242);
+            this.pictureBox1.Size = new System.Drawing.Size(308, 266);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -109,7 +110,7 @@
             this.pictureBox2.Image = global::Wgrywanie_Oprogramowania_JH.Properties.Resources.sd;
             this.pictureBox2.Location = new System.Drawing.Point(317, 3);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(308, 242);
+            this.pictureBox2.Size = new System.Drawing.Size(308, 266);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
@@ -118,9 +119,9 @@
             // 
             this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button2.Location = new System.Drawing.Point(3, 350);
+            this.button2.Location = new System.Drawing.Point(3, 385);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(634, 97);
+            this.button2.Size = new System.Drawing.Size(634, 62);
             this.button2.TabIndex = 3;
             this.button2.Text = "OK";
             this.button2.UseVisualStyleBackColor = true;
@@ -130,9 +131,9 @@
             // 
             this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button1.Location = new System.Drawing.Point(643, 350);
+            this.button1.Location = new System.Drawing.Point(643, 385);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(154, 97);
+            this.button1.Size = new System.Drawing.Size(154, 62);
             this.button1.TabIndex = 2;
             this.button1.Text = "Wyjście";
             this.button1.UseVisualStyleBackColor = true;
@@ -145,12 +146,12 @@
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel4, 0, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(643, 61);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(643, 70);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(154, 283);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(154, 309);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // tableLayoutPanel3
@@ -164,8 +165,8 @@
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 135F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(148, 135);
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 148F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(148, 148);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // checkBox1
@@ -177,7 +178,7 @@
             this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.checkBox1.Location = new System.Drawing.Point(3, 3);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(142, 129);
+            this.checkBox1.Size = new System.Drawing.Size(142, 142);
             this.checkBox1.TabIndex = 0;
             this.checkBox1.Text = "Etap 1.";
             this.checkBox1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -190,11 +191,11 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.Controls.Add(this.checkBox2, 0, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 144);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 157);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(148, 136);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(148, 149);
             this.tableLayoutPanel4.TabIndex = 1;
             // 
             // checkBox2
@@ -205,7 +206,7 @@
             this.checkBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.checkBox2.Location = new System.Drawing.Point(3, 3);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(142, 130);
+            this.checkBox2.Size = new System.Drawing.Size(142, 143);
             this.checkBox2.TabIndex = 0;
             this.checkBox2.Text = "Etap 2.";
             this.checkBox2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -218,7 +219,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(634, 58);
+            this.label1.Size = new System.Drawing.Size(634, 67);
             this.label1.TabIndex = 0;
             this.label1.Text = "Wyjmij kartę SD z komputera Beckhoff, podłącz ją do komputera oraz po włożeniu na" +
     "ciśnij OK";
@@ -238,9 +239,9 @@
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.88889F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 83.11111F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 102F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 450);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
@@ -250,6 +251,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form3";
             this.Text = "Wgrywanie oprogramowania JH";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

@@ -51,8 +51,8 @@ namespace Wgrywanie_Oprogramowania_JH
                 }
             }
             bool gitesLogo = false;
-            bool gitesPass = false;
             string zalogowany;
+            string zlecenie;
             for (int i = 0; i < 10; i++)
             {
                 if (textBox1.Text == user[i])
@@ -61,11 +61,26 @@ namespace Wgrywanie_Oprogramowania_JH
                     gitesLogo = true;
                     if (textBox2.Text == user[i + 1])
                     {
+                        if (textBox3.Text == null || textBox3.Text=="")
+                        {
+                            MessageBox.Show("Proszę wprowadzić numer zlecenia","Uwaga",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                        }else
+                        {
                         this.Visible = false;
                         Form1 f1 = new Form1();
                         f1.label2.Text = zalogowany;
+                            if (checkBox1.Checked == true)
+                            {
+                                f1.label4.Text = checkBox1.Text;
+                            }
+                            if (checkBox2.Checked == true)
+                            {
+                                f1.label4.Text = checkBox2.Text;
+                            }
+                            zlecenie = "Zlecenie Nr."+ textBox3.Text;
+                            f1.label5.Text = zlecenie;
                         f1.ShowDialog();
-                        gitesPass = true;
+                        }
                     }
                     else
                     {
@@ -83,9 +98,24 @@ namespace Wgrywanie_Oprogramowania_JH
                 logo.ForeColor = Color.Red;
                 logo.Visible = true;
             }
+            
         }
 
-        
+        private void CheckBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox2.Checked)
+            {
+                checkBox2.Checked = false;
+            }
+        }
+
+        private void CheckBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                checkBox1.Checked = false;
+            }
+        }
     }
 }
 

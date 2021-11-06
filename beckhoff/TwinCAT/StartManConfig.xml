@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StartMan>
+  <Sessions>
+    <StartupManager.StartManShellCommand>
+      <Name>Recorder</Name>
+      <Description></Description>
+      <Autostart>1</Autostart>
+      <AutostartFocus>1</AutostartFocus>
+      <ActivationHkCode>0</ActivationHkCode>
+      <ActivationHkMods>0</ActivationHkMods>
+      <StartupDelay>20000</StartupDelay>
+      <Application>\Hard Disk2\adsc.exe</Application>
+      <CmdLine>/autostart</CmdLine>
+    </StartupManager.StartManShellCommand>
+    <StartupManager.StartManShellCommand>
+      <Name>ApmKonfiguration</Name>
+      <Description></Description>
+      <Autostart>1</Autostart>
+      <AutostartFocus>1</AutostartFocus>
+      <ActivationHkCode>0</ActivationHkCode>
+      <ActivationHkMods>0</ActivationHkMods>
+      <StartupDelay>1000</StartupDelay>
+      <Application>\Hard Disk\ApmKonfigLoader\ApmKonfigLoader.exe</Application>
+      <CmdLine>/autostart</CmdLine>
+    </StartupManager.StartManShellCommand>
+  </Sessions>
+</StartMan>

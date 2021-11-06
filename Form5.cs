@@ -16,9 +16,10 @@ namespace Wgrywanie_Oprogramowania_JH
 {
     public partial class Form5 : Form
     {
+        int z = 0;
         public int uchwyt;
         int ok = 0;
-        public TwinCAT.Ads.AdsClient con;
+       
         public Form5()
         {
              
@@ -27,9 +28,7 @@ namespace Wgrywanie_Oprogramowania_JH
 
         private void Button2_Click(object sender, EventArgs e)
         {
-            //con = new AdsClient();
-            
-           // con.Connect("5.12.8.70.1.1", 801);
+           
             this.Close();
         }
 
@@ -90,9 +89,14 @@ namespace Wgrywanie_Oprogramowania_JH
                     }
             }
             
+        
             
+        }
 
-            
+        private void Button3_Click(object sender, EventArgs e)
+        {
+            System.IO.Directory.CreateDirectory(@"..\..\test");//////ścieżka do beckhofa
+
         }
     }
 }

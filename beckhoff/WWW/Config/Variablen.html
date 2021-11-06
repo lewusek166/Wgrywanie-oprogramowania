@@ -1,0 +1,322 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Beckhoff-Variablen tabellarisch</title>
+        <link rel="stylesheet" href="APMWeb.css" type="text/css" media="screen" charset="utf-8" />	
+        <script src="TcAPMhandleDataT.js" type="text/javascript"></script>           
+        
+		<style type="text/css">
+		</style>
+    </head>
+    
+    <body>
+	
+		<canvas id="myCanvas" width="578" height="200"></canvas>
+	
+        <div id="wrapper"><!-- begin wrapper -->
+        
+            <h1>Variablen der SPS Beckhoff</h1>
+            <h2>Hier werden die angegebenen Variablen in Echtzeit angezeigt</h2>
+            
+				
+            <div class="array_elem leftmargin" style="width: 200px">
+			
+            	<span class="auto-style1">Drive<br /></span>
+				<span class="modulauswahl" style="margin-top:5px">Input</span><br /><br />
+				<span class="label" >ActualDriveDistance_mm</span><br /><br />
+                <span id="show001" class="recfield" >No Data</span><br /><br />				
+				
+				<span class="modulauswahl">Output</span><br /><br />
+				<span class="label">TargetSpeed_mms</span><br /><br />
+                <span id="show005" class="recfield">No Data</span><br /><br />
+				<span class="label">ActualDistance_mm</span><br /><br />
+				<span id="show003" class="recfield">No Data</span><br />
+				
+				<p class="modulauswahl" style="margin-top:10px">Flags</p>
+				<p class="label">SlowdownRequired</p>
+                <span id="show021" class="circle"></span>
+				               
+			    <p class="modulauswahl" style="margin-top:180px">Supervision</p>
+				<span class="label">DriveBrakingDecelerationEnable</span><br /><br />
+                <span id="show023" class="circle"></span><br /><br />
+				<span class="label">DriveDirectionIsEnable</span><br /><br />
+                <span id="show025" class="circle"></span><br /><br />
+				<span class="label">DriveDistanceIsEnable</span><br /><br />
+                <span id="show027" class="circle"></span><br /><br />
+				<span class="label">DriveRangeCurveIsEnable</span><br /><br />
+                <span id="show029" class="circle"></span><br /><br />
+				<span class="label">DriveRangeStraightAheadIsEnable</span><br /><br />
+                <span id="show031" class="circle"></span><br /><br />
+				<span class="label">IsInMonitoringState</span><br /><br />
+                <span id="show072" class="circle"></span><br /><br />
+				
+			   
+			    <span class="modulauswahl">ReduceFB</span><br /><br />
+				<span class="label">State Targetspeed_mms</span><br /><br />
+                <span id="show006" class="recfield">No Data</span><br /><br />
+				<span class="label">Height TargetSpeed</span><br /><br />
+                <span id="show008" class="recfield">No Data</span><br /><br />
+				<span class="label">Newtargetspeed_mms</span><br /><br />
+               	<span id="show010" class="recfield">No Data</span><br /><br />
+							   
+                <span class="modulauswahl">Diagnostic</span><br /><br />
+				<span class="label">Active Entry 1</span><br /><br />
+                <span id="show011" class="recfield">No Data</span><br /><br />
+				<span class="label">Active Entry 2</span><br /><br />
+                <span id="show012" class="recfield">No Data</span><br /><br />
+				<span class="label">Active Entry 3</span><br /><br />
+                <span id="show013" class="recfield">No Data</span><br /><br />
+				<span class="label">Active Entry 4</span><br /><br />
+                <span id="show014" class="recfield">No Data</span><br /><br />
+				
+								
+            </div>
+            <div class="array_elem" style="width: 200px">
+			
+				<span class="auto-style1"><br/></span>
+				<span class="modulauswahl" style="margin-top:10px">Input</span><br /><br />
+				<span class="label" >TargetSpeed_mms</span><br /><br />
+				<span id="show002" class="recfield" >No Data</span><br /><br />
+				
+				<span class="modulauswahl" >Output</span><br /><br />
+				<span class="label">ActualSpeed_mms</span><br /><br />
+				<span id="show004" class="recfield">No Data</span><br /><br />
+				
+				<p class="modulauswahl" style="margin-top:53px">Flags</p>
+				<span class="label">AllowFullspeedInLoadDirection</span><br /><br />
+				<span id="show022" class="circle"></span><br /><br />
+               
+			    <p class="modulauswahl" style="margin-top:150px">Supervision</p>
+				<span class="label">DriveBrakingDecelerationOK</span><br /><br />
+				<span id="show024" class="circle"></span><br /><br />
+				<span class="label">DriveDirectionIsOK</span><br /><br />
+				<span id="show026" class="circle"></span><br /><br />
+				<span class="label">DriveDistanceIsOK</span><br /><br />
+				<span id="show028" class="circle"></span><br /><br />
+				<span class="label">DriveRangeCurveIsOk</span><br /><br />
+                <span id="show030" class="circle"></span><br /><br />
+				<span class="label">DriveRangeStraightAheadIsOk</span><br /><br />
+                <span id="show032" class="circle"></span><br /><br />
+				<span class="label">DriveSelfMovementIsOk</span><br /><br />
+                <span id="show033" class="circle"></span><br /><br />
+			   
+			    <span class="modulauswahl">ReduceFB</span><br /><br />
+				<span class="label">Steering TargetSpeed_mms</span><br /><br />
+				<span id="show007" class="recfield">No Data</span><br /><br />
+				<span class="label">Sensor Targetspeed_mms</span><br /><br />
+				<span id="show009" class="recfield">No Data</span><br /><br />
+				<span class="label">SlowDownTargetspeed_mms</span><br /><br />
+				<span id="show084" class="recfield">No Data</span><br /><br />
+			   
+			    <span class="modulauswahl">Diagnostic</span><br /><br />
+				<span class="label">Passive Entry 1</span><br /><br />
+				<span id="show016" class="recfield">No Data</span><br /><br />
+				<span class="label">Passive Entry 2</span><br /><br />
+				<span id="show017" class="recfield">No Data</span><br /><br />
+				<span class="label">Passive Entry 3</span><br /><br />
+				<span id="show018" class="recfield">No Data</span><br /><br />
+				<span class="label">Passive Entry 4</span><br /><br />
+				<span id="show019" class="recfield">No Data</span><br /><br />
+								
+            </div>
+			
+			<div class="array_elem" style="width: 200px">
+            	<span class="auto-style1">Fork<br /></span>
+                <span class="modulauswahl" style="margin-top:10px">Input</span><br /><br />
+				<span class="label">TargetLiftHeight_mm</span><br /><br />
+				<span id="show058" class="recfield">No Data</span><br /><br />
+				
+				<span class="modulauswahl">Output</span><br /><br />
+				<span class="label">TargetLiftSpeed_mm</span><br /><br />
+				<span id="show061" class="recfield">No Data</span><br /><br />
+				<span class="label">ActualLiftHeight_mm</span><br /><br />
+				<span id="show059" class="recfield">No Data</span><br /><br />
+				
+				<p class="modulauswahl" style="margin-top:-4px">Flags</p>
+				<span class="label">Raising Fork</span><br /><br />
+ 				<span id="show053" class="circle"></span><br />
+				<span class="label">Standing On HomePosition</span><br /><br />
+ 				<span id="show055" class="circle"></span><br />
+				<span class="label">IsMovingOnInnerMast</span><br /><br />
+  				<span id="show079" class="circle"></span><br />
+				<span class="label">Target Reached</span><br /><br />
+                <span id="show082" class="circle"></span><br />
+				
+				<p class="modulauswahl" style="margin-top:-8px">Supervision</p>
+				<span class="label"></span><br /><br />
+  				<span id="" class="circle" style="background:#eee"></span><br /><br />
+				<span class="label">LiftDirectionEnable</span><br /><br />
+				<span id="show073" class="circle"></span><br /><br />
+				<span class="label">LiftRangeEnable</span><br /><br />
+				<span id="show075" class="circle"></span><br /><br />
+				<span class="label">LiftRangeHistoryEnable</span><br /><br />
+				<span id="show077" class="circle"></span><br /><br />
+				<span class="label"></span><br /><br />
+				<span id="" class="circle" style="background:#eee"></span><br /><br />
+				<span class="label"></span><br /><br />
+				<span id="" class="circle" style="background:#eee"></span><br /><br />
+				
+                <span class="modulauswahl">Diagnostic</span><br /><br />
+				<span class="label">Active Entry 1</span><br /><br />
+				<span id="show062" class="recfield">No Data</span><br /><br />
+				<span class="label">Active Entry 2</span><br /><br />
+				<span id="show063" class="recfield">No Data</span><br /><br />
+				<span class="label">Active Entry 3</span><br /><br />
+				<span id="show064" class="recfield">No Data</span><br /><br />
+				<span class="label">Active Entry 4</span><br /><br />
+				<span id="show065" class="recfield">No Data</span><br /><br />
+				
+            </div>
+			
+			<div class="array_elem" style="width: 200px">
+            	<span class="auto-style1"><br /></span>
+                <span class="modulauswahl" style="margin-top:10px">Input</span><br /><br />
+                <span class="label">ActualLiftHeight_mm</span><br /><br />
+				<span id="show057" class="recfield">No Data</span><br /><br />
+				
+				<span class="modulauswahl">Output</span><br /><br />
+                <span class="label">ActualLiftSpeed_mms</span><br /><br />
+				<span id="show060" class="recfield">No Data</span><br /><br />
+				<span class="label"></span><br /><br />
+				<span id="" class="recfield" style="border:none"></span><br /><br />
+				
+				<p class="modulauswahl" style="margin-top:-4px">Flags</p>
+                <span class="label">Lowering Fork</span><br /><br />
+				<span id="show054" class="circle"></span><br />
+                <span class="label">AboveRearSensorLevel</span><br /><br />
+				<span id="show081" class="circle"></span><br />
+                <span class="label">IsMovingOnOuterMast</span><br /><br />
+				<span id="show080" class="circle"></span><br />
+				<span class="label">AbsoluteDistanceToTarget</span><br /><br />
+				<span id="show083" class="recfield">No Data</span><br />
+				
+				<p class="modulauswahl" style="margin-top:7px">Supervision</p>
+                <span class="label">Lost Reference</span><br /><br />
+				<span id="show056" class="circle"></span><br /><br />
+                <span class="label">LiftDirectionIsOK</span><br /><br />
+				<span id="show074" class="circle"></span><br /><br />
+                <span class="label">LiftRangeIsOk</span><br /><br />
+				<span id="show076" class="circle"></span><br /><br />
+				<span class="label">LiftRangeHistoryIsOk</span><br /><br />
+				<span id="show078" class="circle"></span><br /><br />
+				<span class="label"></span><br /><br />
+				<span id="" class="circle" style="background:#eee"></span><br /><br />
+				<span class="label"></span><br /><br />
+				<span id="" class="circle" style="background:#eee"></span><br /><br />
+				
+				
+                <span class="modulauswahl">Diagnostic</span><br /><br />
+                <span class="label">Passive Entry 1</span><br /><br />
+				<span id="show067" class="recfield">No Data</span><br /><br />
+                <span class="label">Passive Entry 2</span><br /><br />
+				<span id="show068" class="recfield">No Data</span><br /><br />
+                <span class="label">Passive Entry 3</span><br /><br />
+				<span id="show069" class="recfield">No Data</span><br /><br />
+				<span class="label">Passive Entry 4</span><br /><br />
+				<span id="show070" class="recfield">No Data</span><br /><br />
+				
+            </div>
+            
+           <div class="array_elem" style="width: 200px">
+            	<span class="auto-style1">Steering<br /></span>
+                <span class="modulauswahl" style="margin-top:10px">Input</span><br /><br />
+				<span class="label">TargetSteeringAngle</span><br /><br />
+ 				<span id="show035" class="recfield">No Data</span><br /><br />
+		
+				<span class="modulauswahl">Output</span><br /><br />
+				<span class="label">TargetSteeringAngle</span><br /><br />
+ 				<span id="show037" class="recfield">No Data</span><br /><br />
+				
+								
+				<p class="modulauswahl" style="margin-top:53px">Flags</p>
+				<span class="label">PPA is running</span><br /><br />
+ 				<span id="show038" class="circle"></span><br />
+				<span class="label">Testing negative Angle</span><br /><br />
+ 				<span id="show040" class="circle"></span><br />
+				<span class="label"></span><br /><br />
+  				<span id="" class="circle" style="background:#eee"></span><br />
+				<span class="label"></span><br /><br />
+                <span id="" class="circle" style="background:#eee"></span><br />
+				
+				<p class="modulauswahl" style="margin-top:-7px">Supervision</p>
+				<span class="label"></span><br /><br />
+				<span id="" class="circle" style="background:#eee"></span><br /><br />
+				<span class="label"></span><br /><br />
+  				<span id="" class="circle" style="background:#eee"></span><br /><br />
+				<span class="label"></span><br /><br />
+				<span id="" class="circle" style="background:#eee"></span><br /><br />
+				<span class="label"></span><br /><br />
+				<span id="" class="circle" style="background:#eee"></span><br /><br />
+				<span class="label"></span><br /><br />
+				<span id="" class="circle" style="background:#eee"></span><br /><br />
+				<span class="label"></span><br /><br />
+				<span id="" class="circle" style="background:#eee"></span><br /><br />
+				
+				<span class="modulauswahl">Diagnostic</span><br /><br />
+                <span class="label">Active Entry 1</span><br /><br />
+				<span id="show042" class="recfield">No Data</span><br /><br />
+	            <span class="label">Active Entry 2</span><br /><br />
+				<span id="show043" class="recfield">No Data</span><br /><br />
+                <span class="label">Active Entry 3</span><br /><br />
+				<span id="show044" class="recfield">No Data</span><br /><br />
+				<span class="label">Active Entry 4</span><br /><br />
+				<span id="show045" class="recfield">No Data</span><br /><br />
+                
+				
+            </div>
+			
+			<div class="array_elem" style="width: 200px">
+            	<span class="auto-style1"><br /></span>
+                <span class="modulauswahl" style="margin-top:10px">Input</span><br /><br />
+                <span class="label">ActualSteeringAngle</span><br /><br />
+				<span id="show034" class="recfield">No Data</span><br /><br />
+				
+				<span class="modulauswahl">Output</span><br /><br />
+                <span class="label">ActualSteeringAngle</span><br /><br />
+				<span id="show036" class="recfield">No Data</span><br /><br /><br /><br /><br /><br />
+				
+								
+				<p class="modulauswahl" style="margin-top:-2px">Flags</p>
+                <span class="label">Testing positive Angle</span><br /><br />
+				<span id="show039" class="circle"></span><br />
+                <span class="label">Post Run</span><br /><br />
+				<span id="show041" class="circle"></span><br />
+                <span class="label"></span><br /><br />
+				<span id="" class="circle" style="background:#eee"></span><br />
+ 				
+				<p class="modulauswahl" style="margin-top:50px">Supervision</p>
+                <span class="label">RangeHistoryErrorCondition</span><br /><br />
+				<span id="show052" class="circle"></span><br /><br />
+                <span class="label"></span><br /><br />
+				<span id="" class="circle" style="background:#eee"></span><br /><br />
+                <span class="label"></span><br /><br />
+				<span id="" class="circle" style="background:#eee"></span><br /><br />
+				<span class="label"></span><br /><br />
+				<span id="" class="circle" style="background:#eee"></span><br /><br />
+				<span class="label"></span><br /><br />
+				<span id="" class="circle" style="background:#eee"></span><br /><br />
+				<span class="label"></span><br /><br />
+				<span id="" class="circle" style="background:#eee"></span><br /><br />
+				
+                <span class="modulauswahl">Diagnostic</span><br /><br />
+				<span class="label">Passive Entry 1</span><br /><br />
+ 				<span id="show047" class="recfield">No Data</span><br /><br />
+				<span class="label">Passive Entry 2</span><br /><br />
+ 				<span id="show048" class="recfield">No Data</span><br /><br />
+				<span class="label">Passive Entry 3</span><br /><br />
+  				<span id="show049" class="recfield">No Data</span><br /><br />
+				<span class="label">Passive Entry 4</span><br /><br />
+  				<span id="show050" class="recfield">No Data</span><br /><br />
+				
+            </div>
+			
+                  
+            <div class="clear"></div>
+            
+            
+        </div><!-- end wrapper -->
+    
+    </body>
+</html>

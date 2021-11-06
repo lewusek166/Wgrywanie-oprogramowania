@@ -1,0 +1,448 @@
+﻿#invisible
+{
+    display:none;
+}
+
+html, body
+{
+    margin: 0px;
+    padding: 0px;
+
+    width: 100%;
+    height: 100%;
+}
+
+body
+{
+    background-color: rgb(220,228,232); /* K9*/
+}
+
+#Head
+{
+    position: relative;
+
+    margin: 0px 0px 0px 0px;
+    padding-top: 25px;
+    height: 42px;
+    
+    
+    color:  Black;
+    cursor: default;
+    line-height: normal;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    font-size: 20px;
+    font-family: arial, sans-serif;
+
+    width: 98%;
+    min-width: 950px;
+    max-width: 1000px;
+
+    z-index: 4;
+}
+
+#TitleImage
+{
+    float: left;
+    margin-left: 25px;
+}
+#TitleText
+{
+    text-align: left;
+    width: 300px;
+    
+    padding-top: 15px;
+    padding-left: 8px;
+
+    float: left;
+}
+#TitleHistory
+{
+    height: 35px;
+    margin-right: 25px;
+    padding-top: 12px;
+
+    vertical-align: bottom;
+    text-align: right;
+
+    float: right;
+}
+
+#imgBack
+{
+    margin: 0px 10px 0px 0px;
+}
+
+#imgForward
+{
+    margin: 0px;
+}
+
+.error
+{
+    margin: 25px 0px 0px 25px;
+
+    font:       18px normal arial,sans-serif;
+    font-weight: bold;
+    color:      red;
+}
+
+#gradient_top
+{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+
+    height: 400px;
+    width: 400px;
+
+    background-image: url("../res/website/other/Gradient.png");
+    background-repeat: no-repeat;
+
+    z-index: 1;
+}
+
+#gradient_bottom
+{
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+
+    height: 400px;
+    width: 400px;
+
+    background-image: url('../res/website/other/Gradient-bot.png');
+    background-repeat: no-repeat;
+
+    z-index: 2;
+}
+
+#Body
+{
+    position: relative;
+    
+    width: 98%;
+    margin-top: 10px;
+
+    min-width: 950px;
+    max-width: 1000px;
+
+    color:      black;
+    font:       12px normal arial,sans-serif;
+
+    cursor: default;
+    z-index: 3;
+}
+
+#MainNavigationMenue
+{
+    margin: 0px 0px 0px 25px;
+    
+    height: auto;
+    width:  240px;
+    
+    color:  white;
+
+    float:  left;
+}
+
+#SubNavigationMenue
+{
+    margin: 0px 0px 0px 25px;
+    
+    height:     auto;
+    width:      60px;
+    
+    color:      white;
+    font:       inherit;
+    
+    float:      left;
+}
+
+#ActivePage
+{
+    margin: 0px 25px 0px 25px;
+    
+    height: auto;
+    max-width: 600px;
+
+    color:      Black;
+    font:       inherit;
+    font-size:  13px;
+
+    margin-left: 375px;
+}
+
+#status
+{
+    color: rgb(195,0,0);
+    font-size:  15px;
+    font-weight: bold;
+}
+
+.Floatable
+{
+    float:left;
+    margin-right: 25px;
+}
+
+.Clear
+{
+    /*float:none;
+      clear: both;*/
+}
+
+
+/* Table style                                                  | START */
+table
+{
+    width: 100%;
+    margin: 0;
+    border: 0px;
+    border-collapse: collapse;    
+}
+
+td, th
+{
+    padding: 2px 3px;
+    text-align: left;
+
+    color: black;
+    border-bottom: 1px solid rgb(220,228,232); /* K9*/
+    min-height: 22px;
+    height: 22px;
+}
+
+th
+{
+    font-weight:normal;
+    background: rgb(197,211,217); /* K7 */
+}
+
+td
+{
+    background: white;
+    border-right: 1px solid rgb(240,248,252); /* K9*/
+}
+
+/* TableData First Column has a different color and has a width of 150px */
+.td_FirstColumn
+{
+    font-weight:normal;
+    background: rgb(197,211,217); /* K7 */
+
+    width: 150px;
+}
+
+.td_FirstColumn_Important
+{
+    font-weight:bold;
+    background: rgb(197,211,217); /* K7 */
+    color: rgb(195,0,0);
+    
+    width: 150px;
+}
+
+.td_FirstColumn_Info
+{
+    font-weight:bold;
+    background: rgb(197,211,217); /* K7 */
+    color: rgb(0,0,195);
+    
+    width: 150px;
+}
+
+.td_FirstColumn_Flexible
+{
+    font-weight:normal;
+    background: rgb(197,211,217); /* K7 */
+}
+
+.th_trans
+{
+    background-color: transparent;
+    border: 0px;
+}
+
+/* TableData for Title (transparent) */
+.td_trans
+{
+    background-color: transparent;
+    border: 0px;
+    padding: 0px;
+    vertical-align: top;
+}
+
+/* TableData for action buttons (transparent) */
+.td_Action_trans    
+{
+    background-color: transparent;
+    border: 0px;
+    padding: 0px;
+
+    text-align: right;
+    width: 150px;
+    min-width: 90px;
+}
+
+.div_Control
+{
+    width: 230px;
+}
+
+/* Head style                                                   | START */
+h1
+{
+    color: rgb(195,0,0);
+    margin-top: 0px;
+    margin-bottom: 5px;
+    font-weight: bolder;
+}
+
+h2 
+{
+    color: rgb(149, 164, 173); /* Color of inactive Buttons */
+    margin-top: 3px;
+    margin-bottom: 5px;
+}
+
+h3
+{
+    color: rgb(195,0,0);
+    margin-top: 0px;
+    margin-bottom: 5px;
+    font-weight: bolder;
+}
+
+h4
+{
+    color: rgb(149, 164, 173);  /* Color of inactive Buttons */
+    margin-top: 3px;
+    margin-bottom: 5px;
+}
+
+button
+{
+    margin-top: 7px;
+    margin-right: 4px;
+}
+
+
+/* Overlapping Div! */
+.overlay
+{
+    position: fixed;
+
+    top:0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+
+    z-index: -1;
+}
+
+/* put into overlay div */
+.BigSpinner
+{
+    position: absolute;
+
+    top:50%;
+    left: 50%;
+	
+    margin-top: -48px;
+    margin-left: -48px;
+
+	width: 96px;
+	height: 96px;
+
+}
+
+/* put into overlay div */
+.ErrorDiv
+{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+	width: 100%;
+	height: 100%;
+
+    color: white;
+    background-color: black;
+
+	/* opacity for all browsers */
+    zoom: 1;
+	filter: alpha(opacity=70);
+	opacity: 0.7;
+}
+
+/* put into ErrorDiv-div */
+.Message
+{
+    cursor: default;
+    position: absolute;
+
+    top:50%;
+    left: 50%;
+	
+    margin-top: -50px;
+    margin-left: -300px;
+
+	width: 600px;
+	height: 100px;
+
+    font-size: 20px;
+    font-family: arial, sans-serif;
+    color: white;
+    text-align:center;
+
+}
+
+/* Security Wizard */
+.wizzard_body
+{
+    position: relative;
+}
+
+.wizzard_bottom
+{
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+
+.security_warning_container
+{
+    position: fixed;
+
+    top:0px;
+    left: 0px;
+    right: 0px;
+    height: auto;
+
+    z-index: -1;
+}
+
+.security_warning_body
+{
+    position: absolute;
+
+    padding-top: 5px;
+    min-width: 550px;
+
+    top: 0px;
+    left: 0px;
+	width: 100%;
+	height: 35px;
+
+    font: 24px normal arial,sans-serif;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: underline;
+    
+    color: white;
+    background-color: red;
+
+    cursor: pointer;
+}

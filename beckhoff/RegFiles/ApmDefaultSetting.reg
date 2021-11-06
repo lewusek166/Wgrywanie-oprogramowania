@@ -1,0 +1,136 @@
+REGEDIT4
+
+;-------------------------------------------------------------------------------
+; Ams Net Id
+;-------------------------------------------------------------------------------
+[HKEY_LOCAL_MACHINE\SOFTWARE\Beckhoff\TwinCAT\System]
+    "AmsNetId"=hex:05,0c,08,46,01,01
+
+[HKEY_LOCAL_MACHINE\Comm]
+    "BootCount"=dword:0
+
+;-------------------------------------------------------------------------------
+;Ftp erlauben
+;-------------------------------------------------------------------------------
+[HKEY_LOCAL_MACHINE\Comm\FTPD]
+    "AllowAnonymousVroots"=dword:1
+    "IsEnabled"=dword:1
+    "UserList"="webguest;guest"
+    "UseAuthentication"=dword:1
+    "AllowAnonymous"=dword:1
+    "AllowAnonymousUpload"=dword:1
+    "DefaultDir"="\"
+    "IdleTimeout"=dword:12C
+    "DebugOutputChannels"=dword:2
+    "DebugOutputMask"=dword:17
+    "BaseDir"="\Windows"
+    "LogSize"=dword:1000
+
+;-------------------------------------------------------------------------------
+;Explorer Einstellung
+;-------------------------------------------------------------------------------
+[HKEY_LOCAL_MACHINE\Explorer]
+;Details
+    "ListStyle"=dword:1
+    "RecycleBinSize"=dword:A
+;zeige erweiterung   g
+    "ShowExt"=dword:1
+;Systemdateien anzeigen
+    "ShowSys"=dword:0
+;Versteckte Dateien anzeigen
+    "ViewAll"=dword:
+    "UseCompatibleBGImage"=dword:1
+    "UseRecycleBin"=dword:1
+    "Use2ndClipboard"=dword:1
+    "ExpandControlPanel"=dword:1
+    "Suspend"=dword:1
+
+;-------------------------------------------------------------------------------
+; DateiEndungen verknüpfen
+;-------------------------------------------------------------------------------
+[HKEY_CLASSES_ROOT\.log]
+    "Content Type"="text/plain"
+    "Default"="txtfile"
+[HKEY_CLASSES_ROOT\.csv]
+    "Content Type"="text/plain"
+    "Default"="txtfile"
+
+;-------------------------------------------------------------------------------
+; Zeitserver auf die Inbetriebnahme Rechner
+;-------------------------------------------------------------------------------
+[HKEY_LOCAL_MACHINE\Services\TIMESVC]
+    "UserProcGroup"=dword:00000002
+    "Flags"=dword:00000010
+    "multicastperiod"=dword:36EE80
+    "threshold"=dword:5265C00
+    "recoveryrefresh"=dword:36EE80
+    "refresh"=dword:5265C00
+    "Context"=dword:0
+    "Autoupdate" = dword:1
+    "server" = "192.168.100.200"
+    ;"Server"="time.windows.com"
+    "ServerRole" = dword:0
+    "Trustlocalclock" = dword:0
+    "Dll"="timesvc.dll"
+    "Keep"=dword:1
+    "Prefix"="NTP"
+    "Index"=dword:0
+
+;-------------------------------------------------------------------------------
+; Automatically adjust clock for daylight saving
+;-------------------------------------------------------------------------------
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Clock]
+    "ShowDSTUI"=dword:00000001
+    "AutoDST"=dword:00000001
+    "NetworkTimeNotifyUser"=dword:0
+
+;-------------------------------------------------------------------------------
+; Regional settings "German"
+;-------------------------------------------------------------------------------
+[HKEY_LOCAL_MACHINE\nls]
+    "DefaultLCID" = dword:00000809
+
+[HKEY_LOCAL_MACHINE\nls\overrides]
+    ;"IDate"=dword:00000001
+    ;"SSDte"="dd.MM.yyyy"
+    ;"LCID"=dword:00000407
+    "LCID" = dword:00000809
+
+;-------------------------------------------------------------------------------
+; Timezone Amsterdam, Berlin, Bern, Automatically adjust clock
+;-------------------------------------------------------------------------------
+[HKEY_LOCAL_MACHINE\Time]
+    "TZID"=dword:0000053C
+    "TimeZoneInformation"=hex:\
+      C4,FF,FF,FF,57,00,2E,00,20,00,45,00,75,00,72,00,6F,00,70,00,65,00,20,00,53,\
+      00,74,00,61,00,6E,00,64,00,61,00,72,00,64,00,20,00,54,00,69,00,6D,00,65,00,\
+      00,00,64,00,20,00,54,00,69,00,6D,00,65,00,00,00,00,00,00,00,0A,00,00,00,05,\
+      00,03,00,00,00,00,00,00,00,00,00,00,00,57,00,2E,00,20,00,45,00,75,00,72,00,\
+      6F,00,70,00,65,00,20,00,44,00,61,00,79,00,6C,00,69,00,67,00,68,00,74,00,20,\
+      00,54,00,69,00,6D,00,65,00,00,00,74,00,20,00,54,00,69,00,6D,00,65,00,00,00,\
+      00,00,00,00,03,00,00,00,05,00,02,00,00,00,00,00,00,00,C4,FF,FF,FF
+
+[HKEY_LOCAL_MACHINE\Time Zones]
+@ = "UTC"
+
+[HKEY_LOCAL_MACHINE\System\State\DateTime]
+    "NetworkTime Enabled"=dword:1
+    "NetworkTimeNotifyValue"=dword:60
+
+;-------------------------------------------------------------------------------
+;HintergrundBild
+;-------------------------------------------------------------------------------
+[HKEY_CURRENT_USER\ControlPanel\Desktop]
+    "Wallpaper"="\HARD DISK\SYSTEM\Background-Agv.jpg"
+    "Tile"=dword:0
+
+;-------------------------------------------------------------------------------
+; Pfade für den WebServer von \www auf \
+;-------------------------------------------------------------------------------
+[HKEY_LOCAL_MACHINE\Comm\HTTPD\VROOTS\/]
+    "Default"="\Hard Disk\"
+    "a"=dword:0
+    "Redirect"="/remoteadmin/"
+
+
+; DateiEnde

@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Device Manager</title>
+
+        <link rel="stylesheet" type="text/css" href="style/style.css" />
+        <script type="text/javascript" src="upnp.js"></script>
+        <!-- helper -->
+        <script type="text/javascript" src="helper/defines.js"></script>
+        <script type="text/javascript" src="helper/helper.js"></script>
+        <script type="text/javascript" src="helper/dataStream.js"></script>
+        <script type="text/javascript">
+            Helper.LoadJS("helper/secwiz.js?=" + new Date().getTime());
+        </script>
+        <!-- framework -->
+        <script type="text/javascript" src="DeviceManager.js"></script>
+        <!--    controls    -->
+        <link rel="stylesheet" type="text/css" href="controls/controlLib.css" />
+        <script type="text/javascript" src="controls/controlLib.js"></script>
+        <!--    communication   -->        
+        <script type="text/javascript" src="communication/error.js"></script>
+        <script type="text/javascript" src="communication/moduleList.js"></script>
+        <script type="text/javascript" src="communication/mdp.js"></script>
+        <!--    websites    -->
+        <script type="text/javascript" src="pages/_template_page.js"></script>
+        <script type="text/javascript" src="pages/page_Device_System.js"></script>
+        <script type="text/javascript" src="pages/page_Device_Connectivity.js"></script>
+        <script type="text/javascript" src="pages/page_Device_BootOptions.js"></script>
+        <script type="text/javascript" src="pages/page_Hardware_Mainboard.js"></script>
+        <script type="text/javascript" src="pages/page_Hardware_Equipment.js"></script>
+        <script type="text/javascript" src="pages/page_Hardware_HDD.js"></script>
+        <script type="text/javascript" src="pages/page_Hardware_RAID.js"></script>
+        <script type="text/javascript" src="pages/page_Hardware_Nic.js"></script>
+        <script type="text/javascript" src="pages/page_Software_OperatingSystem.js"></script>
+        <script type="text/javascript" src="pages/page_Software_SystemSettings.js"></script>
+        <script type="text/javascript" src="pages/page_Software_FileSystem.js"></script>
+        <script type="text/javascript" src="pages/page_Software_SMB.js"></script>
+        <script type="text/javascript" src="pages/page_TwinCAT_Status.js"></script>
+        <script type="text/javascript" src="pages/page_TwinCAT_Connectivity.js"></script>
+        <script type="text/javascript" src="pages/page_Security_Wizard.js"></script>
+        <script type="text/javascript" src="pages/page_Security_AccessRights.js"></script>
+        <script type="text/javascript" src="pages/page_Security_Certificate.js"></script>
+
+        <script type="text/javascript">
+            var LogError = function (Msg) {
+                var elemBody = document.getElementById("Body");
+                if (elemBody) { elemBody.innerHTML = '<div class="error">' + Msg + '</div>'; }
+            }
+            var CheckScripts = function () {
+                try{
+                    if (window.DevMan == undefined ||
+                        window.CommunicationModule_ERROR == undefined ||
+                        window.CommunicationModule_moduleList == undefined ||
+                        window.ControlLib == undefined ||
+                        window.dataStream == undefined ||
+                        window.Defines == undefined ||
+                        window.Helper == undefined ||
+                        window.Page_Template == undefined ||
+                        window.document.styleSheets.length < 2) {
+                        return false;
+                    }
+                    else { return true; }
+                }
+                catch (e) { return false; }
+            }
+            var StartDeviceManager = function () {
+                try {
+                    if (CheckScripts()) {
+                        var browserInfo = Helper.getBrowserInfo();
+                        if (browserInfo.name == "MSIE" && browserInfo.version < 7) {
+                            LogError('Your Browserversion (' + browserInfo.name + ' ' + browserInfo.version + ') is not supported!<br>Please install at least Internet Explorer 7.0');
+                        }
+                        else {
+                            window.DevMan.Start();
+                        }
+                    }
+                    else
+                    {
+                        if (location.pathname == "/config") {
+                            location.replace(location.href + "/");
+                            return;
+                        }
+                        else {
+                            LogError("The Web Server is too busy at this time.");
+                        }
+                    }
+                }
+                catch (e) { LogError("Could not start Device Manager. Please check your Web Server!"); }
+            }
+        </script>
+    </head>
+
+    <body onload="StartDeviceManager();">
+        <div id="OverlayLoading" class="overlay"></div>
+        <div id="OverlayError" class="overlay"></div>
+        <div id="OverlaySecurityWarning" class="security_warning_container"></div>
+        <div id="Head">
+            <img id="TitleImage" alt="" src="res/website/other/main-icon.png"/>
+            <div id="TitleText">BECKHOFF Device Manager</div>
+        </div>
+        <div id="Body"></div>
+        <div id="gradient_top"></div>
+        <div id="gradient_bottom"></div>
+    </body>
+</html>

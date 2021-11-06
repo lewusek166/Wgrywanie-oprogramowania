@@ -1,0 +1,5 @@
+;-------------------------------------------------------------------------------
+; Enable singletouch mode for MT7 touch screen
+;-------------------------------------------------------------------------------
+[HKEY_LOCAL_MACHINE\Drivers\BuiltIn\TwTouch\Parameters]
+    "HIDMode"=dword:0

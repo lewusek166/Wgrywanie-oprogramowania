@@ -1,0 +1,831 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApmPlusConfig. reqver="1.8" linked="The minimal required version of Apm+ KonfigurationsBuilder-Bde-Die minimal erforderliche Version von Apm+ KonfigurationsBuilder" vehicle="1: EVehicleType_Eks" version="7.0">
+    <BatteryConfiguration name="Battery" linked="Battery Parameter-Bde-">
+        <BatteryChargeConfig name="Charge" linked="Automatic charging-Bde-">
+            <ChargerMissingTimeout time="12000" linked="Maximum waiting time until Li-Ion charger is active-Bde-">12000</ChargerMissingTimeout>
+            <ChargerPresentDelay time="4000" linked="Wait for the Li-Ion charger to be active-Bde-">4000</ChargerPresentDelay>
+            <ChargingActivationDelay time="800" linked="LiIon II - Waiting time from CAN Connection until activation of the charging process on the charger-Bde-">800</ChargingActivationDelay>
+            <ChargingCANDeactivationDelay time="5500" linked="LiIon II - Waiting time from stopping the charging process until the CAN connection between the battery and the charger-Bde-">5500</ChargingCANDeactivationDelay>
+            <ChargingContactorConnectDelay time="500" linked="LiIon II - Waiting time from CAN connection until the closing of the main charging contacts-Bde-">500</ChargingContactorConnectDelay>
+            <ChargingContactorDisconnectDelay time="5000" linked="LiIon II - Waiting time from stopping the charging process to opening the main charging contacts-Bde-">5000</ChargingContactorDisconnectDelay>
+            <DisableLocalUnitDelay time="1250" linked="Time to 'finish loading' signal-Bde-">1250</DisableLocalUnitDelay>
+            <DoubleRestartAfterAutomaticCharging bool="false" linked="If true, basic truck is restarted twice after automatic charging to reset errors in basic truck and battery controller-Bde-">false</DoubleRestartAfterAutomaticCharging>
+            <ErrorTimeout time="60000" linked="Timeout after a fault occurs, if the charger does not switch off until then, the charging contactor in the vehicle is torn open under load-Bde-">60000</ErrorTimeout>
+            <LowerForksBeforeCharging bool="false">true</LowerForksBeforeCharging>
+            <MaximumPostChargeTime time="300000" linked="Maximum waiting time after charging-Bde-">300000</MaximumPostChargeTime>
+            <MaximumPreChargeTime time="300000" linked="Maximum waiting time before starting the charging process-Bde-">300000</MaximumPreChargeTime>
+            <Mode EChargingMode="0: EChargingMode_Manual" linked="Charging mode, _Automatic = lead, _Fast = NiCd, _LiIon = LiIon-Bde-">4: EChargingMode_LiIonII</Mode>
+            <ResetTime time="1000">1000</ResetTime>
+            <VehicleSwitchedOffDelay time="5000" linked="Waiting time until the Agv is switched off, or Li-Ion charger connection stable-Bde-">5000</VehicleSwitchedOffDelay>
+        </BatteryChargeConfig>
+        <BatteryMonitoringConfig name="Monitoring">
+            <BatteryCompartmentFanMonitoringTime time="100">100</BatteryCompartmentFanMonitoringTime>
+        </BatteryMonitoringConfig>
+        <BatterySettingsConfig name="Settings">
+            <UnlearnTime time="5000">5000</UnlearnTime>
+        </BatterySettingsConfig>
+    </BatteryConfiguration>
+    <DriveConfiguration name="Drive">
+        <DriveMonitoringConfig name="Monitoring" safety="true">
+            <ImplausibleDistanceMonitoringTime time="500">500</ImplausibleDistanceMonitoringTime>
+            <ImplausibleDistanceRange_pc sint16="12">12</ImplausibleDistanceRange_pc>
+            <MovingInStraightDirectionDebounceTime time="300">300</MovingInStraightDirectionDebounceTime>
+            <MovingInStraightDirectionThreshold_cdeg sint16="1000">300</MovingInStraightDirectionThreshold_cdeg>
+            <OutsideRangeDelta_mms sint16="300">100</OutsideRangeDelta_mms>
+            <OutsideRangeLookbehindCycles sint16="18">18</OutsideRangeLookbehindCycles>
+            <OutsideRangeMonitoringTime time="500">500</OutsideRangeMonitoringTime>
+            <OutsideRangeSmoothingElements sint16="5">5</OutsideRangeSmoothingElements>
+            <SelfMovmentTreshold_mm sint16="5">5</SelfMovmentTreshold_mm>
+            <StartMovementDelay time="500">600</StartMovementDelay>
+            <WrongDirectionMonitoringTime time="1000">1000</WrongDirectionMonitoringTime>
+        </DriveMonitoringConfig>
+        <DriveSettingsConfig name="Settings">
+            <DriveSpeedCorrectionLookupTable name="DriveSpeedCorrection">
+                <At0300mms float32="1.0" linked="Correction factor for the speed at  300mm/s-Bde-" min="0.8" max="1.2">1.0</At0300mms>
+                <At0600mms float32="1.0" linked="Correction factor for the speed at  600mm/s-Bde-" min="0.8" max="1.2">1.0</At0600mms>
+                <At0900mms float32="1.0" linked="Correction factor for the speed at  900mm/s-Bde-" min="0.8" max="1.2">1.0</At0900mms>
+                <At1200mms float32="1.0" linked="Correction factor for the speed at 1200mm/s-Bde-" min="0.8" max="1.2">1.0</At1200mms>
+                <At1500mms float32="1.0" linked="Correction factor for the speed at 1500mm/s-Bde-" min="0.8" max="1.2">1.0</At1500mms>
+                <At1800mms float32="1.0" linked="Correction factor for the speed at 1800mm/s-Bde-" min="0.8" max="1.2">1.0</At1800mms>
+                <At2100mms float32="1.0" linked="Correction factor for the speed at 2100mm/s-Bde-" min="0.8" max="1.2">1.0</At2100mms>
+                <At2400mms float32="1.0" linked="Correction factor for the speed at 2400mm/s-Bde-" min="0.8" max="1.2">1.0</At2400mms>
+                <At2700mms float32="1.0" linked="Correction factor for the speed at 2700mm/s-Bde-" min="0.8" max="1.2">1.0</At2700mms>
+            </DriveSpeedCorrectionLookupTable>
+            <DriveSpeedCorrectionLookupTable name="LoadSpeedCorrection">
+                <At0300mms float32="1.0" linked="Correction factor for the speed at  300mm/s-Bde-" min="0.8" max="1.2">1.0</At0300mms>
+                <At0600mms float32="1.0" linked="Correction factor for the speed at  600mm/s-Bde-" min="0.8" max="1.2">1.0</At0600mms>
+                <At0900mms float32="1.0" linked="Correction factor for the speed at  900mm/s-Bde-" min="0.8" max="1.2">1.0</At0900mms>
+                <At1200mms float32="1.0" linked="Correction factor for the speed at 1200mm/s-Bde-" min="0.8" max="1.2">1.0</At1200mms>
+                <At1500mms float32="1.0" linked="Correction factor for the speed at 1500mm/s-Bde-" min="0.8" max="1.2">1.0</At1500mms>
+                <At1800mms float32="1.0" linked="Correction factor for the speed at 1800mm/s-Bde-" min="0.8" max="1.2">1.0</At1800mms>
+                <At2100mms float32="1.0" linked="Correction factor for the speed at 2100mm/s-Bde-" min="0.8" max="1.2">1.0</At2100mms>
+                <At2400mms float32="1.0" linked="Correction factor for the speed at 2400mm/s-Bde-" min="0.8" max="1.2">1.0</At2400mms>
+                <At2700mms float32="1.0" linked="Correction factor for the speed at 2700mm/s-Bde-" min="0.8" max="1.2">1.0</At2700mms>
+            </DriveSpeedCorrectionLookupTable>
+            <DriveSpeedScaleFactor_mms sint16="1944" linked="Eks: 1,7m/s 1944, 2,5m/s 2500-Bde-">2500</DriveSpeedScaleFactor_mms>
+            <MaximumNegativeDriveSpeed_mms sint16="-2450">-1945</MaximumNegativeDriveSpeed_mms>
+            <MaximumNegativeDriveSpeed_pm sint16="-1000">-1000</MaximumNegativeDriveSpeed_pm>
+            <MaximumPositiveDriveSpeed_mms sint16="2450">2500</MaximumPositiveDriveSpeed_mms>
+            <MaximumPositiveDriveSpeed_pm sint16="1000">1000</MaximumPositiveDriveSpeed_pm>
+            <NumberOfSmoothingElementsForSpeedMeasurement sint16="10">10</NumberOfSmoothingElementsForSpeedMeasurement>
+            <PredictDistanceFactor float32="0.8" linked="Compensation factor for CAN jitter on distance signal-Bde-">0.8</PredictDistanceFactor>
+            <UnlearnTime time="5000" linked="How long the eventcode will be shown on opt-Bde-">5000</UnlearnTime>
+        </DriveSettingsConfig>
+        <DriveSpeedReductionConfig name="SpeedReduction">
+            <DriveSpeedReductionLookupTable name="DriveDirection">
+                <CurveDebounce time="1000">1000</CurveDebounce>
+                <DriveSpeedReductionNode name="Nodes">
+                    <DriveSpeedReductionNode_00 name="Nodes[0]">
+                        <Abs_ActualSteeringAngle_cdeg sint16="0">0</Abs_ActualSteeringAngle_cdeg>
+                        <Abs_MaxAllowedSpeed_mms sint16="1500">2500</Abs_MaxAllowedSpeed_mms>
+                    </DriveSpeedReductionNode_00>
+                    <DriveSpeedReductionNode_01 name="Nodes[1]">
+                        <Abs_ActualSteeringAngle_cdeg sint16="400">200</Abs_ActualSteeringAngle_cdeg>
+                        <Abs_MaxAllowedSpeed_mms sint16="1500">2500</Abs_MaxAllowedSpeed_mms>
+                    </DriveSpeedReductionNode_01>
+                    <DriveSpeedReductionNode_02 name="Nodes[2]">
+                        <Abs_ActualSteeringAngle_cdeg sint16="900">720</Abs_ActualSteeringAngle_cdeg>
+                        <Abs_MaxAllowedSpeed_mms sint16="1088">930</Abs_MaxAllowedSpeed_mms>
+                    </DriveSpeedReductionNode_02>
+                    <DriveSpeedReductionNode_03 name="Nodes[3]">
+                        <Abs_ActualSteeringAngle_cdeg sint16="2600">5900</Abs_ActualSteeringAngle_cdeg>
+                        <Abs_MaxAllowedSpeed_mms sint16="597">520</Abs_MaxAllowedSpeed_mms>
+                    </DriveSpeedReductionNode_03>
+                    <DriveSpeedReductionNode_04 name="Nodes[4]">
+                        <Abs_ActualSteeringAngle_cdeg sint16="6000">6000</Abs_ActualSteeringAngle_cdeg>
+                        <Abs_MaxAllowedSpeed_mms sint16="300">300</Abs_MaxAllowedSpeed_mms>
+                    </DriveSpeedReductionNode_04>
+                    <DriveSpeedReductionNode_05 name="Nodes[5]">
+                        <Abs_ActualSteeringAngle_cdeg sint16="9150">9000</Abs_ActualSteeringAngle_cdeg>
+                        <Abs_MaxAllowedSpeed_mms sint16="300">300</Abs_MaxAllowedSpeed_mms>
+                    </DriveSpeedReductionNode_05>
+                </DriveSpeedReductionNode>
+                <MaxCurveSpeed_mms sint16="800" min="0">800</MaxCurveSpeed_mms>
+            </DriveSpeedReductionLookupTable>
+            <DriveSpeedReductionLookupTable name="LoadDirection">
+                <CurveDebounce time="1000">1000</CurveDebounce>
+                <DriveSpeedReductionNode name="Nodes">
+                    <DriveSpeedReductionNode_00 name="Nodes[0]">
+                        <Abs_ActualSteeringAngle_cdeg sint16="0">0</Abs_ActualSteeringAngle_cdeg>
+                        <Abs_MaxAllowedSpeed_mms sint16="-1500">-1500</Abs_MaxAllowedSpeed_mms>
+                    </DriveSpeedReductionNode_00>
+                    <DriveSpeedReductionNode_01 name="Nodes[1]">
+                        <Abs_ActualSteeringAngle_cdeg sint16="600">400</Abs_ActualSteeringAngle_cdeg>
+                        <Abs_MaxAllowedSpeed_mms sint16="-1500">-1500</Abs_MaxAllowedSpeed_mms>
+                    </DriveSpeedReductionNode_01>
+                    <DriveSpeedReductionNode_02 name="Nodes[2]">
+                        <Abs_ActualSteeringAngle_cdeg sint16="1400">2223</Abs_ActualSteeringAngle_cdeg>
+                        <Abs_MaxAllowedSpeed_mms sint16="-1100">-800</Abs_MaxAllowedSpeed_mms>
+                    </DriveSpeedReductionNode_02>
+                    <DriveSpeedReductionNode_03 name="Nodes[3]">
+                        <Abs_ActualSteeringAngle_cdeg sint16="2300">5900</Abs_ActualSteeringAngle_cdeg>
+                        <Abs_MaxAllowedSpeed_mms sint16="-855">-670</Abs_MaxAllowedSpeed_mms>
+                    </DriveSpeedReductionNode_03>
+                    <DriveSpeedReductionNode_04 name="Nodes[4]">
+                        <Abs_ActualSteeringAngle_cdeg sint16="6000">6000</Abs_ActualSteeringAngle_cdeg>
+                        <Abs_MaxAllowedSpeed_mms sint16="-300">-300</Abs_MaxAllowedSpeed_mms>
+                    </DriveSpeedReductionNode_04>
+                    <DriveSpeedReductionNode_05 name="Nodes[5]">
+                        <Abs_ActualSteeringAngle_cdeg sint16="9150">9000</Abs_ActualSteeringAngle_cdeg>
+                        <Abs_MaxAllowedSpeed_mms sint16="-300">-300</Abs_MaxAllowedSpeed_mms>
+                    </DriveSpeedReductionNode_05>
+                </DriveSpeedReductionNode>
+                <MaxCurveSpeed_mms sint16="800">800</MaxCurveSpeed_mms>
+            </DriveSpeedReductionLookupTable>
+            <MaxStationExitSpeed_mms sint16="750" linked="Maximum speed when exiting a load handling station in drive direction. Depends on available safety field configuration-Bde-">750</MaxStationExitSpeed_mms>
+            <Warnfield_SlowdownSlope_mms2 sint16="500" linked="Deceleartion slope in [mm/s^2] for speed reduction due to warning field-Bde-">500</Warnfield_SlowdownSlope_mms2>
+        </DriveSpeedReductionConfig>
+        <DriveWeightAdjustmentConfig name="WeightAdjustment">
+            <Enable bool="false" linked="Enable adjusting driving behavior depending on weight of the load-Bde-">false</Enable>
+            <Factors name="Factors" linked="Lookup table mapping the weight in 100kg intervals to distance adjustment factors-Bde-">
+                <Factors_00 float32="0.0">0.0</Factors_00>
+                <Factors_01 float32="0.0">0.0</Factors_01>
+                <Factors_02 float32="0.0">0.0</Factors_02>
+                <Factors_03 float32="0.0">0.0</Factors_03>
+                <Factors_04 float32="0.0">0.0</Factors_04>
+                <Factors_05 float32="0.0">0.0</Factors_05>
+                <Factors_06 float32="0.0">0.0</Factors_06>
+                <Factors_07 float32="0.0">0.0</Factors_07>
+                <Factors_08 float32="0.0">0.0</Factors_08>
+                <Factors_09 float32="0.0">0.0</Factors_09>
+                <Factors_10 float32="0.0">0.0</Factors_10>
+                <Factors_11 float32="0.0">0.0</Factors_11>
+                <Factors_12 float32="0.0">0.0</Factors_12>
+                <Factors_13 float32="0.0">0.0</Factors_13>
+                <Factors_14 float32="0.0">0.0</Factors_14>
+            </Factors>
+        </DriveWeightAdjustmentConfig>
+        <PidParameterSet name="Control">
+            <EnableDFactor bool="false">false</EnableDFactor>
+            <EnableIFactor bool="false">false</EnableIFactor>
+            <EnablePFactor bool="false">false</EnablePFactor>
+            <Kp float32="0.9">0.9</Kp>
+            <Ta float32="0.03">0.03</Ta>
+            <Tn float32="1.0">1.0</Tn>
+            <Tv float32="1.0">1.0</Tv>
+        </PidParameterSet>
+    </DriveConfiguration>
+    <ForkConfiguration name="Fork" linked="ForkSensor, ForkSettings, LoadWeight-Bde-">
+        <ForkHeightSensorConfig name="Encoder" linked="Lifting height encoder configuration-Bde-">
+            <DebounceTime time="500" linked="Debounce time, do not immediately trigger an error-Bde-">500</DebounceTime>
+            <DistancePerRev_mm sint32="385" linked="Distance in [mm] in one single revolution of the encoder-Bde-">385</DistancePerRev_mm>
+            <EncoderType EEncoderType="2: EEncoderType_ViaCan" linked="CHANGED COMMENT-[ Choice between no encoder for Ezs and special types, Baumer or Sick Encoder, or for the Eks over Can. If Sick can be additionally selected a DT35 / 50 as comparison reference ]- Choice between Sick Encoder for Erc Switch for Ere, none for Ezs and special types, or for the Eks over Can.-Bde-CHANGED COMMENT-[ Wahl zwischen keinem Encoder für Ezs und Sondertypen, Baumer- oder Sick-Encoder, oder für die Eks über Can. Wenn Sick ausgewählt ist, kann zusätzlich ein DT35 / 50 als Vergleichsreferenz gewählt werden ]- Wahl zwischen Sick-Encoder für Erc, Switch für Ere, None für Ezs und Sonderfahrzeuge, oder für Eks über Can.">2: EEncoderType_ViaCan</EncoderType>
+            <InsideRange_mm sint16="80" linked="For the Second Encoder on Erc both values must be within this tolerance-Bde-">50</InsideRange_mm>
+            <LiftMastType ELiftMastType="0: ELiftMastType_Default" linked="Selection of the lifting mast. DZ Mast with free lift-Bde-Auswahl des Hubgerüstes. DZ Mast mit Freihub">0: ELiftMastType_Default</LiftMastType>
+            <MaxResolution_bits sint32="26" linked="Resolution of the encoder in bits-Bde-">26</MaxResolution_bits>
+            <StepsPerRev sint32="16384" linked="Steps in one single revolution of the encoder-Bde-">16384</StepsPerRev>
+        </ForkHeightSensorConfig>
+        <ForkMonitoringConfig name="Monitoring" safety="true">
+            <BelowZeroThreshold_mm int16="3" linked="-Bde-Hubhöhenwert in mm unter Null der noch als in Ordnung toleriert wird.">3</BelowZeroThreshold_mm>
+            <DelayStopMonitoringTime time="2000">2000</DelayStopMonitoringTime>
+            <EnableBelowZeroDetection bool="false" linked="-Bde-Wenn aktiv, wird die aktuelle Höhe im AutomatikMode auf deutliches Unterschreiten von 0 geprüft.">false</EnableBelowZeroDetection>
+            <EnableOverHeightDetection bool="false" linked="If active, the current altitude in the automatic mode is compared with the MaximumForkHeight_mm and stopped if exceeded.-Bde-">false</EnableOverHeightDetection>
+            <LiftRangeHistorySupervisionDeactivingHeight sint16="350">120</LiftRangeHistorySupervisionDeactivingHeight>
+            <OutsideRangeDelta_mm sint16="60">60</OutsideRangeDelta_mm>
+            <OutsideRangeLookbehindCycles sint16="24">24</OutsideRangeLookbehindCycles>
+            <OutsideRangeMonitoringTime time="1500">1500</OutsideRangeMonitoringTime>
+            <OutsideRangeSmoothingElements sint16="5">5</OutsideRangeSmoothingElements>
+            <SelfMovementMonitoringTime time="500">500</SelfMovementMonitoringTime>
+            <SelfMovementThreshold_mm sint16="20">20</SelfMovementThreshold_mm>
+            <StartMovementDelay time="600">600</StartMovementDelay>
+            <WrongDirectionMonitoringTime time="1000">5000</WrongDirectionMonitoringTime>
+        </ForkMonitoringConfig>
+        <ForkSettingsConfig name="Settings">
+            <BoostMinSpeedMovingToZeroFactor sint16="1">1</BoostMinSpeedMovingToZeroFactor>
+            <DelayNewOperation time="2000">2000</DelayNewOperation>
+            <LiftSpeedScaleFactor_mms sint16="350" linked="100% = x mm/s-Bde-">266</LiftSpeedScaleFactor_mms>
+            <LowerLiftmastOffsetFactor_Loaded sint16="2">0</LowerLiftmastOffsetFactor_Loaded>
+            <LowerLiftmastOffsetFactor_Unloaded sint16="2">0</LowerLiftmastOffsetFactor_Unloaded>
+            <MaximumNegativeLiftSpeed_mms sint16="-350">-220</MaximumNegativeLiftSpeed_mms>
+            <MaximumNegativeLiftSpeed_pc sint16="-100">-100</MaximumNegativeLiftSpeed_pc>
+            <MaximumNegativeSpeedChange_mms float32="-380" linked="Affects the lowering speed, positioning accuracy is worse-Bde-" min="-400" max="-300">-380.0</MaximumNegativeSpeedChange_mms>
+            <MaximumPositiveLiftSpeed_mms sint16="350">200</MaximumPositiveLiftSpeed_mms>
+            <MaximumPositiveLiftSpeed_pc sint16="100">100</MaximumPositiveLiftSpeed_pc>
+            <MaximumPositiveSpeedChange_mms float32="350" linked="Affects the lifting speed, positioning accuracy is worse-Bde-" min="300" max="400">350.0</MaximumPositiveSpeedChange_mms>
+            <MinimumAbsoluteLiftSpeed_mms sint16="30">30</MinimumAbsoluteLiftSpeed_mms>
+            <NumberOfSmoothingElementsForSpeedMeasurement sint16="10">10</NumberOfSmoothingElementsForSpeedMeasurement>
+            <RaiseLiftmastOffsetFactor_Loaded sint16="0">0</RaiseLiftmastOffsetFactor_Loaded>
+            <RaiseLiftmastOffsetFactor_Unloaded sint16="0">0</RaiseLiftmastOffsetFactor_Unloaded>
+            <RearSensorReactivationHeight_mm sint16="12" linked="In combination with travel height 0 for ERC213a can activate PSS in load direction again-Bde-">12</RearSensorReactivationHeight_mm>
+            <ReducedNegativeSpeedChange_mms float32="-50.0" linked="Reduced fork acceleration when lowering to prevent sensor stops by traversing the PSS field on Fast Flex-Bde-">-50.0</ReducedNegativeSpeedChange_mms>
+            <ShortDistanceMultiplier sint16="1" min="1" max="4">1</ShortDistanceMultiplier>
+            <TargetReachedDebounceTime time="50">50</TargetReachedDebounceTime>
+            <UnlearnTime time="5000" linked="How long the eventcode will be shown on opt-Bde-">5000</UnlearnTime>
+        </ForkSettingsConfig>
+        <PidParameterSet name="Control">
+            <EnableDFactor bool="false">false</EnableDFactor>
+            <EnableIFactor bool="false">false</EnableIFactor>
+            <EnablePFactor bool="true">true</EnablePFactor>
+            <Kp float32="1.2">1.2</Kp>
+            <Ta float32="0.2">0.2</Ta>
+            <Tn float32="1.0">1.0</Tn>
+            <Tv float32="1.0">1.0</Tv>
+        </PidParameterSet>
+        <SideShiftSettingsConfig name="SideshiftSettings" linked="Erc, Eks only-Bde-">
+            <SideShiftAvailable bool="false" linked="Sideshift (Eks)-Bde-">false</SideShiftAvailable>
+        </SideShiftSettingsConfig>
+        <StackingSettingsConfig name="StackingSettings" linked="Erc, Eks only-Bde-">
+            <BeamLength_mm sint16="1250" linked="The Distance between Laser and ForkTip-Bde-Der Abstand zwischen Laser und ForkTip">1250</BeamLength_mm>
+            <ConstTargetSpeed_mms sint16="350" linked="The speed with which the fork is moved during scanning-Bde-Die Geschwindigkeit, mit der die Gabel beim Scannen bewegt wird">350</ConstTargetSpeed_mms>
+            <DistanceForkTipToStack_mm sint16="200" linked="Erc only. The Distance between Fork Tip and Pallet. Within ~ 10 cm.-Bde-">200</DistanceForkTipToStack_mm>
+            <DistanceThroughStack_mm sint16="1000" linked="Pallet depth, the sensor must additionally see this length in order to be recognized as free-Bde-Palettentiefe, der Sensor muss diese Länge zusätzlich sehen, um als frei erkannt zu werden">1000</DistanceThroughStack_mm>
+            <LoadPosCheckAvailable bool="false" linked="Position check after unloading active-Bde-Nur Eks. Positionsprüfung nach dem Entladen aktiv">false</LoadPosCheckAvailable>
+            <LoadPosCheckShortDistMulti sint16="4" linked="How long the UnLoadCheck drives slowly. Multiplier x SlowDowndistance_mm-Bde-Wie lange der UnLoadCheck langsam fährt. Multiplikator x SlowDowndistance_mm" min="1" max="4">4</LoadPosCheckShortDistMulti>
+            <LoadPosCheckTipToBeFree EForkTipSensor="3: EFourOfFour" linked="Eks only. Number of sensors that must be free after to stop the unload procedure earlier. The fork will be moved down until the sensors are free, or the postion height is reached-Bde-Anzahl der Sensoren, die danach frei sein müssen, um den Entladevorgang früher zu beenden. Die Gabel wird nach unten bewegt, bis die Sensoren frei sind oder die Positionshöhe erreicht ist.">3: EFourOfFour</LoadPosCheckTipToBeFree>
+            <PalletOffset_mm sint16="50" linked="Offset of the pallet in x-direction to the bottom pallet-Bde-Versatz der Palette in x-Richtung zur unteren Palette">50</PalletOffset_mm>
+            <RangeToBeEqual_mm sint16="50" linked="The measured distance of both sensors must be within this window-Bde-Der gemessene Abstand beider Sensoren muss innerhalb dieses Fensters liegen">50</RangeToBeEqual_mm>
+            <ReflectingHysteresis_mm sint16="200" linked="Switching hysteresis, maximum up to the middle pallet foot-Bde-Schalthysterese, maximal bis zum mittleren Palettenfuß">200</ReflectingHysteresis_mm>
+            <StackingAvailable bool="false" linked="Pallet stack detection active-Bde-Nur Eks. Palettenstapel-Erkennung aktiv">true</StackingAvailable>
+            <zForkThickness_mm sint16="60" linked="The max. thickness of the fork-Bde-Die maximale Dicke der Gabel">60</zForkThickness_mm>
+            <zLoadDistance_mm sint16="20" linked="The distance between the fork and the recognized pallet base-Bde-Der Abstand zwischen der Gabel und der erkannten Palettenbasis">20</zLoadDistance_mm>
+            <zMaxScanHeight_mm sint16="1800" linked="The max. Height that can be scanned. In addition there is 2 * zScanOffset_mm (for offset and braking distance)-Bde-Die max. Höhe, die gescannt werden kann. Zusätzlich gibt es 2 * zScanOffset_mm (für Offset und Bremsweg)" min="0" max="1850">1800</zMaxScanHeight_mm>
+            <zPosLowerOffset_mm sint16="-15" linked="Distance between the lower inner laser point and the fork top-Bde-Abstand zwischen dem unteren inneren Laserpunkt und der Gabelspitze" min="-60" max="0">-15</zPosLowerOffset_mm>
+            <zPosUpperOffset_mm sint16="10" linked="Distance between the upper outer laser point and the fork top-Bde-Abstand zwischen dem oberen äußeren Laserpunkt und der Gabelspitze">10</zPosUpperOffset_mm>
+            <zScanFilter_mm sint16="10" linked="Every x mm in z-direction a measurement is used for error evaluation-Bde-Alle x mm in z-Richtung wird eine Messung zur Fehlerauswertung verwendet" min="0" max="20">10</zScanFilter_mm>
+            <zScanOffset_mm sint16="145" linked="The offset in z-direction, which is still scanned after the supposed recognition of the upper edge of the pallet, in order to recognize further pallets-Bde-Der Versatz in z-Richtung, der nach der vermeintlichen Erkennung der Palettenoberkante noch gescannt wird, um weitere Paletten zu erkennen">145</zScanOffset_mm>
+            <zScanStartHeight_mm sint16="10" linked="Start height for the pallet scan-Bde-Starthöhe für den Palettenscan">10</zScanStartHeight_mm>
+            <zToleranceWindow_mm sint16="50" linked="If, after the scan, the fork is at any height, and that height is within stack height plus excavation plus this value, no new altitude will be approached-Bde-Wenn sich die Gabel nach dem Scan auf einer beliebigen Höhe befindet und diese Höhe innerhalb der Stapelhöhe plus Aushub plus diesem Wert liegt, wird keine neue Höhe angefahren">50</zToleranceWindow_mm>
+        </StackingSettingsConfig>
+    </ForkConfiguration>
+    <HardwareLayerConfiguration name="HardwareLayer">
+        <HardwareLayerSteerTeachConfig name="SteerTeach">
+            <RevokeSignalTime time="250" linked="Timespan for which the revoke signal will be sent to the external safety PLC. Minimum is 200ms.-Bde-">250</RevokeSignalTime>
+            <SteerTeachTolerance_cdeg int16="125" linked="Tolerance range around 0 degrees in which the actual steering angle has to be during teaching-Bde-">125</SteerTeachTolerance_cdeg>
+            <SteerTeachtoleranceHoldTime time="250" linked="Timespan for which the steering angle has to remain in the tolerance range during teaching-Bde-">250</SteerTeachtoleranceHoldTime>
+            <TeachModeOnSignalTime time="250" linked="Timespan for which the teach mode on signal will be sent to the external safety PLC. Minimum is 200ms.-Bde-">250</TeachModeOnSignalTime>
+            <TeachRetries sint16="2" linked="Number of times the teaching process is retried if unsuccessful-Bde-">2</TeachRetries>
+            <TeachSignalTime time="250" linked="Timespan for which the teach signal will be sent to the external safety PLC. Minimum is 200ms.-Bde-">250</TeachSignalTime>
+            <TeachTimeout time="5000" linked="Timeout for waiting for external signal during teaching, e.g. waiting for steering to reach the tolerance or reaction of safety PLC or vehicle to teach signal-Bde-">5000</TeachTimeout>
+        </HardwareLayerSteerTeachConfig>
+    </HardwareLayerConfiguration>
+    <IpConfiguration name="Network">
+        <IpSettingsConfiguration name="Udp">
+            <CyclicTransmit time="0" linked="Duration after which cyclic messages will be sent ... 0 =&gt; Disable cyclic transmission-Bde-">1000</CyclicTransmit>
+            <HandshakeDebounce time="40" linked="Since handshake signals might come from different tasks have to debounce them as output order of function blocks might copy the handshake signal before the actual data-Bde-">40</HandshakeDebounce>
+            <LocalIp string="192.169.200.2" linked="Internal IP address - should always default to correct ethernet adapter-Bde-">192.168.100.2</LocalIp>
+            <LocalPort int32="49334" linked="Internal port number - used for receving data-Bde-">49333</LocalPort>
+            <ServerIp string="10.247.254.10" linked="Server IP address - default to laptop, site specific configuration done via WLX-Bde-">192.168.100.200</ServerIp>
+            <ServerPort int32="49334" linked="Server port number - used for sending data-Bde-">49333</ServerPort>
+            <SocketTimeout time="1000" linked="Timeout duration for socket operations-Bde-">1000</SocketTimeout>
+            <UnlearnTime time="5000" linked="How long the eventcode will be shown on opt-Bde-">5000</UnlearnTime>
+        </IpSettingsConfiguration>
+        <IpSettingsConfiguration name="Tcp">
+            <CyclicTransmit time="0" linked="Duration after which cyclic messages will be sent ... 0 =&gt; Disable cyclic transmission-Bde-">0</CyclicTransmit>
+            <HandshakeDebounce time="40" linked="Since handshake signals might come from different tasks have to debounce them as output order of function blocks might copy the handshake signal before the actual data-Bde-">40</HandshakeDebounce>
+            <LocalIp string="192.169.200.2" linked="Internal IP address - should always default to correct ethernet adapter-Bde-">192.168.100.2</LocalIp>
+            <LocalPort int32="49334" linked="Internal port number - used for receving data-Bde-">49334</LocalPort>
+            <ServerIp string="10.247.254.10" linked="Server IP address - default to laptop, site specific configuration done via WLX-Bde-">192.168.100.200</ServerIp>
+            <ServerPort int32="49334" linked="Server port number - used for sending data-Bde-">49334</ServerPort>
+            <SocketTimeout time="1000" linked="Timeout duration for socket operations-Bde-">1000</SocketTimeout>
+            <UnlearnTime time="5000" linked="How long the eventcode will be shown on opt-Bde-">5000</UnlearnTime>
+        </IpSettingsConfiguration>
+    </IpConfiguration>
+    <LightAndSoundConfiguration name="LightAndSound" linked="FloorSpot, Buzzer-Bde-">
+        <BlockingDelay time="10000">10000</BlockingDelay>
+        <EnableBuzzerOnMovement bool="false">false</EnableBuzzerOnMovement>
+        <EnableBuzzerWhileBlocked bool="false">false</EnableBuzzerWhileBlocked>
+        <FloorSpotPostRun time="5000">5000</FloorSpotPostRun>
+        <MovementBuzzerDuration time="3000">3000</MovementBuzzerDuration>
+    </LightAndSoundConfiguration>
+    <LogToFileConfiguration name="LogToFile" linked="Whether, and where the logfile is written-Bde-">
+        <LogToFileSettingsConfig name="Settings">
+            <BlackboxTriggerCode sint32="0" linked="Eventcode which should trigger Blackbox on Cvc side.-Bde-" min="9100" max="9999">0</BlackboxTriggerCode>
+            <PathExtern string="\Hard Disk2\" linked="External path specification (path must exist!)-Bde-">\Hard Disk2\</PathExtern>
+            <PathIntern string="\Hard Disk\ftp\" linked="Internal path specification (path must exist!)-Bde-">\Hard Disk\ftp\</PathIntern>
+            <Target ELogWrite="0: ELogWrite_None" linked="Where the log file is written externally requires a UsbStick, intern writes to Cf / SD card-Bde-">0: ELogWrite_None</Target>
+        </LogToFileSettingsConfig>
+    </LogToFileConfiguration>
+    <NavigationConfig name="Navigation">
+        <NavigationMonitoringConfig name="Monitoring">
+            <DebounceLostPositionTime time="1000">1000</DebounceLostPositionTime>
+            <HeightCheckDebounce time="1000">1000</HeightCheckDebounce>
+            <LoadSensorFailureMonitorinigTime time="100">100</LoadSensorFailureMonitorinigTime>
+        </NavigationMonitoringConfig>
+        <NavigationSettingsConfig name="Settings">
+            <NavigationSettingsHeightCheck name="HeightCheck">
+                <IsSensorHighActive bool="true" linked="Polarity of height check evaluation depends on actual sensor type. Set this to FALSE for TIM's-Bde-">true</IsSensorHighActive>
+                <NumberOfSensors int8="2" linked="Number of sensors that should be present in case feature is used. Musn't be more than 8 or less than 2-Bde-">2</NumberOfSensors>
+            </NavigationSettingsHeightCheck>
+            <UnlearnTime time="5000" linked="How long the eventcode will be shown on opt-Bde-">5000</UnlearnTime>
+        </NavigationSettingsConfig>
+    </NavigationConfig>
+    <SafetyConfiguration name="Safety" safety="true">
+        <SafetyImplementationConfiguration name="Implementation" safety="true">
+            <PssControl EPssControlImplementation="2: EPssControlImplementation_MasterSlave" cvc="true">2: EPssControlImplementation_MasterSlave</PssControl>
+        </SafetyImplementationConfiguration>
+        <SafetyMonitoringConfiguration name="Monitoring" safety="true">
+            <AckbuttonPlausibilityMonitoringTime time="300">300</AckbuttonPlausibilityMonitoringTime>
+            <ImplausibleSignalMonitoringTime time="0">0</ImplausibleSignalMonitoringTime>
+            <NavigationApplicationTimeout time="100">100</NavigationApplicationTimeout>
+            <ProtectionFieldTimeout time="0">0</ProtectionFieldTimeout>
+            <SensorStopShutoffDelay time="0">0</SensorStopShutoffDelay>
+            <VehicleApplicationTimeout time="0">0</VehicleApplicationTimeout>
+        </SafetyMonitoringConfiguration>
+        <SafetySettingsConfiguration name="Settings" safety="true">
+            <BackupAndRestorePortNumber int16="1001">1001</BackupAndRestorePortNumber>
+            <CurveHysteresis_FastSpeed_cdeg sint16="300">300</CurveHysteresis_FastSpeed_cdeg>
+            <CurveHysteresis_MaxSpeed_cdeg sint16="100">100</CurveHysteresis_MaxSpeed_cdeg>
+            <CurveThreshold_FastSpeed_cdeg sint16="500">500</CurveThreshold_FastSpeed_cdeg>
+            <CurveThreshold_MaxSpeed_cdeg sint16="180">180</CurveThreshold_MaxSpeed_cdeg>
+            <DebounceAutoModeDisabled time="80" linked="Debounce time before falling edge on automatic mode release from base truck leads to a reaction-Bde-">80</DebounceAutoModeDisabled>
+            <DebounceBaseTruckError time="80" linked="Debounce time before rising edge on error bit from base truck leads to a reaction-Bde-">80</DebounceBaseTruckError>
+            <DebounceButtonDuration time="80" linked="Debounce time before rising edge on phyiscal push buttons lead to a reaction-Bde-">80</DebounceButtonDuration>
+            <DebounceEStopDisabled time="80" linked="Debounce time before falling edge on e-stop release from base truck leads to a reaction-Bde-">80</DebounceEStopDisabled>
+            <DriveSpeedHysteresis_mms sint16="50">50</DriveSpeedHysteresis_mms>
+            <DriveSpeedThreshold_Fast_mms sint16="1700">1700</DriveSpeedThreshold_Fast_mms>
+            <DriveSpeedThreshold_Medium_mms sint16="800">800</DriveSpeedThreshold_Medium_mms>
+            <DriveSpeedThreshold_Slow_mms sint16="300">300</DriveSpeedThreshold_Slow_mms>
+            <FsoeAcknowledgePulseDuration time="3000">3000</FsoeAcknowledgePulseDuration>
+            <FsoeStartupDelay time="1000">1000</FsoeStartupDelay>
+            <PssAutoInsertButtonDelay time="2000" linked="Delay how long acknowledge button has to pushed by operator before pss fields are switched when trying to auto-insert AGV-Bde-">2000</PssAutoInsertButtonDelay>
+            <S3000AcknowledgeDelay time="1000">1000</S3000AcknowledgeDelay>
+            <S3000AcknowledgePulseDuration time="250">250</S3000AcknowledgePulseDuration>
+            <S3000LoadDirectionDisabled bool="false">false</S3000LoadDirectionDisabled>
+            <StateTransitionDelay time="20">20</StateTransitionDelay>
+            <StoppedMovingThreshold time="0">0</StoppedMovingThreshold>
+            <UnlearnTime time="5000" linked="How long the eventcode will be shown on opt-Bde-">5000</UnlearnTime>
+        </SafetySettingsConfiguration>
+    </SafetyConfiguration>
+    <SensorsConfiguration name="Sensors">
+        <SensorsSettingsConfiguration name="Settings">
+            <AutomaticContinuationDebounce time="3000" linked="Self-acknowledgment E9119 Minimum distance when entering flexible segment was not reached. If the value is&gt; 0, acknowledgment is given-Bde-">0</AutomaticContinuationDebounce>
+            <FlexlineOffset_mm sint16="" linked="Offset in measurement value between Flexline and Pallet Breaking Sensors. This value will be subtracted from the actually measured value, doesn't have to be negative  (Default 2160-Bde-"/>
+            <ForkTipSensorCount EForkTipSensor="0: EOneOfFour" linked="Eks only. Number of fork sensors to be evaluated. At FourOfFour, every sensor has to recognize something to stop the vehicle. With stacking activatet, the max. is internally limited to TwoOfFour-Bde-Nur Eks. Anzahl der auszuwertenden Gabelsensoren. Bei FourOfFour muss jeder Sensor etwas erkennen, um das Fahrzeug anzuhalten. Bei aktivierter Stapelung ist das Maximum intern auf TwoOfFour begrenzt.">0: EOneOfFour</ForkTipSensorCount>
+            <ForkTipSensorType EAnalogSensorType="1: EAnalogSensorType_SickDT50" linked="Used fork sensor type, so that the correct measuring range is used-Bde-">1: EAnalogSensorType_SickDT50</ForkTipSensorType>
+            <MinFlexTravelDistance_mm sint32="1300">1000</MinFlexTravelDistance_mm>
+            <PalletDistancePowerOffPostRun time="10000" linked="Delay before switching off pallet distance sensor after no pallet has been detected-Bde-">10000</PalletDistancePowerOffPostRun>
+            <PlausibilityCheckEnable bool="false" linked="Load handling plausibility check using the analogue pallet sensor-Bde-">false</PlausibilityCheckEnable>
+            <PlausibilityEnable_mm sint16="1400" linked="This length depends on the installed fork. If the measured values are larger, the process will not start.-Bde-">2000</PlausibilityEnable_mm>
+            <PlausibilityExit_mm sint16="1000" linked="Counter part to PlausibilityEnable_mm, distance to compare measured value with odometry while exiting the station-Bde-">1000</PlausibilityExit_mm>
+            <PlausibilityHysteresis_mm sint16="30" linked="If the delta is greater between the distance traveled and the distance measured with the sensor, the pallet is pushed-Bde-">30</PlausibilityHysteresis_mm>
+            <SensorsSettingsTestConfiguration name="Test">
+                <AccousticPulseDuration time="250">250</AccousticPulseDuration>
+                <AnalogDistanceDebounce time="500">500</AnalogDistanceDebounce>
+                <AnalogMaxSpeed_mms sint16="1000">1000</AnalogMaxSpeed_mms>
+                <AnalogMinimumDistance_mm sint16="300">300</AnalogMinimumDistance_mm>
+                <AnalogSmoothFactor sint16="249">249</AnalogSmoothFactor>
+                <AnalogThreshold_mm sint16="1000">1000</AnalogThreshold_mm>
+                <StartupDelay time="1000">1000</StartupDelay>
+            </SensorsSettingsTestConfiguration>
+            <StationExitDistanceForRearSensor_mm sint16="5000" linked="In case feature is enabled via sensor mask: Distance during which rear sensors will be evaluated even when driving in drive-direction-Bde-">5000</StationExitDistanceForRearSensor_mm>
+            <WarnfieldStuckDuration time="5000">5000</WarnfieldStuckDuration>
+        </SensorsSettingsConfiguration>
+        <SensorsSideConfiguration name="SideSensorRight">
+            <FaultDetectionTime_ms time="0">500</FaultDetectionTime_ms>
+            <SelfTestHeight_mm sint16="0">5</SelfTestHeight_mm>
+        </SensorsSideConfiguration>
+        <SensorsSideConfiguration name="SideSensorLeft">
+            <FaultDetectionTime_ms time="0">500</FaultDetectionTime_ms>
+            <SelfTestHeight_mm sint16="0">5</SelfTestHeight_mm>
+        </SensorsSideConfiguration>
+        <SideSensorTypes ESensorIoType="0: ESensorIoType_ViaDIO" linked="CHANGED COMMENT-[ Eks only. Sidesensor Selection, blue TIM -&gt; ViaDIO, yellow  TIM -&gt; ViaCAN, also selecting PalletDetectionSensor ]- Sidesensor Selection, default for all Agv  -&gt; ViaDIO, for Eks215a yellow  TIM -&gt; ViaCAN, also selecting PalletDetectionSensor-Bde-CHANGED COMMENT-[ Nur Eks. Auswahl Seitensensor, blauer TIM -&gt; ViaDIO, gelber (Sicherheit) TIM -&gt; ViaCAN, auch Auswahl PalletDetectionSensor ]- Auswahl Seitensensor, Standard fuer alle Agv -&gt; ViaDIO, beim Eks215a gelber (Sicherheit) TIM -&gt; ViaCAN, damit auch Auswahl PalletDetectionSensor" safety="true">1: ESensorIoType_ViaCan</SideSensorTypes>
+    </SensorsConfiguration>
+    <SpecialFunctionsConfiguration name="SpecialFunctions" linked="Track surveying, Dryer, LinearAxis,  RGB Underfloorlight-Bde-">
+        <ActiveClampConfiguration name="ActiveClamp" linked="Parameters for active clamping-Bde-">
+            <ActiveClampMonitoringConfig name="Monitoring">
+                <ErrorPulseRate time="250" linked="Duration at which additional clamp lights are flashing in case of an error-Bde-">250</ErrorPulseRate>
+                <LostSwitch time="1000" linked="Debounce during automatic travel, where an end switch is allowed to change, before an error is generated-Bde-">1000</LostSwitch>
+                <MovedBeyondLimit time="100" linked="Debounce for reaching either end switch while still allowing a raise/lower command before an error is generated-Bde-">100</MovedBeyondLimit>
+                <ReachedLowerEnd time="1000" linked="Debounce for reaching lower end switch without also having a is-clamped signal before an error is generated-Bde-">1000</ReachedLowerEnd>
+                <TransitionDelay time="1000" linked="Delay between changing operating states before being able to control the clamp again is possible-Bde-">1000</TransitionDelay>
+            </ActiveClampMonitoringConfig>
+            <ActiveClampSettingsConfig name="Settings">
+                <AdditionalLiftingHeight sint16="170" linked="Additional lifting height after clamping-Bde-">170</AdditionalLiftingHeight>
+                <EnableQuickDrop bool="false" linked="Finish drop operation without clompletely opening the clamp-Bde-">false</EnableQuickDrop>
+                <ForkHeightCheck bool="true" linked="When active, clip action is only possible when the fork is on the SafetyHeight.-Bde-">true</ForkHeightCheck>
+                <Implementation EActiveClampImplementation="0: EActiveClampImplementation_None" linked="Select which type of active clamp is to be used Default (EActiveClampImplementation_None)-Bde-">0: EActiveClampImplementation_None</Implementation>
+                <Laufzeit time="10000" linked="The time after which an end stop should be reached-Bde-">10000</Laufzeit>
+                <LoadPalletCheck bool="true" linked="When active SemiAutoMatik Clamps only possible with Pallet Available-Bde-">true</LoadPalletCheck>
+                <maxDistance sint16="150" linked="Maximum distance at which the car can stand-Bde-">150</maxDistance>
+                <minDistance sint16="50" linked="Minimum distance at which the car can stand-Bde-">50</minDistance>
+                <SafetyHeight sint16="50" linked="Height in which the fork must be in order to open the clamp in automatic mode. Must correspond to the height specified when clamping in the stations.-Bde-">50</SafetyHeight>
+                <ShowPosition bool="true" linked="Shows the current hold-down position via the up / down button-Bde-">true</ShowPosition>
+                <Speed sint16="70" linked="in mms.-Bde-">70</Speed>
+                <SwitchBackToFork time="500" linked="The time after the manual mode, after releasing the drawbar, the fork can be moved again.-Bde-">500</SwitchBackToFork>
+                <UnlearnTime time="5000" linked="How long the eventcode will be shown on opt-Bde-">5000</UnlearnTime>
+                <ValveOffDelay time="400" linked="After stopping the pump, it will still turn for about 250 to 500ms. As long as the valves must remain open.-Bde-">400</ValveOffDelay>
+            </ActiveClampSettingsConfig>
+        </ActiveClampConfiguration>
+        <BlowDryerConfiguration name="Dryer" linked="Heating for laser scanners-Bde-">
+            <BlowTime time="60000" linked="Switch-on time when meshing-Bde-">60000</BlowTime>
+            <Enable bool="false" linked="Enables scanner heater, set Erc to TRUE-Bde-">false</Enable>
+        </BlowDryerConfiguration>
+        <NumberOfPssScenarios sint16="32">32</NumberOfPssScenarios>
+        <NumberOfSideSensorScenarios sint16="4">4</NumberOfSideSensorScenarios>
+        <OrthogonalConfig name="OrthogonalMeasurement" linked="Track surveying-Bde-">
+            <MaxSensorDistance_mm sint16="10000">10000</MaxSensorDistance_mm>
+            <MinSensorDistance_mm sint16="200">200</MinSensorDistance_mm>
+            <SampleDistance_mm sint16="40">40</SampleDistance_mm>
+        </OrthogonalConfig>
+        <SensorTestTrackPoint name="SensorTestNodes">
+            <SensorTestTrackPoint_00 name="SensorTestNodes[0]">
+                <ConstantSpeedDuration time="9999">9999</ConstantSpeedDuration>
+                <MaximumTravelDistance_mm sint16="0">0</MaximumTravelDistance_mm>
+                <TargetDriveSpeed_mms sint16="0">0</TargetDriveSpeed_mms>
+                <TargetSteeringAngle_cdeg sint16="0">0</TargetSteeringAngle_cdeg>
+            </SensorTestTrackPoint_00>
+            <SensorTestTrackPoint_01 name="SensorTestNodes[1]">
+                <ConstantSpeedDuration time="15000">15000</ConstantSpeedDuration>
+                <MaximumTravelDistance_mm sint16="15000">15000</MaximumTravelDistance_mm>
+                <TargetDriveSpeed_mms sint16="2500">2500</TargetDriveSpeed_mms>
+                <TargetSteeringAngle_cdeg sint16="0">0</TargetSteeringAngle_cdeg>
+            </SensorTestTrackPoint_01>
+            <SensorTestTrackPoint_02 name="SensorTestNodes[2]">
+                <ConstantSpeedDuration time="15000">15000</ConstantSpeedDuration>
+                <MaximumTravelDistance_mm sint16="15000">15000</MaximumTravelDistance_mm>
+                <TargetDriveSpeed_mms sint16="1650">1650</TargetDriveSpeed_mms>
+                <TargetSteeringAngle_cdeg sint16="0">0</TargetSteeringAngle_cdeg>
+            </SensorTestTrackPoint_02>
+            <SensorTestTrackPoint_03 name="SensorTestNodes[3]">
+                <ConstantSpeedDuration time="15000">15000</ConstantSpeedDuration>
+                <MaximumTravelDistance_mm sint16="15000">15000</MaximumTravelDistance_mm>
+                <TargetDriveSpeed_mms sint16="780">780</TargetDriveSpeed_mms>
+                <TargetSteeringAngle_cdeg sint16="0">0</TargetSteeringAngle_cdeg>
+            </SensorTestTrackPoint_03>
+            <SensorTestTrackPoint_04 name="SensorTestNodes[4]">
+                <ConstantSpeedDuration time="15000">15000</ConstantSpeedDuration>
+                <MaximumTravelDistance_mm sint16="15000">15000</MaximumTravelDistance_mm>
+                <TargetDriveSpeed_mms sint16="280">280</TargetDriveSpeed_mms>
+                <TargetSteeringAngle_cdeg sint16="0">0</TargetSteeringAngle_cdeg>
+            </SensorTestTrackPoint_04>
+            <SensorTestTrackPoint_05 name="SensorTestNodes[5]">
+                <ConstantSpeedDuration time="15000">15000</ConstantSpeedDuration>
+                <MaximumTravelDistance_mm sint16="15000">15000</MaximumTravelDistance_mm>
+                <TargetDriveSpeed_mms sint16="2500">2500</TargetDriveSpeed_mms>
+                <TargetSteeringAngle_cdeg sint16="100">100</TargetSteeringAngle_cdeg>
+            </SensorTestTrackPoint_05>
+            <SensorTestTrackPoint_06 name="SensorTestNodes[6]">
+                <ConstantSpeedDuration time="15000">15000</ConstantSpeedDuration>
+                <MaximumTravelDistance_mm sint16="15000">15000</MaximumTravelDistance_mm>
+                <TargetDriveSpeed_mms sint16="1650">1650</TargetDriveSpeed_mms>
+                <TargetSteeringAngle_cdeg sint16="300">300</TargetSteeringAngle_cdeg>
+            </SensorTestTrackPoint_06>
+            <SensorTestTrackPoint_07 name="SensorTestNodes[7]">
+                <ConstantSpeedDuration time="15000">15000</ConstantSpeedDuration>
+                <MaximumTravelDistance_mm sint16="15000">15000</MaximumTravelDistance_mm>
+                <TargetDriveSpeed_mms sint16="780">780</TargetDriveSpeed_mms>
+                <TargetSteeringAngle_cdeg sint16="300">300</TargetSteeringAngle_cdeg>
+            </SensorTestTrackPoint_07>
+            <SensorTestTrackPoint_08 name="SensorTestNodes[8]">
+                <ConstantSpeedDuration time="15000">15000</ConstantSpeedDuration>
+                <MaximumTravelDistance_mm sint16="15000">15000</MaximumTravelDistance_mm>
+                <TargetDriveSpeed_mms sint16="780">780</TargetDriveSpeed_mms>
+                <TargetSteeringAngle_cdeg sint16="2000">2000</TargetSteeringAngle_cdeg>
+            </SensorTestTrackPoint_08>
+            <SensorTestTrackPoint_09 name="SensorTestNodes[9]">
+                <ConstantSpeedDuration time="15000">15000</ConstantSpeedDuration>
+                <MaximumTravelDistance_mm sint16="15000">15000</MaximumTravelDistance_mm>
+                <TargetDriveSpeed_mms sint16="350">350</TargetDriveSpeed_mms>
+                <TargetSteeringAngle_cdeg sint16="5400">5400</TargetSteeringAngle_cdeg>
+            </SensorTestTrackPoint_09>
+            <SensorTestTrackPoint_10 name="SensorTestNodes[10]">
+                <ConstantSpeedDuration time="15000">15000</ConstantSpeedDuration>
+                <MaximumTravelDistance_mm sint16="15000">15000</MaximumTravelDistance_mm>
+                <TargetDriveSpeed_mms sint16="280">280</TargetDriveSpeed_mms>
+                <TargetSteeringAngle_cdeg sint16="6600">6600</TargetSteeringAngle_cdeg>
+            </SensorTestTrackPoint_10>
+            <SensorTestTrackPoint_11 name="SensorTestNodes[11]">
+                <ConstantSpeedDuration time="15000">15000</ConstantSpeedDuration>
+                <MaximumTravelDistance_mm sint16="15000">15000</MaximumTravelDistance_mm>
+                <TargetDriveSpeed_mms sint16="2500">2500</TargetDriveSpeed_mms>
+                <TargetSteeringAngle_cdeg sint16="-100">-100</TargetSteeringAngle_cdeg>
+            </SensorTestTrackPoint_11>
+            <SensorTestTrackPoint_12 name="SensorTestNodes[12]">
+                <ConstantSpeedDuration time="15000">15000</ConstantSpeedDuration>
+                <MaximumTravelDistance_mm sint16="15000">15000</MaximumTravelDistance_mm>
+                <TargetDriveSpeed_mms sint16="1650">1650</TargetDriveSpeed_mms>
+                <TargetSteeringAngle_cdeg sint16="-300">-300</TargetSteeringAngle_cdeg>
+            </SensorTestTrackPoint_12>
+            <SensorTestTrackPoint_13 name="SensorTestNodes[13]">
+                <ConstantSpeedDuration time="15000">15000</ConstantSpeedDuration>
+                <MaximumTravelDistance_mm sint16="15000">15000</MaximumTravelDistance_mm>
+                <TargetDriveSpeed_mms sint16="780">780</TargetDriveSpeed_mms>
+                <TargetSteeringAngle_cdeg sint16="-300">-300</TargetSteeringAngle_cdeg>
+            </SensorTestTrackPoint_13>
+            <SensorTestTrackPoint_14 name="SensorTestNodes[14]">
+                <ConstantSpeedDuration time="15000">15000</ConstantSpeedDuration>
+                <MaximumTravelDistance_mm sint16="15000">15000</MaximumTravelDistance_mm>
+                <TargetDriveSpeed_mms sint16="780">780</TargetDriveSpeed_mms>
+                <TargetSteeringAngle_cdeg sint16="-2000">-2000</TargetSteeringAngle_cdeg>
+            </SensorTestTrackPoint_14>
+            <SensorTestTrackPoint_15 name="SensorTestNodes[15]">
+                <ConstantSpeedDuration time="15000">15000</ConstantSpeedDuration>
+                <MaximumTravelDistance_mm sint16="15000">15000</MaximumTravelDistance_mm>
+                <TargetDriveSpeed_mms sint16="350">350</TargetDriveSpeed_mms>
+                <TargetSteeringAngle_cdeg sint16="-5400">-5400</TargetSteeringAngle_cdeg>
+            </SensorTestTrackPoint_15>
+            <SensorTestTrackPoint_16 name="SensorTestNodes[16]">
+                <ConstantSpeedDuration time="15000">15000</ConstantSpeedDuration>
+                <MaximumTravelDistance_mm sint16="15000">15000</MaximumTravelDistance_mm>
+                <TargetDriveSpeed_mms sint16="280">280</TargetDriveSpeed_mms>
+                <TargetSteeringAngle_cdeg sint16="-6600">-6600</TargetSteeringAngle_cdeg>
+            </SensorTestTrackPoint_16>
+            <SensorTestTrackPoint_17 name="SensorTestNodes[17]">
+                <ConstantSpeedDuration time="15000">15000</ConstantSpeedDuration>
+                <MaximumTravelDistance_mm sint16="15000">15000</MaximumTravelDistance_mm>
+                <TargetDriveSpeed_mms sint16="-2500">-2500</TargetDriveSpeed_mms>
+                <TargetSteeringAngle_cdeg sint16="0">0</TargetSteeringAngle_cdeg>
+            </SensorTestTrackPoint_17>
+            <SensorTestTrackPoint_18 name="SensorTestNodes[18]">
+                <ConstantSpeedDuration time="15000">15000</ConstantSpeedDuration>
+                <MaximumTravelDistance_mm sint16="15000">15000</MaximumTravelDistance_mm>
+                <TargetDriveSpeed_mms sint16="-1650">-1650</TargetDriveSpeed_mms>
+                <TargetSteeringAngle_cdeg sint16="0">0</TargetSteeringAngle_cdeg>
+            </SensorTestTrackPoint_18>
+            <SensorTestTrackPoint_19 name="SensorTestNodes[19]">
+                <ConstantSpeedDuration time="15000">15000</ConstantSpeedDuration>
+                <MaximumTravelDistance_mm sint16="15000">15000</MaximumTravelDistance_mm>
+                <TargetDriveSpeed_mms sint16="-780">-780</TargetDriveSpeed_mms>
+                <TargetSteeringAngle_cdeg sint16="0">0</TargetSteeringAngle_cdeg>
+            </SensorTestTrackPoint_19>
+            <SensorTestTrackPoint_20 name="SensorTestNodes[20]">
+                <ConstantSpeedDuration time="15000">15000</ConstantSpeedDuration>
+                <MaximumTravelDistance_mm sint16="15000">15000</MaximumTravelDistance_mm>
+                <TargetDriveSpeed_mms sint16="-280">-280</TargetDriveSpeed_mms>
+                <TargetSteeringAngle_cdeg sint16="0">0</TargetSteeringAngle_cdeg>
+            </SensorTestTrackPoint_20>
+            <SensorTestTrackPoint_21 name="SensorTestNodes[21]">
+                <ConstantSpeedDuration time="15000">15000</ConstantSpeedDuration>
+                <MaximumTravelDistance_mm sint16="15000">15000</MaximumTravelDistance_mm>
+                <TargetDriveSpeed_mms sint16="-2500">-2500</TargetDriveSpeed_mms>
+                <TargetSteeringAngle_cdeg sint16="100">100</TargetSteeringAngle_cdeg>
+            </SensorTestTrackPoint_21>
+            <SensorTestTrackPoint_22 name="SensorTestNodes[22]">
+                <ConstantSpeedDuration time="15000">15000</ConstantSpeedDuration>
+                <MaximumTravelDistance_mm sint16="15000">15000</MaximumTravelDistance_mm>
+                <TargetDriveSpeed_mms sint16="-1650">-1650</TargetDriveSpeed_mms>
+                <TargetSteeringAngle_cdeg sint16="300">300</TargetSteeringAngle_cdeg>
+            </SensorTestTrackPoint_22>
+            <SensorTestTrackPoint_23 name="SensorTestNodes[23]">
+                <ConstantSpeedDuration time="15000">15000</ConstantSpeedDuration>
+                <MaximumTravelDistance_mm sint16="15000">15000</MaximumTravelDistance_mm>
+                <TargetDriveSpeed_mms sint16="-780">-780</TargetDriveSpeed_mms>
+                <TargetSteeringAngle_cdeg sint16="300">300</TargetSteeringAngle_cdeg>
+            </SensorTestTrackPoint_23>
+            <SensorTestTrackPoint_24 name="SensorTestNodes[24]">
+                <ConstantSpeedDuration time="15000">15000</ConstantSpeedDuration>
+                <MaximumTravelDistance_mm sint16="15000">15000</MaximumTravelDistance_mm>
+                <TargetDriveSpeed_mms sint16="-780">-780</TargetDriveSpeed_mms>
+                <TargetSteeringAngle_cdeg sint16="2000">2000</TargetSteeringAngle_cdeg>
+            </SensorTestTrackPoint_24>
+            <SensorTestTrackPoint_25 name="SensorTestNodes[25]">
+                <ConstantSpeedDuration time="15000">15000</ConstantSpeedDuration>
+                <MaximumTravelDistance_mm sint16="15000">15000</MaximumTravelDistance_mm>
+                <TargetDriveSpeed_mms sint16="-350">-350</TargetDriveSpeed_mms>
+                <TargetSteeringAngle_cdeg sint16="5400">5400</TargetSteeringAngle_cdeg>
+            </SensorTestTrackPoint_25>
+            <SensorTestTrackPoint_26 name="SensorTestNodes[26]">
+                <ConstantSpeedDuration time="15000">15000</ConstantSpeedDuration>
+                <MaximumTravelDistance_mm sint16="15000">15000</MaximumTravelDistance_mm>
+                <TargetDriveSpeed_mms sint16="-280">-280</TargetDriveSpeed_mms>
+                <TargetSteeringAngle_cdeg sint16="6600">6600</TargetSteeringAngle_cdeg>
+            </SensorTestTrackPoint_26>
+            <SensorTestTrackPoint_27 name="SensorTestNodes[27]">
+                <ConstantSpeedDuration time="15000">15000</ConstantSpeedDuration>
+                <MaximumTravelDistance_mm sint16="15000">15000</MaximumTravelDistance_mm>
+                <TargetDriveSpeed_mms sint16="-2500">-2500</TargetDriveSpeed_mms>
+                <TargetSteeringAngle_cdeg sint16="-100">-100</TargetSteeringAngle_cdeg>
+            </SensorTestTrackPoint_27>
+            <SensorTestTrackPoint_28 name="SensorTestNodes[28]">
+                <ConstantSpeedDuration time="15000">15000</ConstantSpeedDuration>
+                <MaximumTravelDistance_mm sint16="15000">15000</MaximumTravelDistance_mm>
+                <TargetDriveSpeed_mms sint16="-1650">-1650</TargetDriveSpeed_mms>
+                <TargetSteeringAngle_cdeg sint16="-300">-300</TargetSteeringAngle_cdeg>
+            </SensorTestTrackPoint_28>
+            <SensorTestTrackPoint_29 name="SensorTestNodes[29]">
+                <ConstantSpeedDuration time="15000">15000</ConstantSpeedDuration>
+                <MaximumTravelDistance_mm sint16="15000">15000</MaximumTravelDistance_mm>
+                <TargetDriveSpeed_mms sint16="-780">-780</TargetDriveSpeed_mms>
+                <TargetSteeringAngle_cdeg sint16="-300">-300</TargetSteeringAngle_cdeg>
+            </SensorTestTrackPoint_29>
+            <SensorTestTrackPoint_30 name="SensorTestNodes[30]">
+                <ConstantSpeedDuration time="15000">15000</ConstantSpeedDuration>
+                <MaximumTravelDistance_mm sint16="15000">15000</MaximumTravelDistance_mm>
+                <TargetDriveSpeed_mms sint16="-780">-780</TargetDriveSpeed_mms>
+                <TargetSteeringAngle_cdeg sint16="-2000">-2000</TargetSteeringAngle_cdeg>
+            </SensorTestTrackPoint_30>
+            <SensorTestTrackPoint_31 name="SensorTestNodes[31]">
+                <ConstantSpeedDuration time="15000">15000</ConstantSpeedDuration>
+                <MaximumTravelDistance_mm sint16="15000">15000</MaximumTravelDistance_mm>
+                <TargetDriveSpeed_mms sint16="-350">-350</TargetDriveSpeed_mms>
+                <TargetSteeringAngle_cdeg sint16="-5400">-5400</TargetSteeringAngle_cdeg>
+            </SensorTestTrackPoint_31>
+            <SensorTestTrackPoint_32 name="SensorTestNodes[32]">
+                <ConstantSpeedDuration time="15000">15000</ConstantSpeedDuration>
+                <MaximumTravelDistance_mm sint16="15000">15000</MaximumTravelDistance_mm>
+                <TargetDriveSpeed_mms sint16="-280">-280</TargetDriveSpeed_mms>
+                <TargetSteeringAngle_cdeg sint16="-6600">-6600</TargetSteeringAngle_cdeg>
+            </SensorTestTrackPoint_32>
+            <SensorTestTrackPoint_33 name="SensorTestNodes[33]">
+                <ConstantSpeedDuration time="15000">15000</ConstantSpeedDuration>
+                <MaximumTravelDistance_mm sint16="15000">15000</MaximumTravelDistance_mm>
+                <TargetDriveSpeed_mms sint16="280">280</TargetDriveSpeed_mms>
+                <TargetSteeringAngle_cdeg sint16="9000">9000</TargetSteeringAngle_cdeg>
+            </SensorTestTrackPoint_33>
+            <SensorTestTrackPoint_34 name="SensorTestNodes[34]">
+                <ConstantSpeedDuration time="15000">15000</ConstantSpeedDuration>
+                <MaximumTravelDistance_mm sint16="15000">15000</MaximumTravelDistance_mm>
+                <TargetDriveSpeed_mms sint16="280">280</TargetDriveSpeed_mms>
+                <TargetSteeringAngle_cdeg sint16="-9000">-9000</TargetSteeringAngle_cdeg>
+            </SensorTestTrackPoint_34>
+            <SensorTestTrackPoint_35 name="SensorTestNodes[35]">
+                <ConstantSpeedDuration time="15000">15000</ConstantSpeedDuration>
+                <MaximumTravelDistance_mm sint16="15000">15000</MaximumTravelDistance_mm>
+                <TargetDriveSpeed_mms sint16="-280">-280</TargetDriveSpeed_mms>
+                <TargetSteeringAngle_cdeg sint16="9000">9000</TargetSteeringAngle_cdeg>
+            </SensorTestTrackPoint_35>
+            <SensorTestTrackPoint_36 name="SensorTestNodes[36]">
+                <ConstantSpeedDuration time="15000">15000</ConstantSpeedDuration>
+                <MaximumTravelDistance_mm sint16="15000">15000</MaximumTravelDistance_mm>
+                <TargetDriveSpeed_mms sint16="-280">-280</TargetDriveSpeed_mms>
+                <TargetSteeringAngle_cdeg sint16="-9000">-9000</TargetSteeringAngle_cdeg>
+            </SensorTestTrackPoint_36>
+            <SensorTestTrackPoint_37 name="SensorTestNodes[37]">
+                <ConstantSpeedDuration time="0">0</ConstantSpeedDuration>
+                <MaximumTravelDistance_mm sint16="0">0</MaximumTravelDistance_mm>
+                <TargetDriveSpeed_mms sint16="0">0</TargetDriveSpeed_mms>
+                <TargetSteeringAngle_cdeg sint16="0">0</TargetSteeringAngle_cdeg>
+            </SensorTestTrackPoint_37>
+            <SensorTestTrackPoint_38 name="SensorTestNodes[38]">
+                <ConstantSpeedDuration time="0">0</ConstantSpeedDuration>
+                <MaximumTravelDistance_mm sint16="0">0</MaximumTravelDistance_mm>
+                <TargetDriveSpeed_mms sint16="0">0</TargetDriveSpeed_mms>
+                <TargetSteeringAngle_cdeg sint16="0">0</TargetSteeringAngle_cdeg>
+            </SensorTestTrackPoint_38>
+            <SensorTestTrackPoint_39 name="SensorTestNodes[39]">
+                <ConstantSpeedDuration time="0">0</ConstantSpeedDuration>
+                <MaximumTravelDistance_mm sint16="0">0</MaximumTravelDistance_mm>
+                <TargetDriveSpeed_mms sint16="0">0</TargetDriveSpeed_mms>
+                <TargetSteeringAngle_cdeg sint16="0">0</TargetSteeringAngle_cdeg>
+            </SensorTestTrackPoint_39>
+            <SensorTestTrackPoint_40 name="SensorTestNodes[40]">
+                <ConstantSpeedDuration time="0">0</ConstantSpeedDuration>
+                <MaximumTravelDistance_mm sint16="0">0</MaximumTravelDistance_mm>
+                <TargetDriveSpeed_mms sint16="0">0</TargetDriveSpeed_mms>
+                <TargetSteeringAngle_cdeg sint16="0">0</TargetSteeringAngle_cdeg>
+            </SensorTestTrackPoint_40>
+        </SensorTestTrackPoint>
+        <TestTrackImplementationConfig name="TestTrackImplementation">
+            <TestTrack ETestTrackNodesImplementation="4: ETestTrackNodesImplementation_Eks2p5ms">4: ETestTrackNodesImplementation_Eks2p5ms</TestTrack>
+        </TestTrackImplementationConfig>
+        <UnderFloorLightConfiguration name="UnderFloorLight">
+            <CycleTime time="20" linked="The base time of the PWM. Faster reduces the number of steps because Fast Task is 2ms-Bde-">20</CycleTime>
+            <Enable bool="false">false</Enable>
+            <PwmSteps sint16="10" linked="Number of levels that are possible, 2ms Fast Task and 20ms cycle-Bde-">10</PwmSteps>
+        </UnderFloorLightConfiguration>
+    </SpecialFunctionsConfiguration>
+    <SteerConfiguration name="Steer">
+        <PidParameterSet name="Control">
+            <EnableDFactor bool="false">false</EnableDFactor>
+            <EnableIFactor bool="true">true</EnableIFactor>
+            <EnablePFactor bool="true">true</EnablePFactor>
+            <Kp float32="1.05">1.05</Kp>
+            <Ta float32="0.055">0.055</Ta>
+            <Tn float32="1.0">1.0</Tn>
+            <Tv float32="1.0">1.0</Tv>
+        </PidParameterSet>
+        <SteerMonitoringConfig name="Monitoring" safety="true">
+            <DirectionalStabilityMonitoringElement name="DirectionalStability">
+                <DirectionalStabilityMonitoringElement_00 name="DirectionalStability[0]">
+                    <Abs_DeltaThreshold_cdeg sint16="300">300</Abs_DeltaThreshold_cdeg>
+                    <DetectionDuration time="1000">1000</DetectionDuration>
+                </DirectionalStabilityMonitoringElement_00>
+                <DirectionalStabilityMonitoringElement_01 name="DirectionalStability[1]">
+                    <Abs_DeltaThreshold_cdeg sint16="300">500</Abs_DeltaThreshold_cdeg>
+                    <DetectionDuration time="1000">500</DetectionDuration>
+                </DirectionalStabilityMonitoringElement_01>
+                <DirectionalStabilityMonitoringElement_02 name="DirectionalStability[2]">
+                    <Abs_DeltaThreshold_cdeg sint16="300">1000</Abs_DeltaThreshold_cdeg>
+                    <DetectionDuration time="1000">150</DetectionDuration>
+                </DirectionalStabilityMonitoringElement_02>
+            </DirectionalStabilityMonitoringElement>
+            <OutsideRangeDelta_cdeg sint16="250">250</OutsideRangeDelta_cdeg>
+            <OutsideRangeLookbehindCycles sint16="14">14</OutsideRangeLookbehindCycles>
+            <OutsideRangeMonitoringTime time="500">500</OutsideRangeMonitoringTime>
+            <OutsideRangeSmoothingElements sint16="5">5</OutsideRangeSmoothingElements>
+            <StartMovementDelay time="600">600</StartMovementDelay>
+            <WrongDirectionMonitoringTime time="600">600</WrongDirectionMonitoringTime>
+        </SteerMonitoringConfig>
+        <SteerSettingsConfig name="Settings">
+            <Abs_MaximumInStationAngle_cdeg sint16="9000">9000</Abs_MaximumInStationAngle_cdeg>
+            <FastSpeedRateOfChangeModifier float32="0.1">0.1</FastSpeedRateOfChangeModifier>
+            <FastSpeedStabilityThreshold_mms sint16="1500">1500</FastSpeedStabilityThreshold_mms>
+            <FullSpeedRateOfChangeModifier float32="0.02">0.02</FullSpeedRateOfChangeModifier>
+            <MaximumFastSpeedNegativeAngle_cdeg sint16="-300">-300</MaximumFastSpeedNegativeAngle_cdeg>
+            <MaximumFastSpeedPositiveAngle_cdeg sint16="300">300</MaximumFastSpeedPositiveAngle_cdeg>
+            <MaximumFullSpeedNegativeAngle_cdeg sint16="-100">-100</MaximumFullSpeedNegativeAngle_cdeg>
+            <MaximumFullSpeedPositiveAngle_cdeg sint16="100">100</MaximumFullSpeedPositiveAngle_cdeg>
+            <MaximumNegativeSteeringAngle_cdeg sint16="-9000">-9000</MaximumNegativeSteeringAngle_cdeg>
+            <MaximumNegativeSteeringSlope_cdeg_s sint16="-5000">-2750</MaximumNegativeSteeringSlope_cdeg_s>
+            <MaximumPositiveSteeringAngle_cdeg sint16="9000">9000</MaximumPositiveSteeringAngle_cdeg>
+            <MaximumPositiveSteeringSlope_cdeg_s sint16="5000">2750</MaximumPositiveSteeringSlope_cdeg_s>
+            <NavigationSteerSignalSmoothingElements sint16="0" linked="Smoothing the skip of the steering setpoint from navigation control. Only active when the controller is switched off.-Bde-">0</NavigationSteerSignalSmoothingElements>
+            <NumberOfSmoothingElementsForSpeedMeasurement sint16="5">5</NumberOfSmoothingElementsForSpeedMeasurement>
+            <ShutOffPostRunTime time="3000">3000</ShutOffPostRunTime>
+            <UnlearnTime time="5000" linked="How long the eventcode will be shown on opt-Bde-">5000</UnlearnTime>
+        </SteerSettingsConfig>
+    </SteerConfiguration>
+    <TrailerConfiguration name="Trailer" linked="Trailer handling-Bde-">
+        <TrailerSettingsConfig name="Settings">
+            <HasAutoCoupling bool="false" linked="Automated coupling active and supported-Bde-">false</HasAutoCoupling>
+            <LiftTrailerOnlyInAutomatic bool="true" linked="Than the compressed air trailer is lifted or lowered only in automatic state, in all other states, the trailer is controlled manually-Bde-">true</LiftTrailerOnlyInAutomatic>
+            <ShooterLightCurtainMissing time="15000">15000</ShooterLightCurtainMissing>
+            <ShooterLightCurtainStillActive time="15000">15000</ShooterLightCurtainStillActive>
+            <ShooterOnPointDelay time="3000">3000</ShooterOnPointDelay>
+            <TrailerLiftWaitDelay time="10000" linked="Time after which the lift is assumed to be finished on compressed air trailers.-Bde-">10000</TrailerLiftWaitDelay>
+            <TrailerType ETrailerType="0: ETrailerType_None" linked="Select the correct trailer, Shooter has additional flag in Cvc SensorMask.-Bde-">0: ETrailerType_None</TrailerType>
+            <UnlearnTime time="5000" linked="How long the eventcode will be shown on opt-Bde-">5000</UnlearnTime>
+        </TrailerSettingsConfig>
+    </TrailerConfiguration>
+    <Tw2Enums>
+        <E_S_UPS_Mode eSUPS_WrPersistData_Shutdown="0" eSUPS_WrPersistData_NoShutdown="1" eSUPS_ImmediateShutdown="2" eSUPS_CheckPowerStatus="3"/>
+        <E_S_UPS_State eSUPS_PowerOK="0" eSUPS_PowerFailure="1" eSUPS_WritePersistentData="2" eSUPS_QuickShutdown="3" eSUPS_WaitForRecover="4" eSUPS_WaitForPowerOFF="5"/>
+        <E_SEARCH_CRITERIA eSEARCH_BY_NAME="0" eSEARCH_BY_NUMBER="1" eSEARCH_BY_PRICE="2"/>
+        <EActiveClampImplementation EActiveClampImplementation_None="0" EActiveClampImplementation_Hydraulic="1" EActiveClampImplementation_Electric_Top="2" EActiveClampImplementation_Electric_Bottom="3"/>
+        <EAllgErrCode eErr_NoError="0" eErr_UnspecifiedError="1" eErr_InvalidIndex="256" eErr_InvalidAccess="257" eErr_BufferTooSmall="258" eErr_TypeNotSupported="259" eErr_OutOfMemory="260" eErr_NoDataAvailable="261" eErr_InvalidData="262" eErr_InvalidArg="263" eErr_ValueOutOfRange="264" eErr_ServerIsBusy="512" eErr_MDPApiNotInitialized="513" eErr_NotImplemented="0F00" eErr_NotSupported="4096" eErr_UnexpectedError="0FFF"/>
+        <EAnalogSensorTestSequence EAnalogSensorTestSequence_Start="0" EAnalogSensorTestSequence_MinDistance="1" EAnalogSensorTestSequence_Increasing="2" EAnalogSensorTestSequence_TresholdDistance="3" EAnalogSensorTestSequence_Finished="4"/>
+        <EAnalogSensorType EAnalogSensorType_SickDT35="0" EAnalogSensorType_SickDT50="1" EAnalogSensorType_SickWTT12="2" EAnalogSensorType_SickDT35_IFM="3" EAnalogSensorType_Last="4"/>
+        <EApmState EApmState_Emergency="0" EApmState_Manual="1" EApmState_StartUp="2" EApmState_VehicleAutoMode="3" EApmState_BaseSystemReady="4" EApmState_Idle="5" EApmState_AutoInsert="6" EApmState_Moving="7" EApmState_LoadHandling="8" EApmState_Charging="9" EApmState_Blocked="10" EApmState_Recover="11" EApmState_EndOfLine="12" EApmState_SensorCalibration="13"/>
+        <EAutoChargeCommand EAutoChargeCommand_Idle="0" EAutoChargeCommand_PrepareForDocking="1" EAutoChargeCommand_ChargerEnabled="2" EAutoChargeCommand_ChargerDisabled="3"/>
+        <EAutoChargeState EAutoChargeState_Idle="0" EAutoChargeState_PrepareForDocking="1" EAutoChargeState_EnableLocalUnit="2" EAutoChargeState_WaitForExternalCharger="3" EAutoChargeState_Charging="4" EAutoChargeState_WaitForExternalChargerOff="5" EAutoChargeState_DisableLocalUnit="6" EAutoChargeState_ProcessFinished="7" EAutoChargeState_Error="8"/>
+        <EAutoChargeStatus EAutoChargeStatus_Idle="0" EAutoChargeStatus_ReceivedDockingCommand="1" EAutoChargeStatus_ReadyForCharger="2" EAutoChargeStatus_ChargingFinished="3" EAutoChargeStatus_Error="7"/>
+        <EBarcodeResult eBarcodeResult_Ok="0" eBarcodeResult_NoRead="1" eBarcodeResult_OutOfSequence="2" eBarcodeResult_NotMovingTimeout="3" eBarcodeResult_SerialComTimeout="4" eBarcodeResult_CodeLengthImplausible="5"/>
+        <EBarcodeState eBarcodeState_Init="0" eBarcodeState_DelayActivation="1" eBarcodeState_Activate="2" eBarcodeState_SendActivateCmd="3" eBarcodeState_ActivateAcknowledge="4" eBarcodeState_WaitForData="5" eBarcodeState_EvaluateData="6" eBarcodeState_FormatResult="7" eBarcodeState_FormatError="8" eBarcodeState_DelayDeactivation="9" eBarcodeState_Deactivate="10" eBarcodeState_SendDeactivateCmd="11" eBarcodeState_DeactivateAcknowledge="12" eBarcodeState_ScanningFinished="13"/>
+        <EBatteryErrorCodes EBatteryErrorCodes_FirstElement="100" EBatteryErrorCodes_LastElement="109" EBatteryErrorCodes_BatteryEmpty="101" EBatteryErrorCodes_MaxChargeDurationExceeded="102" EBatteryErrorCodes_MaxPreChargeDurationExceeded="103" EBatteryErrorCodes_MaxPostChargeDurationExceeded="104" EBatteryErrorCodes_ChargeSequenceError="105" EBatteryErrorCodes_BatteryCompartmentFanError="106" EBatteryErrorCodes_ChargeRelaisOpened="107" EBatteryErrorCodes_ChargerMissing="108"/>
+        <ECanMonitoring ECanMonitoring_Init="0" ECanMonitoring_PreOp="1" ECanMonitoring_Running="2" ECanMonitoring_Error="3"/>
+        <EChargingMode EChargingMode_Manual="0" EChargingMode_Automatic="1" EChargingMode_Spare="2" EChargingMode_LiIon="3" EChargingMode_LiIonII="4"/>
+        <ECheckState_T ECheckState_Idle="0" ECheckState_ControlAfterUnload="1" ECheckState_Init="2" ECheckState_StartsToLower="3" ECheckState_Lowering="4" ECheckState_Finished="5" ECheckState_Error="6"/>
+        <EConfigErrorCodes EConfigErrorCodes_FirstElement="9500" EConfigErrorCodes_LastElement="9599" EConfigErrorCodes_VersionTimeout="9501" EConfigErrorCodes_VehicleScalingValuesTimeout="9502" EConfigErrorCodes_ForkProjectSettingsTimeout="9503" EConfigErrorCodes_SpeedNodesDriveDirectionTimeout="9504" EConfigErrorCodes_SpeedNodesLoadDirectionTimeout="9505" EConfigErrorCodes_FactorySensorSettingsTimeout="9506" EConfigErrorCodes_NavigationSettingsTimeout="9507" EConfigErrorCodes_VersionMismatch="9520" EConfigErrorCodes_SpeedNodesDriveDirectionImplausible="9521" EConfigErrorCodes_SpeedNodesLoadDirectionImplausible="9522" EConfigErrorCodes_SafetyMaskInvalid="9523" EConfigErrorCodes_ConfigurationMismatch="9524" EConfigErrorCodes_UnknownTestTrackSetup="9525" EConfigErrorCodes_SensorMaskInvalid="9526" EConfigErrorCodes_MinTravelHeightOutOfBounds="9551" EConfigErrorCodes_PalletOnBoardHeightOutOfBounds="9552" EConfigErrorCodes_MaxTravelHeightOutOfBounds="9553" EConfigErrorCodes_MaxLiftHeightOutOfBounds="9554" EConfigErrorCodes_TargetReachedWindowOutOfBounds="9555" EConfigErrorCodes_SlowdownDistanceOutOfBounds="9556" EConfigErrorCodes_StopCommandDelayOutOfBounds="9557" EConfigErrorCodes_RearSensorLevelWithoutPalletOutOfBounds="9558" EConfigErrorCodes_RearSensorLevelWithPalletOutOfBounds="9559" EConfigErrorCodes_DistanceScaleFactorOutOfBounds="9560" EConfigErrorCodes_ReduceSpeedHeightOutOfBounds="9561" EConfigErrorCodes_MinSlowdownSpeedOutOfBounds="9562" EConfigErrorCodes_FlexSegSlowdownSpeedOutOfBounds="9563" EConfigErrorCodes_FlexSegPalletSensorDebounceTimeOutOFBounds="9564" EConfigErrorCodes_FlexSegLoadDirectionSensorDebounceTimeOutOfBounds="9565" EConfigErrorCodes_OrthoMaxTargetDistanceOutOfBounds="9566" EConfigErrorCodes_OrthoMinTargetDistanceOutOfBounds="9567" EConfigErrorCodes_OrthoMaxDriveDistanceOutOfBounds="9568" EConfigErrorCodes_OrthoMinDriveDistanceOutOfBounds="9569" EConfigErrorCodes_OrthoMinObjectWidthOutOfBounds="9570" EConfigErrorCodes_OrthoStartOffsetOutOfBounds="9571" EConfigErrorCodes_SlowdownDistanceDistanceOutOfBounds="9572" EConfigErrorCodes_SlowdownDistanceSpeedOutOfBounds="9573" EConfigErrorCodes_AccelerationSlopeOutOfBounds="9574" EConfigErrorCodes_DecelerationSlopeOutOfBounds="9575" EConfigErrorCodes_SteeringEncoderOffsetOutOfBounds="9576" EConfigErrorCodes_ForkHeightSettings="9577"/>
+        <ECustErrorCodes ECustErrorCodes_FirstElement="9600" ECustErrorCodes_LastElement="9699" ECustErrorCodes_PressureMonitor="9601" ECustErrorCodes_ClampedTimeOut="9602" ECustErrorCodes_KeySwitchMiddle="9603" ECustErrorCodes_ClampInLowerEndPos="9604" ECustErrorCodes_ImplausibleSwitchState="9605" ECustErrorCodes_MovedBeyondLimit="9606" ECustErrorCodes_ClampWithoutPallet="9607" ECustErrorCodes_LostSwitch="9608" ECustErrorCodes_ClampNotInEntryPos="9609" ECustErrorCodes_TrailerIsNotOk="9621"/>
+        <EDriveErrorCodes EDriveErrorCodes_FirstElement="10" EDriveErrorCodes_LastElement="19" EDriveErrorCodes_RangeSupervision="11" EDriveErrorCodes_DistanceCrossCheck="12" EDriveErrorCodes_BrakingDeceleration="13" EDriveErrorCodes_SelfMovement="14" EDriveErrorCodes_InvalidTargetValues="15"/>
+        <EDriveState EDriveState_Reverse="-1" EDriveState_Hold="0" EDriveState_Forward="1" EDriveState_Init="2" EDriveState_Wait="3"/>
+        <EDriveType eDrv_Unkown="0" eDrv_Fixed="1" eDrv_Removeable="2" eDrv_CDRom="4"/>
+        <EelPosState EelPosState_SetState="0" EelPosState_Off="1" EelPosState_Undefined="2" EelPosState_AtTop="3" EelPosState_WaitForTop="4" EelPosState_IsClamped="5"/>
+        <EEncoderType EEncoderType_Sick="0" EEncoderType_None="1" EEncoderType_ViaCan="2" EEncoderType_UpDownSwitch="3"/>
+        <EEthercatErrorCodes EEthercatErrorCodes_NoError="0" EEthercatErrorCodes_SlaveSignalsError="1" EEthercatErrorCodes_InvalidVendorIdOrProductCodeRead="2" EEthercatErrorCodes_InitializationErrorOccurred="3" EEthercatErrorCodes_SlaveDisabled="8" EEthercatErrorCodes_SlaveNotPresent="16" EEthercatErrorCodes_SlaveSignalsLinkError="32" EEthercatErrorCodes_SlaveSignalsMissingLink="64" EEthercatErrorCodes_SlaveSignalsUnexpectedLink="128" EEthercatErrorCodes_CommunicationPortA="256" EEthercatErrorCodes_CommunicationPortB="512" EEthercatErrorCodes_CommunicationPortC="1024" EEthercatErrorCodes_CommunicationPortD="2048"/>
+        <EEthercatOperationMode EEthercatOperationMode_Init="1" EEthercatOperationMode_SlavePreOp="2" EEthercatOperationMode_Boot="3" EEthercatOperationMode_SafeOp="4" EEthercatOperationMode_Op="8"/>
+        <EFlexibleSegmentType EFlexibleSegmentType_None="0" EFlexibleSegmentType_DigitalPick="1" EFlexibleSegmentType_DigitalDrop="2" EFlexibleSegmentType_AnalogPick="3" EFlexibleSegmentType_AnalogDrop="4" EFlexibleSegmentType_SpeedPick="5" EFlexibleSegmentType_SpeedDrop="6" EFlexibleSegmentType_Abortable="7" EFlexibleSegmentType_Invalid="8"/>
+        <EForkCommand EForkCommand_Idle="0" EForkCommand_WaitForTargetReached="1" EForkCommand_Finished="2"/>
+        <EForkErrorCodes EForkErrorCodes_FirstElement="20" EForkErrorCodes_LastElement="39" EForkErrorCodes_NotReferenced="21" EForkErrorCodes_RangeSupervision="22" EForkErrorCodes_LostReference="23" EForkErrorCodes_SelfMovement="24" EForkErrorCodes_ControlError="25" EForkErrorCodes_StackingShiftError="31" EForkErrorCodes_MissingStack="32" EForkErrorCodes_StackingMisaligned="33" EForkErrorCodes_LoadCheckError="34" EForkErrorCodes_RequestUser="35"/>
+        <EForkMode_T EForkMode_HeightControl="0" EForkMode_ConstSpeed="1"/>
+        <EForkReadjust EForkReadjust_Idle="0" EForkReadjust_Monitoring="1" EForkReadjust_Required="2" EForkReadjust_StepOne="3" EForkReadjust_StepTwo="4" EForkReadjust_StepThree="5" EForkReadjust_StepFour="6" EForkReadjust_Done="7" EForkReadjust_Error="8" EForkReadjust_Recover="9"/>
+        <EForkReferencing EForkReferencing_NotReferenced="0" EForkReferencing_ReferenceUp="1" EForkReferencing_ReferenceDown="2" EForkReferencing_ChangeDirection="3" EForkReferencing_Referenced="4"/>
+        <EForkState EForkState_NotReferenced="0" EForkState_ReferenceUp="1" EForkState_ReferenceDown="2" EForkState_Referenced="3" EForkState_MoveUp="4" EForkState_MoveDown="5" EForkState_HoldPosition="6"/>
+        <EForkTipSensor EOneOfFour="0" ETwoOfFour="1" EThreeOfFour="2" EFourOfFour="3"/>
+        <EForkTryPositioning EForkTryPositioning_Idle="0" EForkTryPositioning_Try="1" EForkTryPositioning_WaitForStop="2" EForkTryPositioning_Finished="3" EForkTryPositioning_Retry="4" EForkTryPositioning_Error="5"/>
+        <EHardwareErrorCodes EHardwareErrorCodes_FirstElement="9399" EHardwareErrorCodes_LastElement="9499" EHardwareErrorCodes_Ethercat="9400" EHardwareErrorCodes_SelftestBeckhoff="9401" EHardwareErrorCodes_SafetyPlc="9402" EHardwareErrorCodes_TillerArm="9403" EHardwareErrorCodes_AtPos_01="9404" EHardwareErrorCodes_AtPos_02="9405" EHardwareErrorCodes_AtPos_03="9406" EHardwareErrorCodes_AtPos_04="9407" EHardwareErrorCodes_AtPos_05="9408" EHardwareErrorCodes_AtPos_06="9409" EHardwareErrorCodes_AtPos_07="9410" EHardwareErrorCodes_AtPos_08="9411" EHardwareErrorCodes_AtPos_09="9412" EHardwareErrorCodes_AtPos_10="9413" EHardwareErrorCodes_AtPos_11="9414" EHardwareErrorCodes_AtPos_12="9415" EHardwareErrorCodes_AtPos_13="9416" EHardwareErrorCodes_AtPos_14="9417" EHardwareErrorCodes_AtPos_15="9418" EHardwareErrorCodes_AtPos_16="9419" EHardwareErrorCodes_AtPos_17="9420" EHardwareErrorCodes_AtPos_18="9421" EHardwareErrorCodes_AtPos_19="9422" EHardwareErrorCodes_AtPos_20="9423" EHardwareErrorCodes_AtPos_21="9424" EHardwareErrorCodes_AtPos_22="9425" EHardwareErrorCodes_HeightEncoderOffset="9432" EHardwareErrorCodes_OverHeight="9433" EHardwareErrorCodes_EncoderSetting="9434" EHardwareErrorCodes_LiftEncoderBelowZero="9435" EHardwareErrorCodes_ControllerStillOn="9440" EHardwareErrorCodes_S3000FeedbackLeft="9450" EHardwareErrorCodes_S3000FeedbackRight="9451" EHardwareErrorCodes_S3000FeedbackXor="9452" EHardwareErrorCodes_GasWarning="9460" EHardwareErrorCodes_GasShutdown="9461" EHardwareErrorCodes_GasWaitForInit="9462" EHardwareErrorCodes_EthernetIP_MasterBusError="9470" EHardwareErrorCodes_EthernetIP_LinearAxisBusError="9471" EHardwareErrorCodes_SteeringReferenceError="9480" EHardwareErrorCodes_SafeSteeringEncoderError="9481" EHardwareErrorCodes_SafeDrivingEncoderError="9482" EHardwareErrorCodes_SafePlcIoError="9483" EHardwareErrorCodes_SafeProtectionFieldSizeSelect="9484" EHardwareErrorCodes_SafeClutchRelayMonitor="9485" EHardwareErrorCodes_PreSelectProtectionFieldError="9486" EHardwareErrorCodes_UnsafeLoadPosition="9487" EHardwareErrorCodes_HardStopVehicle="9488" EHardwareErrorCodes_FlexisoftCanHeartbeat="9489" EHardwareErrorCodes_FootSwitch="9490" EHardwareErrorCodes_CustCan="9495" EHardwareErrorCodes_NavCan="9496" EHardwareErrorCodes_VehCan="9497" EHardwareErrorCodes_SenCan="9498"/>
+        <EHomePosition EHomePosition_Idle="0" EHomePosition_LowerForks="1" EHomePosition_LowerTrailer="2" EHomePosition_ReachedZeroHeight="3"/>
+        <EhydPosState EhydPosState_ForkDefault="0" EhydPosState_Off="1" EhydPosState_IsEmergency="2" EhydPosState_IsOpenManuell="3" EhydPosState_IsClampedManuell="4" EhydPosState_OffManuell="5" EhydPosState_IsOpenSemi="6" EhydPosState_IsClampedSemi="7" EhydPosState_Undefined="8" EhydPosState_IsOpen="9" EhydPosState_IsClamped="10"/>
+        <EInvalidOrderState EInvalidOrderState_Idle="0" EInvalidOrderState_MonitorLoadOrder="1" EInvalidOrderState_MonitorUnloadOrder="2" EInvalidOrderState_Error="3"/>
+        <EIpMessageType EIpMessageType_Undefined="0" EIpMessageType_LaneMeasurement="1" EIpMessageType_LaneMeasurementLeft="2" EIpMessageType_LaneMeasurementRight="3" EIpMessageType_Barcode="4" EIpMessageType_Status="5"/>
+        <EKeySwitch EKeySwitchAuto="0" EKeySwitchMitte="1" EKeySwitchManu="2"/>
+        <ELiftMastType ELiftMastType_Default="0" ELiftMastType_DZ="1"/>
+        <ELinearAxisError ELinearAxisError_None="0" ELinearAxisError_RuntimeMonitor="1" ELinearAxisError_AcknowledgeAlarmTimeout="2" ELinearAxisError_ServoActivationTimeout="3" ELinearAxisError_GenericMovingTimeout="4" ELinearAxisError_PositioningDoneTimeout="5"/>
+        <ELinearAxisErrorCodes ELinearAxisErrorCodes_FirstElement="110" ELinearAxisErrorCodes_LastElement="119"/>
+        <ELinearAxisState ELinearAxisState_Disabled="0" ELinearAxisState_Init="1" ELinearAxisState_AcknowledgeAlarm="2" ELinearAxisState_Idle="3" ELinearAxisState_PrepareDrive="4" ELinearAxisState_Moving="5" ELinearAxisState_Finished="6" ELinearAxisState_Error="7"/>
+        <ELogStates StPrepData="0" StFileOpen="1" StOpened="2" StWrite="3" StNxEle="4" StFileClose="5" StClosed="6" StNoHdd="7"/>
+        <ELogWrite ELogWrite_None="0" ELogWrite_Intern="1" ELogWrite_Extern="2"/>
+        <EMovement EMovement_DriveDir_Straight="0" EMovement_DriveDir_Left="1" EMovement_DriveDir_Right="2" EMovement_LoadDir_Straight="3" EMovement_LoadDir_Left="4" EMovement_LoadDir_Right="5"/>
+        <ENavigationErrorCodes ENavigationErrorCodes_FirstElement="0" ENavigationErrorCodes_LastElement="9" ENavigationErrorCodes_LoadError="1" ENavigationErrorCodes_LostPosition="2" ENavigationErrorCodes_OutsideSafetyZone="3" ENavigationErrorCodes_HeightCheckImplausible="4"/>
+        <ENetworkErrorCodes ENetworkErrorCodes_FirstElement="50" ENetworkErrorCodes_LastElement="69" ENetworkErrorCodes_TcpConnectSocketError="51" ENetworkErrorCodes_TcpSendSocketError="52" ENetworkErrorCodes_TcpCloseSocketError="53" ENetworkErrorCodes_TcpConnectTimeout="54" ENetworkErrorCodes_TcpSendTimeout="55" ENetworkErrorCodes_TcpCloseTimeout="56" ENetworkErrorCodes_UdpCreateSocketError="57" ENetworkErrorCodes_UdpSendSocketError="58" ENetworkErrorCodes_UdpCloseSocketError="59"/>
+        <EOpState EInit="0" EManual="1" ESemiAutomatic="2" EAutomatic="3" ETransitionModes="4" EError="5"/>
+        <EPidDisabledBehavior EPidDisabledBehavior_MirrorActualValue="0" EPidDisabledBehavior_ConstantZero="1" EPidDisabledBehavior_FreezeLastControlValue="2"/>
+        <EPowerStatus ePwr_Unkown="0" ePwr_Online="1" ePwr_OnBatteries="2"/>
+        <EProtectionFieldAutoAck EProtectionFieldAutoAck_Idle="0" EProtectionFieldAutoAck_Active="1" EProtectionFieldAutoAck_Delay="2" EProtectionFieldAutoAck_Acknowledge="3"/>
+        <EPssControlImplementation EPssControlImplementation_Undefined="0" EPssControlImplementation_Classic="1" EPssControlImplementation_MasterSlave="2" EPssControlImplementation_MasterOnly="3" EPssControlImplementation_MasterSlavePlus="4"/>
+        <ERangeMonitoringType ERangeMonitoringType_AboveBoundary="0" ERangeMonitoringType_BelowBoundary="1" ERangeMonitoringType_WithinBoundary="2"/>
+        <ESafeSteerTeaching ESafeSteerTeaching_WaitForStart="0" ESafeSteerTeaching_TeachModeOn="1" ESafeSteerTeaching_WaitingForSteerAngle="2" ESafeSteerTeaching_Teach="3" ESafeSteerTeaching_TeachingDone="4" ESafeSteerTeaching_Retry="5" ESafeSteerTeaching_LostConnection="6" ESafeSteerTeaching_Error="7" ESafeSteerTeaching_Revoke="8"/>
+        <ESafetyErrorCodes ESafetyErrorCodes_FirstElement="70" ESafetyErrorCodes_LastElement="99" ESafetyErrorCodes_EmergencyStopButtonActive="71" ESafetyErrorCodes_SensorTestInvalid="72" ESafetyErrorCodes_ForkTipEStopActive="73" ESafetyErrorCodes_SafetyPlcNotInRunMode="76" ESafetyErrorCodes_VehicleHasError="77" ESafetyErrorCodes_VehicleEstopNotReleased="78" ESafetyErrorCodes_VehicleAutomodeNotReleased="79" ESafetyErrorCodes_ImplausibleManualModeRequests="80" ESafetyErrorCodes_NavigationUnit="82" ESafetyErrorCodes_AcknowledgeButtonPlausibility="83" ESafetyErrorCodes_ProtectionFieldMonitoring="84" ESafetyErrorCodes_ImplausiblePssControl="85" ESafetyErrorCodes_TwinCatCrc="86" ESafetyErrorCodes_SafetyPLCHeartbeatError="87" ESafetyErrorCodes_CustEStopNotReleased="88" ESafetyErrorCodes_CustAutomodeNotReleased="89"/>
+        <ESensorErrorCodes ESensorErrorCodes_FirstElement="9099" ESensorErrorCodes_LastElement="9198" ESensorErrorCodes_S3000="9100" ESensorErrorCodes_S100="9101" ESensorErrorCodes_SideSensorRight="9102" ESensorErrorCodes_SideSensorLeft="9103" ESensorErrorCodes_ForkDiagnonalRight="9109" ESensorErrorCodes_ForkDiagnonalLeft="9110" ESensorErrorCodes_ForkTipRight="9111" ESensorErrorCodes_ForkTipLeft="9112" ESensorErrorCodes_SideSensorLeftSelfMonitoring="9113" ESensorErrorCodes_SideSensorRightSelfMonitoring="9114" ESensorErrorCodes_S3000Dirty="9115" ESensorErrorCodes_S3000LightDirty="9116" ESensorErrorCodes_S3000SystemError="9117" ESensorErrorCodes_StopDueToButton="9118" ESensorErrorCodes_MinFlexDistance="9119" ESensorErrorCodes_NaturalNavigation="9120" ESensorErrorCodes_Cust="9122" ESensorErrorCodes_LoadPlausibility="9123" ESensorErrorCodes_S300RightWarnField="9130" ESensorErrorCodes_S300LeftWarnField="9131" ESensorErrorCodes_S300RightDirty="9132" ESensorErrorCodes_S300LeftDirty="9133" ESensorErrorCodes_S300RightSystemError="9134" ESensorErrorCodes_S300LeftSystemError="9135" ESensorErrorCodes_PssLoadDir_BelowTines="9136" ESensorErrorCodes_SafePlcNoAutomaticRestart="9137"/>
+        <ESensorErrorSignalImplementation ESensorErrorSignalImplementation_None="0" ESensorErrorSignalImplementation_Pulsed="1" ESensorErrorSignalImplementation_IndividualSignals="2"/>
+        <ESensorIoType ESensorIoType_ViaDIO="0" ESensorIoType_ViaCan="1"/>
+        <ESensorTestState ESensorTestState_NotAvailable="0" ESensorTestState_Untested="1" ESensorTestState_Tested="2"/>
+        <ESensorTestTrack ESensorTestTrack_Idle="0" ESensorTestTrack_WaitForStartPosition="1" ESensorTestTrack_Accelerating="2" ESensorTestTrack_ConstantSpeed="3" ESensorTestTrack_Decelerating="4" ESensorTestTrack_End="5"/>
+        <EShooterError EShooterError_None="0" EShooterError_LightCurtainMissing="1" EShooterError_LightCurtainStillActive="2"/>
+        <EShooterState EShooterState_Idle="0" EShooterState_ApproachStation="1" EShooterState_WaitForStationReached="2" EShooterState_PauseOnStation="3" EShooterState_Finished="4"/>
+        <ESlowdownDistanceDirection ESlowdownDistanceDirection_NONE="0" ESlowdownDistanceDirection_LR="1" ESlowdownDistanceDirection_AR="2" ESlowdownDistanceDirection_LR_AR="3"/>
+        <ESourceModul EConfiguration="0" EDiagnostics="1" EDriving="2" EHardwareLayer="3" ELightAndSound="4" ENavigation="5" ENetwork="6" ESafety="7" ESdo="8" ESensors="9" ESerialPort="10" ESpecialFunctions="11" EState="12" ESteering="13" EFork="14" EDynamicConfig="15" EBattery="16" ETrailer="17" EActiveClamp="18"/>
+        <ESpeedFlexState ESpeedFlexState_Idle="0" ESpeedFlexState_FastApproach="1" ESpeedFlexState_SlowApproach="2" ESpeedFlexState_FinishHandshake="3"/>
+        <ESpeedNode ESpeedNode_SteeringAngle="0" ESpeedNode_DriveSpeed="1"/>
+        <ESpeedZone ESpeedZone_Slow="0" ESpeedZone_Medium="1" ESpeedZone_Fast="2" ESpeedZone_Max="3"/>
+        <EStackCheck_T EStackCheck_None="0" EStackCheck_StackDetection="1" EStackCheck_DetectFirstPallet="2" EStackCheck_ReScanStack="3" EStackCheck_CheckAfterUnload="4" EStackCheck_UnloadDetection="5" EStackCheck_Last="7"/>
+        <EStackState_T EStackState_PreInit="0" EStackState_FirstPallet="1" EStackState_Init="2" EStackState_LowerEdge="3" EStackState_LowerEdgeOff="4" EStackState_UpperEdge="5" EStackState_StackDetected="6" EStackState_Finished="7" EStackState_WaitForUser="8" EStackState_Error="9"/>
+        <EState_T EState_T_Init="0" EState_T_MoveUp="1" EState_T_MoveDown="2" EState_T_Stop="3"/>
+        <ESteerErrorCodes ESteerErrorCodes_FirstElement="40" ESteerErrorCodes_LastElement="49" ESteerErrorCodes_RangeSupervision="41" ESteerErrorCodes_ReferenceFailed="42" ESteerErrorCodes_LimitationExceeded="43"/>
+        <ETcpState ETcpState_Init="0" ETcpState_ConnectStart="1" ETcpState_ConnectWait="2" ETcpState_CloseStart="3" ETcpState_CloseWait="4" ETcpState_Idle="5" ETcpState_SendStart="6" ETcpState_SendWait="7" ETcpState_ReceiveStart="8" ETcpState_ReceiveWait="9" ETcpState_Error="10"/>
+        <ETestTrackNodesImplementation ETestTrackNodesImplementation_Unknown="0" ETestTrackNodesImplementation_Spare_1="1" ETestTrackNodesImplementation_Spare_2="2" ETestTrackNodesImplementation_ErcEreClassic="3" ETestTrackNodesImplementation_Eks2p5ms="4" ETestTrackNodesImplementation_ErcEreEzs="5"/>
+        <ETimControlImplementation ETimControlImplementation_Undefined="0" ETimControlImplementation_Simple="1" ETimControlImplementation_Advanced="2" ETimControlImplementation_Flexisoft="3"/>
+        <ETimEvaluationImplementation ETimEvaluationImplementation_Undefined="0" ETimEvaluationImplementation_Fixed="1" ETimEvaluationImplementation_Directional="2" ETimEvaluationImplementation_PalletWidth="3"/>
+        <ETimMountedPosition ETimMountedPosition_Left="0" ETimMountedPosition_Right="1"/>
+        <ETrailerType ETrailerType_None="0" ETrailerType_Shooter="1" ETrailerType_GTF="2" ETrailerType_AirPressure="3"/>
+        <ETravelDirection ETravelDirection_DriveDir="0" ETravelDirection_LoadDir="1"/>
+        <EUdpState EUdpState_Init="0" EUdpState_CreateStart="1" EUdpState_CreateWait="2" EUdpState_CloseStart="3" EUdpState_CloseWait="4" EUdpState_Idle="5" EUdpState_SendStart="6" EUdpState_SendWait="7" EUdpState_ReceiveStart="8" EUdpState_ReceiveWait="9" EUdpState_Error="10"/>
+        <EUpsMode eUpsWrPersistData="0" eUpsWrPersistDataShutdown="1" eUpsWrPersistDataNoShutdown="2" eUpsImmediateShutdown="3" eUpsCheckPowerStatus="4" eUpsWaitForPowerOFF="5" eUpsWaitForRecover="6"/>
+        <EVehicleAutomaticMode EVehicleAutomaticMode_Init="0" EVehicleAutomaticMode_EmergencyStopRelease="1" EVehicleAutomaticMode_WaitForEmergencyStopAcknowledge="2" EVehicleAutomaticMode_AutomaticModeRelease="3" EVehicleAutomaticMode_WaitForAutomaticModeAcknowledge="4" EVehicleAutomaticMode_Running="5"/>
+        <EVehicleGroup EVehicleGroup_NotDefined="0" EVehicleGroup_Lueneburg="1" EVehicleGroup_Moosburg="2"/>
+        <EVehicleStartUpState EVehicleStartUpState_Init="0" EVehicleStartUpState_StartingUp="1" EVehicleStartUpState_Running="2" EVehicleStartUpState_SwitchedOffDuringCharging="3" EVehicleStartUpState_DoubleRestartSwitchOff="4"/>
+        <EVehicleType EVehicleType_NotDefined="0" EVehicleType_Eks="1" EVehicleType_Erc="2" EVehicleType_Ere="3" EVehicleType_Ezs="4"/>
+        <EVoltageLocation eVl_Unknown="0" eVl_Other="1" eVl_Processor="2" eVl_Disk="3" eVl_System_Management_Module="4" eVl_Mainboard="5" eVl_Memory_Module="6" eVl_Power_Supply="7" eVl_Addin_Card="8" eVl_Front_Panel_Board="9" eVl_Back_Panel_Board="10" eVl_Peripherie="11" eVl_Chassis="12" eVl_Battery="13" eVl_Ups="14" eVl_Graphic_Board="15" eVl_SuperIO="16" eVl_Chipset="17"/>
+    </Tw2Enums>
+<Checksum>f746e855433d83dee167d251edb026b9</Checksum>
+</ApmPlusConfig.>

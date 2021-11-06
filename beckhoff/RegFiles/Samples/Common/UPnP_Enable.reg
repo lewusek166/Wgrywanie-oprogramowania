@@ -1,0 +1,8 @@
+;-------------------------------------------------------------------------------
+; Enable 'Universal Plug and Play (UPnP)' service
+;-------------------------------------------------------------------------------
+[HKEY_LOCAL_MACHINE\Services\UPNPSVC]
+    "Flags"=dword:10
+
+[HKEY_LOCAL_MACHINE\Services\UPNPLOADER]
+    "Flags"=dword:10

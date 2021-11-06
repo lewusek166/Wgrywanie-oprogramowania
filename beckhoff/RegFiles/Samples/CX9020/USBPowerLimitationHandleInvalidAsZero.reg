@@ -1,0 +1,11 @@
+;-------------------------------------------------------------------------------
+; According to the USB specification, an USB device may not report a consumption
+; of 0mA. To be safe, a invalid report of 0mA is handled as the maximum, 500mA.
+; But this can prevent some devices from working, so with this registry key, a
+; report of 0mA is handled as 0mA.
+;
+; Note: Under some circumances, this can result in a shut down of a USB port
+; with all its connected devices due too much power consumption.
+;-------------------------------------------------------------------------------
+[HKEY_LOCAL_MACHINE\Drivers\USB\ClientDrivers]
+    "PowerLimitationSafeHandling"=dword:0

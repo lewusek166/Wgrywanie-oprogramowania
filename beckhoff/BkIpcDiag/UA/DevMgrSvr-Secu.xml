@@ -1,0 +1,19 @@
+<TcUaSecurityConfig>
+
+	<!-- Setup of user groups. Default access does only apply when accessing nodes with NO security config set up !-->
+	<Groups>
+		<Group Name="Guests">
+			<DefaultAccess Namespace="http://opcfoundation.org/UA/" Access="0x000003FF"/>
+			<DefaultAccess Namespace="urn:[NodeName]:BeckhoffAutomation:DevMgrUaServer:1" Access="0x000003FF"/>
+			<DefaultAccess Namespace="urn:Beckhoff.com/DevMgrUaServer/MDP" Access="0x0000011B"/>
+		</Group>
+		<Group Name="Administrators" MemberOf="Guests">
+			<DefaultAccess Namespace="*" Access="0x000003FF"/>
+		</Group>
+	</Groups>
+
+	<Users>
+		<User Name="Administrator" Auth="OS" MemberOf ="Administrators"/>
+	</Users>
+
+</TcUaSecurityConfig>

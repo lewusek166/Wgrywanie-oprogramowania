@@ -1,0 +1,27 @@
+[HKEY_LOCAL_MACHINE\Drivers\Display\DDIPU\DI0]
+; 0 = Use pre-defined values or EDID from monitor
+; 1 ... N = Use exact values from registry
+    "UserDefinedDTD"    =dword:10
+
+[HKEY_LOCAL_MACHINE\Drivers\Display\DDIPU\DI0\16]
+; 800 x 480 @ 60Hz
+; The pixel clock is in kHz
+;hsync = 300, vsync = 20, => 1200*500*60Hz = 33Mhz
+    "PixelClock"        =dword:80E8
+    "HorzActive"        =dword:320
+    "HorzSync"          =dword:64
+    "HorzSyncPulse"     =dword:64
+    "HorzBlank"         =dword:12C
+    "HorzSyncPolarity"  =dword:0
+    "VertActive"        =dword:1E0
+    "VertSync"          =dword:5
+    "VertSyncPulse"     =dword:5
+    "VertBlank"         =dword:14
+    "VertSyncPolarity"  =dword:0
+;DISPLAY_PORT_LVDS1
+    "PortType"          =dword:4
+;IPU_PIX_FMT_RGB666
+    "PixelFormat"       =dword:0
+;red component offset, red component mask, green component offset, green component mask, blue component offset, blue component mask
+;here rgb888 -> rgb666 mapping
+    "RGBMapping"        =hex:11, FC, B, FC, 5, FC

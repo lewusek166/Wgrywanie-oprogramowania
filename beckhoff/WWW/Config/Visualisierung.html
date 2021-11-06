@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <title>Jungheinrich AG APM</title>
+    <link rel="Stylesheet" href=StyleSheet.css />
+    <SCRIPT type="text/javascript" src="TcAPMhandleData.js"></script>
+	<script type="text/javascript" src="TcAdsWebService.js"></script>
+	<SCRIPT type="text/javascript"></script>
+	
+</head>
+<body>
+		
+    <svg id="svgROOT" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" 
+            xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/"
+            height="100%" width="100%" /*viewBox="0 0 160 120"*/ version="1.1" style="display: block;">
+		<defs id="defs2987">
+			<linearGradient id="linearGradient3771">
+				<stop id="stop3773" stop-color="#FFFF00" offset="0"/>
+				<stop id="stop3775" stop-color="#FFFF00" offset="1"/>
+			</linearGradient>
+
+		    <linearGradient id="linearGradient3777" y2="300.2161" xlink:href="#linearGradient3771" gradientUnits="userSpaceOnUse" x2="800.05183" y1="300.2161" x1="0.29462782"/>
+		    <linearGradient id="linearGradient4137" y2="337.08334" xlink:href="#linearGradient3771" gradientUnits="userSpaceOnUse" x2="507.06943" y1="337.08334" x1="447.51389"/>
+		    <linearGradient id="linearGradient4227" y2="337.08334" gradientUnits="userSpaceOnUse" y1="337.08334" x2="907.06943" x1="447.51389">
+				<stop id="stop3773-2" stop-color="#FFFF00" offset="0"/>
+				<stop id="stop3775-4" stop-color="#FFFF00" offset="1"/>
+		    </linearGradient>
+
+		    <linearGradient id="linearGradient4399" y2="505.71912" gradientUnits="userSpaceOnUse" x2="316.50488" gradientTransform="matrix(1.2229961,0,0,1.0384615,-21.086483,-41.773622)" y1="463.88196" x1="316.72495">
+			    <stop id="stop4395" stop-color="#c1d3f4" offset="0"/>
+			    <stop id="stop4403" stop-color="#486fbf" offset="0.30596605"/>
+			    <stop id="stop4405" stop-color="#486fbf" stop-opacity="0.74901962" offset="0.66658556"/>
+			    <stop id="stop4401" stop-color="#c1d3f4" offset="1"/>
+		    </linearGradient>
+
+		    <filter id="filter4407" color-interpolation-filters="sRGB">
+			    <feGaussianBlur id="feGaussianBlur4409" stdDeviation="4" result="result8"/>
+			    <feOffset id="feOffset4411" result="result11" dx="4" dy="4"/>
+			    <feComposite id="feComposite4413" operator="in" in="SourceGraphic" in2="result11" result="result6"/>
+			    <feFlood id="feFlood4415" flood-color="rgb(0,0,0)" in="result6" flood-opacity="1" result="result10"/>
+			    <feBlend id="feBlend4417" result="result12" in="result6" in2="result10" mode="normal"/>
+			    <feComposite id="feComposite4419" operator="in" in2="SourceGraphic" result="result2"/>
+		    </filter>
+	    </defs>
+
+	    <g id="layer1">
+			<rect id="rectBackground" height="700" width="1625" y="150" x="5" fill="url(#linearGradient3777)"   stroke="black"  stroke-width="2"/> //allgemeine Box mit kompletten Inhalt Daten
+			
+			<path id="S3000AR" d="M 1020,470 l 10,75 a75,75 0 0,0 0,-150 z" fill="green" stroke-linejoin="round" />
+			
+			
+		    <circle id="YellowLamplight" fill="#ffffff" cx="170" cy="315" r="30" stroke="black" stroke-width="3" />
+		    <circle id="GreenLamplight" fill="#ffffff" cx="60" cy="315" r="30" stroke="black" stroke-width="3" />
+			<circle id="BlueLamplight" fill="#ffffff" cx="280" cy="315" r="30" stroke="black" stroke-width="3" />
+		    <rect id="rect3787-5" stroke-linejoin="round" stroke-dasharray="none" rx="7.6" ry="7.6" height="55" width="700" stroke="black" stroke-miterlimit="4" y="160" x="375" stroke-width="8" fill="none"/> //Box von APM State
+		    <image id="bild" x="375" y="230" width="640px" height="480px"
+			xlink:href="ERC-Model.jpg">
+			<title>Model</title>
+			</image>	
+			<image id="bild2" x="10" y="10" width="0px" height="0px"
+			xlink:href="Palette2.png">
+			<title>Palette</title>
+			</image>		
+						
+			<path id="S3000LR" d="M 1020,470 l 10,75 a75,75 0 0,0 0,-150 z" fill="green" stroke-linejoin="round" transform="rotate(180,1020,470) translate(325,0)" />
+			<path id="TIM_Rechts" d="M 940,375 l 75,-10 a125,125 0 0,0 -150,0 z" fill="green" stroke-linejoin="round" />
+			<path id="TIM_Links" d="M 940,375 l 75,-10 a125,125 0 0,0 -150,0 z" fill="green" stroke-linejoin="round" transform="rotate(180,940,375) translate(0,-190)" />
+			<image x="695" y="428" width="50px" height="75px"
+			xlink:href="SickLR.jpg">
+			<title>Sick S3000 in LR</title>
+			</image>	   
+			<image x="958" y="441" width="64px" height="60px"
+			xlink:href="SickAR.jpg">
+			<title>Sick S3000 in AR</title>
+			</image>	   
+			<image x="10" y="350" width="320px" height="240px"
+			xlink:href="Display.jpg">
+			<title>OPT Display</title>
+			</image>
+			<image x="50" y="585" width="100px" height="160px"
+			xlink:href="Batteriestand.jpg">
+			<title>Batteriestandsanzeige</title>
+			</image>		
+			<image x="10" y="175" width="326px" height="102px"
+			xlink:href="Light.jpg">
+			<title>Kontrollleuchten</title>
+			</image>		
+			<rect id="rect0815" stroke-linejoin="round" stroke-dasharray="none" rx="7" ry="7" height="80" width="206" stroke="#ffffff" stroke-miterlimit="4" y="430" x="70" stroke-width="1" fill="white"/> //Display
+			<text id="textErrorCode1" style="writing-mode:lr;letter-spacing:0px;text-anchor:start;word-spacing:0px;text-align:start;" font-weight="normal" xml:space="preserve" transform="scale(1,1)" font-style="normal" font-stretch="normal" font-size="18px" font-variant="normal" y="445" x="75" font-family="Arial" line-height="125%" fill="black"><tspan id="tspan4014">Error Code 1: ???</tspan></text>
+			<text id="textErrorCode2" style="writing-mode:lr;letter-spacing:0px;text-anchor:start;word-spacing:0px;text-align:start;" font-weight="normal" xml:space="preserve" transform="scale(1,1)" font-style="normal" font-stretch="normal" font-size="18px" font-variant="normal" y="465" x="75" font-family="Arial" line-height="125%" fill="black"><tspan id="tspan4014">Error Code 2: ???</tspan></text>
+			<text id="textErrorCode3" style="writing-mode:lr;letter-spacing:0px;text-anchor:start;word-spacing:0px;text-align:start;" font-weight="normal" xml:space="preserve" transform="scale(1,1)" font-style="normal" font-stretch="normal" font-size="18px" font-variant="normal" y="485" x="75" font-family="Arial" line-height="125%" fill="black"><tspan id="tspan4014">Error Code 3: ???</tspan></text>
+			<text id="textErrorCode4" style="writing-mode:lr;letter-spacing:0px;text-anchor:start;word-spacing:0px;text-align:start;" font-weight="normal" xml:space="preserve" transform="scale(1,1)" font-style="normal" font-stretch="normal" font-size="18px" font-variant="normal" y="505" x="75" font-family="Arial" line-height="125%" fill="black"><tspan id="tspan4014">Error Code 4: ???</tspan></text>
+			<text id="textErrorCode5" style="writing-mode:lr;letter-spacing:0px;text-anchor:start;word-spacing:0px;text-align:start;" font-weight="normal" xml:space="preserve" transform="scale(1,1)" font-style="normal" font-stretch="normal" font-size="24px" font-variant="normal" y="195" x="1100" font-family="Arial" line-height="125%" fill="black"><tspan id="tspan4014">Distanzmessung: Keine Messdaten vorhanden</tspan></text>
+			<text id="textErrorCode13" style="writing-mode:lr;letter-spacing:0px;text-anchor:start;word-spacing:0px;text-align:start;" font-weight="normal" xml:space="preserve" transform="scale(1,1)" font-style="normal" font-stretch="normal" font-size="24px" font-variant="normal" y="250" x="1100" font-family="Arial" line-height="125%" fill="black"><tspan id="tspan4014">Fahrzeugtyp: Unbekannt</tspan></text>
+			<text id="textErrorCode6" style="writing-mode:lr;letter-spacing:0px;text-anchor:start;word-spacing:0px;text-align:start;" font-weight="normal" xml:space="preserve" transform="scale(1,1)" font-style="normal" font-stretch="normal" font-size="24px" font-variant="normal" y="300" x="400" font-family="Arial" line-height="125%" fill="black"><tspan id="tspan4014">Heben  IST: ???</tspan></text>
+			<text id="textErrorCode7" style="writing-mode:lr;letter-spacing:0px;text-anchor:start;word-spacing:0px;text-align:start;" font-weight="normal" xml:space="preserve" transform="scale(1,1)" font-style="normal" font-stretch="normal" font-size="24px" font-variant="normal" y="270" x="400" font-family="Arial" line-height="125%" fill="black"><tspan id="tspan4014">Heben SOLL: ???</tspan></text>
+			<text id="textErrorCode8" style="writing-mode:lr;letter-spacing:0px;text-anchor:start;word-spacing:0px;text-align:start;" font-weight="normal" xml:space="preserve" transform="scale(1,1)" font-style="normal" font-stretch="normal" font-size="24px" font-variant="normal" y="695" x="725" font-family="Arial" line-height="125%" fill="black"><tspan id="tspan4014">Fahren IST: ???</tspan></text>
+			<text id="textErrorCode9" style="writing-mode:lr;letter-spacing:0px;text-anchor:start;word-spacing:0px;text-align:start;" font-weight="normal" xml:space="preserve" transform="scale(1,1)" font-style="normal" font-stretch="normal" font-size="24px" font-variant="normal" y="665" x="725" font-family="Arial" line-height="125%" fill="black"><tspan id="tspan4014">Fahren SOLL: ???</tspan></text>
+			<text id="textErrorCode10" style="writing-mode:lr;letter-spacing:0px;text-anchor:start;word-spacing:0px;text-align:start;" font-weight="normal" xml:space="preserve" transform="scale(1,1)" font-style="normal" font-stretch="normal" font-size="24px" font-variant="normal" y="325" x="775" font-family="Arial" line-height="125%" fill="black"><tspan id="tspan4014">Lenken IST: ???</tspan></text>
+			<text id="textErrorCode11" style="writing-mode:lr;letter-spacing:0px;text-anchor:start;word-spacing:0px;text-align:start;" font-weight="normal" xml:space="preserve" transform="scale(1,1)" font-style="normal" font-stretch="normal" font-size="24px" font-variant="normal" y="295" x="775" font-family="Arial" line-height="125%" fill="black"><tspan id="tspan4014">Lenken SOLL: ???</tspan></text>
+			<text id="textErrorCode12" style="writing-mode:lr;letter-spacing:0px;text-anchor:start;word-spacing:0px;text-align:start;" font-weight="normal" xml:space="preserve" transform="scale(1,1)" font-style="normal" font-stretch="normal" font-size="48px" font-variant="normal" y="203" x="385" font-family="Arial" line-height="125%" fill="black"><tspan id="tspan4014">Apm State: Unbekannt</tspan></text>
+
+			<g id="g3151" transform="matrix(1.1196257,0,0,1.1196257,440.10928,-646.86502)">
+			    <g id="Vordergrund">
+				
+				    				    
+			    </g>
+		    </g>
+			<!-- jpg-Grafik (Logo von Jungheinrich) in die SVG-Grafik einbinden -->
+			<image x="0" y="0" width="590px" height="135px"
+			xlink:href="JH_Logo_4c.jpg">
+			<title>only jpg,png,svg</title>
+			</image>
+			<rect id="progressBackground" stroke-dasharray="none" rx="7" ry="7" height="100" filter="url(#filter4407)" width="20" stroke="#999999" stroke-miterlimit="4" y="585" x="90" stroke-width="3" fill="#f0f0f0"/> 			//Umrandung Skala
+		    <rect id="progress" rx="7" ry="7" height="98" width="18" y="586" x="91" fill="url(#linearGradient4399)" transform="rotate(180,91,586) translate(-18,-97)" /> 		//Füllgrad-Innenleben
+		    <a xlink:href="Variablen.html" xlink:title="Seite mit Variablen" target="_blank"><text x="300" y="775" font-size="39px" fill="#0000FF">HIER KLICKEN: Variablen tabellarisch dargestellt</text></a>
+			
+			<div id="div_log"></div>
+			
+	   </g>
+		
+    </svg>               
+	
+	
+</body>
+</html>

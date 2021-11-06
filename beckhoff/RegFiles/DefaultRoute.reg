@@ -1,0 +1,19 @@
+REGEDIT4
+
+;-------------------------------------------------------------------------------
+; Default Route
+;-------------------------------------------------------------------------------
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Beckhoff\TwinCAT\Remote\IBNPC-GERHARD]
+    "Flags"=dword:0
+    "Timeout"=dword:0
+    "TransportType"=dword:1
+    "AmsNetId"=hex:c0,a8,64,c8,01,01
+    "Address"="IBNPC-GERHARD"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Beckhoff\TwinCAT\Remote\LoopBack]
+    "Address"="127.0.0.1"
+    "AmsNetId"=hex:7f,00,00,00,01,01
+    "TransportType"=dword:1
+    "Timeout"=dword:7D0
+    "Flags"=dword:0

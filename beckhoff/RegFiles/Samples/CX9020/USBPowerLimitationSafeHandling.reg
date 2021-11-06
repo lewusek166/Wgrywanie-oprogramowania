@@ -1,0 +1,6 @@
+;-------------------------------------------------------------------------------
+; According to the USB specification, an USB device may not report a consumption
+; of 0mA. To be safe, a invalid report of 0mA is handled as the maximum, 500mA.
+;-------------------------------------------------------------------------------
+[HKEY_LOCAL_MACHINE\Drivers\USB\ClientDrivers]
+    "PowerLimitationSafeHandling"=dword:1

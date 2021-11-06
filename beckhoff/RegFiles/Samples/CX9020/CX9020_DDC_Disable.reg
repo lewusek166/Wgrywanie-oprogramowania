@@ -1,0 +1,5 @@
+;-------------------------------------------------------------------------------
+; Use static resoltuion from registry instead of DDC data
+;-------------------------------------------------------------------------------
+[HKEY_LOCAL_MACHINE\Drivers\Display\DDIPU\DI0]
+    "EnableDDC"=dword:0

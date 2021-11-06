@@ -1,0 +1,8 @@
+;-------------------------------------------------------------------------------
+; Disable 'Universal Plug and Play (UPnP)' service
+;-------------------------------------------------------------------------------
+[HKEY_LOCAL_MACHINE\Services\UPNPSVC]
+    "Flags"=dword:14
+
+[HKEY_LOCAL_MACHINE\Services\UPNPLOADER]
+    "Flags"=dword:14

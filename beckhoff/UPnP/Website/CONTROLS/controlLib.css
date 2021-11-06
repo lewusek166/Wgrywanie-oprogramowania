@@ -1,0 +1,675 @@
+﻿.MainNavigationTile
+{
+    margin: 0px 0px 10px 0px;
+    width: 250px;
+    height: 86px;
+}
+
+.MainNavigationTile_RangeBorder
+{
+    margin-right: 3px;
+    
+    width: 7px;
+    height: 86px;
+    float: left; 
+    /*background-color: rgb(200,200,200);*/
+}
+
+.MainNavigationTile_Body_Unselected
+{
+    width: 235px;
+    height: 86px;
+    float: left; 
+    background-image: url("../res/website/nav/main/bg-kachel-mainnav-normal.png");
+}
+
+.MainNavigationTile_Body_Selected
+{
+    width: 235px;
+    height: 86px;
+    float: left; 
+    background-image: url("../res/website/nav/main/bg-kachel-mainnav-active.png");
+}
+
+.MainNavigationTile_BodyText
+{
+    /* margin top = 86["height of tile"] - (fontsize + 7["bottom margin"]) */
+    margin-top: 67px;
+    margin-left: 7px;
+    
+    font: inherit;
+    font-weight: bold;
+    
+    text-align: left;
+    
+    color: White;
+    cursor: default;
+}
+
+
+
+.SubNavigationTile
+{
+    width: 70px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.SubNavigationTile_RangeBorder
+{
+    width: 7px;
+    height: 57px;
+    float: left; 
+    
+    margin-right: 3px;
+    /*background-color: rgb(200,200,200);*/
+}
+
+.SubNavigationTile_Body_Unselected
+{
+    width: 57px;
+    height: 57px;
+    float: left; 
+    
+    background-image: url("../res/website/nav/sub/bg-kachel-subnav-normal.png");
+}
+
+.SubNavigationTile_Body_Selected
+{
+    width: 57px;
+    height: 57px;
+    float: left; 
+    
+    background-image: url("../res/website/nav/sub/bg-kachel-subnav-active.png");
+}
+
+.SubNavigationTile_Icon
+{
+    width: 57px;
+    height: 40px;
+    
+    background-repeat: no-repeat;
+    background-position: center center;
+    
+}
+
+.SubNavigationTile_BodyText
+{
+    width: 57px;
+    height: 15px;
+
+    color: White;
+    font-size: 9px;
+    text-align: center;
+
+    cursor: default;
+}
+
+
+
+
+
+
+
+/*  BarGraph                                        |   START */
+
+.Bargraph_Body
+{
+    width: 310px;
+    height: 100px;   /* sum of container heights = 96 */
+    font:       12px normal arial,sans-serif;
+
+    margin-bottom: 20px;
+}
+
+.Bargraph_Body_Info_Container
+{
+    width: 256px;
+    width: 310px;
+    
+    height: 45px;
+    margin-bottom: 5px;
+}
+
+    .Bargraph_Body_Info_Image
+    {
+        display: block;
+        width: 45px;
+        height: 45px;
+        
+        background-repeat: no-repeat;
+        background-position: top;
+        /*background-image: url("../pic/FunctionTile/cpu_tile/kachelicons-sw-groesse-1-cpu-temperature.png"); */
+        
+        float: left;
+    }
+    
+    .Bargraph_Body_Info_Title
+    {
+        width: 161px;
+        height: 45px;
+        line-height: 45px;
+        
+        color: Black;
+        font-size: 12px;
+        text-align: center;
+        
+        float: left;
+    }
+    
+    .Bargraph_Body_Info_Value
+    {
+        width: 93px;
+        height: 45px;
+        line-height: 45px;
+        
+        color: Black;
+        font-size: 30px;
+        text-align: right;  
+        
+        float: left; 
+    }
+    
+
+.Bargraph_Body_Bar_Container
+{
+    width: 256px;
+    width: 310px;
+    
+    height: 16px;
+    margin-bottom: 4px;
+}
+    
+    .Bargraph_Body_Bar_Item
+    {
+        /*   30 * 10   */
+        margin-right: 1px;
+        width: 9px;
+        height: 16px;
+        
+        background-color: rgb(235,235,235);
+        
+        float: left;
+    }
+    
+
+.Bargraph_Body_Range_Container
+{
+    width: 310px;
+    
+    font-size: 1px;
+    height: 8px;
+    margin-bottom: 4px;
+}
+
+    .Bargraph_Body_Range_Item_Green
+    {
+        /*   24 * 10   */
+        margin-right: 1px;
+        
+        width: 239px;
+        height: 8px;
+        font-size: 1px;
+        
+        background-color: Lime;
+        float: left;
+    }
+    
+    .Bargraph_Body_Range_Item_Yellow
+    {
+        /*   3 * 10   */
+        margin-right: 1px;
+        
+        width: 29px;
+        height: 8px;
+        font-size: 1px;
+        
+        background-color: Yellow;
+        float: left;
+    }
+    
+    .Bargraph_Body_Range_Item_Red
+    {
+        /*   3 * 10   */
+        margin-right: 1px;
+        
+        width: 29px;
+        height: 8px;
+        font-size: 1px;
+        
+        background-color: Red;
+        float: left;
+    }
+
+
+
+.Bargraph_Body_RangeText_Container
+{
+    width: 310px;
+    
+    height: 16px;
+}
+
+    
+    .Bargraph_Body_RangeText_Item_Green_Zero
+    {
+        /*   24 * 10   */
+        width: 20px;
+        height: 16px;
+        
+        text-align: left;
+        float: left;
+    }
+    
+    .Bargraph_Body_RangeText_Item_Green
+    {
+        /*   24 * 10   */
+        margin-right: 1px;
+        
+        width: 219px;
+        height: 16px;
+        
+        text-align: right;
+        float: left;
+    }
+    
+    .Bargraph_Body_RangeText_Item_Yellow
+    {
+        /*   3 * 10   */
+        margin-right: 1px;
+        
+        width: 29px;
+        height: 16px;
+        
+        text-align: right;
+        float: left;
+    }
+    
+    .Bargraph_Body_RangeText_Item_Red
+    {
+        /*   3 * 10   */
+        margin-right: 1px;
+        
+        width: 29px;
+        height: 16px;
+        
+        text-align: right;
+        float: left;
+    }
+
+/*  BarGraph                                        |   END */
+
+
+
+/*  BarGraph  TINY                                  |   START */
+
+.BargraphTiny_Body
+{
+    padding-top: 5px;
+    width: 270px;
+    height: 50px;   /* sum of container heights = 96 */
+    font:       12px normal arial,sans-serif;
+    
+    /*background-color: rgb(248,248,248);*/
+    /*background-color: rgb(207,218,224);*/ /* K8 */
+    background: rgb(197,211,217); /* K7 */
+    margin-bottom: 20px;
+}
+
+.BargraphTiny_Body_Image
+{
+    display: block;
+    width: 55px;
+    height: 45px;
+        
+    background-repeat: no-repeat;
+    background-position: top;
+    /*background-image: url("../pic/FunctionTile/cpu_tile/kachelicons-sw-groesse-1-cpu-temperature.png"); */
+        
+    float: left;
+}
+
+
+.BargraphTiny_Body_Progress_Container
+{
+    width: 110px;
+    height: 45px;
+        
+    float: left;
+}
+
+    .BargraphTiny_Body_Bar_Container
+    {
+        width: 110px;
+    
+        height: 16px;
+        margin-top: 4px;
+        margin-bottom: 4px;
+    }
+
+        .BargraphTiny_Body_Bar_Item
+        {
+            /*   30 * 10   */
+            margin-right: 1px;
+            width: 9px;
+            height: 16px;
+        
+            background-color: rgb(235,235,235);
+        
+            float: left;
+        }
+
+
+    .BargraphTiny_Body_Range_Container
+    {
+        width: 110px;
+        height: 4px;
+        
+        font-size:1px;
+        margin-bottom: 4px;
+
+    }
+
+        .BargraphTiny_Body_Range_Item_Green
+        {
+            /*   6 * 10   */
+            margin-right: 1px;
+            
+            width: 59px;
+            height: 4px;
+            font-size: 1px;
+        
+            background-color: Lime;
+            float: left;
+        }
+    
+        .BargraphTiny_Body_Range_Item_Yellow
+        {
+            /*   2 * 10   */
+            margin-right: 1px;
+            
+            width: 19px;
+            height: 4px;
+            font-size: 1px;
+        
+            background-color: Yellow;
+            float: left;
+        }
+    
+        .BargraphTiny_Body_Range_Item_Red
+        {
+            /*   2 * 10   */
+            margin-right: 1px;
+            
+            width: 19px;
+            height: 4px;
+            font-size: 1px;
+        
+            background-color: Red;
+            float: left;
+        }
+
+
+    .BargraphTiny_Body_RangeText_Container
+    {
+        width: 110px;
+        height: 16px;
+    }
+
+        .BargraphTiny_Body_RangeText_Item_Green_Zero
+        {
+            /*   24 * 10   */
+            width: 20px;
+            height: 16px;
+            
+            font-size: 10px;
+            text-align: left;
+
+            float: left;
+        }
+    
+        .BargraphTiny_Body_RangeText_Item_Green
+        {
+            /*   24 * 10   */
+            margin-right: 1px;
+        
+            width: 40px;
+            height: 16px;
+        
+            font-size: 10px;
+            text-align: right;
+
+            float: left;
+        }
+    
+        .BargraphTiny_Body_RangeText_Item_Yellow
+        {
+            /*   3 * 10   */
+            margin-right: 1px;
+        
+            width: 20px;
+            height: 16px;
+        
+            font-size: 10px;
+            text-align: right;
+
+            float: left;
+        }
+    
+        .BargraphTiny_Body_RangeText_Item_Red
+        {
+            /*   3 * 10   */
+            margin-right: 1px;
+        
+            width: 20px;
+            height: 16px;
+        
+            font-size: 10px;
+            text-align: right;
+
+            float: left;
+        }
+
+
+.BargraphTiny_Body_Value_Container
+{
+    width: 100px;
+    height: 45px;
+        
+    float: left;
+}
+
+    .BargraphTiny_Body_Value
+    {
+        width: 100px;
+        height: 32px;
+
+        color: Black;
+        font-size: 27px;
+        text-align: left;
+    }
+
+    .BargraphTiny_Body_Title
+    {
+        width: 100px;
+        height: 15px;
+
+        color: Black;
+        font-size: 10px;
+        text-align: left;
+    }
+
+
+/*  BarGraph  TINY                                  |   END */
+
+
+
+/* BarGraph    DEFAULT                              | START */
+
+.BargraphTinyDefault_Body
+{
+    width: 250px;
+    height: 45px;   /* sum of container heights = 96 */
+
+    font:       12px normal arial,sans-serif;
+    background-color: rgb(197,211,217); /* K7 */
+
+    margin-bottom: 20px;
+    margin-right: 10px;
+    /*float: left;*/
+}
+
+.BargraphTinyDefault_ImageContainer
+{
+    float:left;
+}
+
+.BargraphTinyDefault_Body_Image
+{
+    display: block;
+    width: 55px;
+    height: 30px;
+        
+    background-repeat: no-repeat;
+    background-position: top;
+
+    /*no float*/
+}
+
+.BargraphTinyDefault_Body_Title
+{
+    width: 55px;
+    height: 15px;
+
+    color: Black;
+    font-size: 10px;
+    text-align: center;
+    
+}
+
+
+.BargraphTinyDefault_Body_Progress_Container
+{
+    width: 100px;
+    height: 45px;
+        
+    float: left;
+}
+
+    .BargraphTinyDefault_Body_Bar_Container
+    {
+        width: 100px;
+    
+        height: 45px;
+        margin-top: 10px;
+    }
+
+        .BargraphTinyDefault_Body_Bar_Item
+        {
+            /*   30 * 10   */
+            margin-right: 1px;
+            width: 9px;
+            height: 22px;
+        
+            background-color: rgb(252,252,252);
+            
+            float: left;
+        }
+
+.BargraphTinyDefault_Body_Value_Container
+{
+    
+    width: 90px;
+    height: 45px;
+        
+    float: left;
+}
+
+    .BargraphTinyDefault_Body_Value
+    {
+        margin-top: 7px;
+        
+        width: 90px;
+        height: 20px;
+
+        color: Black;
+        font-size: 20px;
+        text-align: right;
+
+    }
+
+    .BargraphTinyDefault_Body_Value_Small
+    {
+        margin-top: 7px;
+        
+        width: 90px;
+        height: 20px;
+
+        color: Black;
+        font-size: 16px;
+        text-align: right;
+
+    }
+
+    .BargraphTinyDefault_Body_Max
+    {
+        
+        margin-top: 3px;
+
+        width: 90px;
+        height: 10px;
+
+        color: Black;
+        font-size: 10px;
+        text-align: right;
+    }
+
+
+
+.BusTermTile
+{
+    width: 30px;
+    height: 50px;
+    margin: 0px 4px 4px 0px;
+    float: left;
+}
+
+.BusTermTile_Body_Unselected
+{
+    width: 30px;
+    height: 50px;
+    float: left;
+    
+    background-image: url("../res/modules/iot/bg-kachel-busterm-normal.png");
+}
+
+.BusTermTile_Body_Selected
+{
+    width: 30px;
+    height: 50px;
+    float: left; 
+    
+    background-image: url("../res/modules/iot/bg-kachel-busterm-active.png");
+}
+
+.BusTermTile_Icon
+{
+    width: 30px;
+    height: 35px;
+    
+    background-repeat: no-repeat;
+    background-position: center center;
+    
+}
+
+.BusTermTile_BodyText
+{
+    width: 30px;
+    height: 15px;
+
+    color: White;
+    font-size: 9px;
+    text-align: center;
+
+    cursor: default;
+}

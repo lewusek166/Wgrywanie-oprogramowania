@@ -1,0 +1,5 @@
+;-------------------------------------------------------------------------------
+; Disable daylight saving for automatically clock adjust
+;-------------------------------------------------------------------------------
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Clock]
+    "AutoDST"=dword:0000000

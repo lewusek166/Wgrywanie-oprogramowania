@@ -1,0 +1,30 @@
+REGEDIT4
+
+;-------------------------------------------------------------------------------
+; Enable 'CE Remote Display' (CeRDisp)
+;-------------------------------------------------------------------------------
+[HKEY_LOCAL_MACHINE\init]
+    "Launch90"="CeRDisp.exe"
+
+;-------------------------------------------------------------------------------
+; IpSetting beider Ports
+;-------------------------------------------------------------------------------
+[HKEY_LOCAL_MACHINE\Comm\FEC1\Parms\TcpIp]
+    "EnableDHCP"=dword:0
+    "DefaultGateway"="192.168.100.10"
+    "IpAddress"="192.168.100.1"
+    "SubnetMask"="255.255.255.0"
+
+;-------------------------------------------------------------------------------
+;Bildschirm Auflösung 1024 * 768
+;-------------------------------------------------------------------------------
+[HKEY_LOCAL_MACHINE\Drivers\Display\DDIPU\DI0]
+   "Width"=dword:400
+   "Height"=dword:300
+    "Bpp"=dword:20
+
+[HKEY_LOCAL_MACHINE\Drivers\Display\DDIPU\DI0]
+    "EnableDDC"=dword:0
+
+
+; DateiEnde

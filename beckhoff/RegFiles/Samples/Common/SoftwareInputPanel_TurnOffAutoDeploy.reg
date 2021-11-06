@@ -1,0 +1,5 @@
+;-------------------------------------------------------------------------------
+; Turn off auto deploy of Software Input Panel (SIP)
+;-------------------------------------------------------------------------------
+[HKEY_CURRENT_USER\ControlPanel\Sip]
+    "TurnOffAutoDeploy"=dword:1

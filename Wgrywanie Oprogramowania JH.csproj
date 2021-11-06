@@ -1,5 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.Extensions.Configuration.UserSecrets.5.0.0\build\netstandard2.0\Microsoft.Extensions.Configuration.UserSecrets.props" Condition="Exists('packages\Microsoft.Extensions.Configuration.UserSecrets.5.0.0\build\netstandard2.0\Microsoft.Extensions.Configuration.UserSecrets.props')" />
+  <Import Project="packages\Microsoft.VisualStudio.Azure.Kubernetes.Tools.Targets.1.1.0\build\Microsoft.VisualStudio.Azure.Kubernetes.Tools.Targets.props" Condition="Exists('packages\Microsoft.VisualStudio.Azure.Kubernetes.Tools.Targets.1.1.0\build\Microsoft.VisualStudio.Azure.Kubernetes.Tools.Targets.props')" />
+  <Import Project="packages\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.1.11.1\build\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.props" Condition="Exists('packages\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.1.11.1\build\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -12,6 +15,8 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -36,12 +41,93 @@
     <ApplicationIcon>pobrane.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.5.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Configuration.5.0.0\lib\net461\Microsoft.Extensions.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Abstractions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Configuration.Abstractions.5.0.0\lib\net461\Microsoft.Extensions.Configuration.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Binder, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Configuration.Binder.5.0.0\lib\net461\Microsoft.Extensions.Configuration.Binder.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.CommandLine, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Configuration.CommandLine.5.0.0\lib\net461\Microsoft.Extensions.Configuration.CommandLine.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.EnvironmentVariables, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Configuration.EnvironmentVariables.5.0.0\lib\net461\Microsoft.Extensions.Configuration.EnvironmentVariables.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.FileExtensions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Configuration.FileExtensions.5.0.0\lib\net461\Microsoft.Extensions.Configuration.FileExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Json, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Configuration.Json.5.0.0\lib\net461\Microsoft.Extensions.Configuration.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.UserSecrets, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Configuration.UserSecrets.5.0.0\lib\net461\Microsoft.Extensions.Configuration.UserSecrets.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Xml, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Configuration.Xml.5.0.0\lib\net461\Microsoft.Extensions.Configuration.Xml.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.DependencyInjection.5.0.0\lib\net461\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.DependencyInjection.Abstractions.5.0.0\lib\net461\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.FileProviders.Abstractions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.FileProviders.Abstractions.5.0.0\lib\net461\Microsoft.Extensions.FileProviders.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.FileProviders.Physical, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.FileProviders.Physical.5.0.0\lib\net461\Microsoft.Extensions.FileProviders.Physical.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.FileSystemGlobbing, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.FileSystemGlobbing.5.0.0\lib\net461\Microsoft.Extensions.FileSystemGlobbing.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Hosting, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Hosting.5.0.0\lib\net461\Microsoft.Extensions.Hosting.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Hosting.Abstractions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Hosting.Abstractions.5.0.0\lib\net461\Microsoft.Extensions.Hosting.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Logging.5.0.0\lib\net461\Microsoft.Extensions.Logging.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Extensions.Logging.Abstractions.5.0.0\lib\net461\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Configuration, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Logging.Configuration.5.0.0\lib\net461\Microsoft.Extensions.Logging.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Console, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Logging.Console.5.0.0\lib\net461\Microsoft.Extensions.Logging.Console.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Debug, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Logging.Debug.5.0.0\lib\net461\Microsoft.Extensions.Logging.Debug.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.EventLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Logging.EventLog.5.0.0\lib\net461\Microsoft.Extensions.Logging.EventLog.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.EventSource, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Logging.EventSource.5.0.0\lib\net461\Microsoft.Extensions.Logging.EventSource.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Options.5.0.0\lib\net461\Microsoft.Extensions.Options.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options.ConfigurationExtensions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Options.ConfigurationExtensions.5.0.0\lib\net461\Microsoft.Extensions.Options.ConfigurationExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=5.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Primitives.5.0.0\lib\net461\Microsoft.Extensions.Primitives.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Immutable, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Collections.Immutable.5.0.0\lib\net461\System.Collections.Immutable.dll</HintPath>
     </Reference>
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Configuration" />
@@ -50,6 +136,14 @@
     </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Diagnostics.DiagnosticSource.5.0.0\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.4.3.0\lib\net462\System.IO.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
     </Reference>
@@ -61,12 +155,37 @@
     <Reference Include="System.Reactive, Version=5.0.0.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
       <HintPath>packages\System.Reactive.5.0.0\lib\net472\System.Reactive.dll</HintPath>
     </Reference>
-    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    <Reference Include="System.Runtime, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.4.3.0\lib\net462\System.Runtime.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.5.0.0\lib\net45\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System.Security" />
     <Reference Include="System.Security.AccessControl, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>packages\System.Security.AccessControl.5.0.0\lib\net461\System.Security.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.Algorithms.4.3.1\lib\net463\System.Security.Cryptography.Algorithms.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System.Security.Permissions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Security.Permissions.5.0.0\lib\net461\System.Security.Permissions.dll</HintPath>
@@ -78,10 +197,19 @@
     <Reference Include="System.Text.Encoding.CodePages, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>packages\System.Text.Encoding.CodePages.4.5.1\lib\net461\System.Text.Encoding.CodePages.dll</HintPath>
     </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Text.Encodings.Web.5.0.0\lib\net461\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Text.Json.5.0.0\lib\net461\System.Text.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="System.Transactions" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web" />
     <Reference Include="System.Windows" />
     <Reference Include="System.Xml.Linq" />
@@ -99,8 +227,14 @@
     <Reference Include="TwinCAT.Ads.Abstractions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=180016cd49e5e8c3, processorArchitecture=MSIL">
       <HintPath>packages\Beckhoff.TwinCAT.Ads.Abstractions.5.0.479\lib\net461\TwinCAT.Ads.Abstractions.dll</HintPath>
     </Reference>
+    <Reference Include="TwinCAT.Ads.AdsRouterConsole, Version=5.0.0.0, Culture=neutral, PublicKeyToken=180016cd49e5e8c3, processorArchitecture=MSIL">
+      <HintPath>packages\Beckhoff.TwinCAT.Ads.AdsRouterConsole.5.0.479\lib\net461\TwinCAT.Ads.AdsRouterConsole.exe</HintPath>
+    </Reference>
     <Reference Include="TwinCAT.Ads.Server, Version=5.0.0.0, Culture=neutral, PublicKeyToken=180016cd49e5e8c3, processorArchitecture=MSIL">
       <HintPath>packages\Beckhoff.TwinCAT.Ads.Server.5.0.479\lib\net461\TwinCAT.Ads.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="TwinCAT.Ads.TcpRouter, Version=5.0.0.0, Culture=neutral, PublicKeyToken=180016cd49e5e8c3, processorArchitecture=MSIL">
+      <HintPath>packages\Beckhoff.TwinCAT.Ads.TcpRouter.5.0.479\lib\net461\TwinCAT.Ads.TcpRouter.dll</HintPath>
     </Reference>
     <Reference Include="WindowsBase" />
   </ItemGroup>
@@ -157,6 +291,119 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="beckhoff\BkIpcDiag\Certs\CX-4401FE.cer" />
+    <None Include="beckhoff\BkIpcDiag\Certs\CX-440202.cer" />
+    <None Include="beckhoff\BkIpcDiag\Certs\CX-440234.cer" />
+    <None Include="beckhoff\BkIpcDiag\Certs\CX-633BB0.cer" />
+    <None Include="beckhoff\BkIpcDiag\Certs\Eks.cer" />
+    <None Include="beckhoff\CX9020_CB3011_WEC7_HPS_v504f_TC211R3_B2306" />
+    <None Include="beckhoff\Documents and Settings\default.vol" />
+    <None Include="beckhoff\Documents and Settings\DEFAULT\user.hv" />
+    <None Include="beckhoff\Documents and Settings\system.hv" />
+    <None Include="beckhoff\NK.BIN" />
+    <None Include="beckhoff\RegFiles\ApmDefaultSetting.reg" />
+    <None Include="beckhoff\RegFiles\Apm_Eks3.reg" />
+    <None Include="beckhoff\RegFiles\DefaultRoute.reg" />
+    <None Include="beckhoff\RegFiles\DefaultSettingArm7.reg" />
+    <None Include="beckhoff\RegFiles\FirewallWEC7.reg" />
+    <None Include="beckhoff\RegFiles\FT232R_USB_UART_COM3.reg" />
+    <None Include="beckhoff\RegFiles\PCT_V03_V04_USB_MultitouchDriver_WEC7.reg" />
+    <None Include="beckhoff\RegFiles\Samples\CB3011\CB3011_Color_Depth_16.reg" />
+    <None Include="beckhoff\RegFiles\Samples\CB3011\CB3011_Color_Depth_32.reg" />
+    <None Include="beckhoff\RegFiles\Samples\CB3011\CB3011_LVDS_7_inch_DataImage_FG0700K6DSSWAGT1.reg" />
+    <None Include="beckhoff\RegFiles\Samples\CB3011\FEC1_IP_Address.reg" />
+    <None Include="beckhoff\RegFiles\Samples\CB3011\FT232R_USB_UART_COM3.reg" />
+    <None Include="beckhoff\RegFiles\Samples\CB3011\USBPowerLimitationHandleInvalidAsZero.reg" />
+    <None Include="beckhoff\RegFiles\Samples\CB3011\USBPowerLimitationSafeHandling.reg" />
+    <None Include="beckhoff\RegFiles\Samples\Common\AdjustDaylight_Disable.reg" />
+    <None Include="beckhoff\RegFiles\Samples\Common\Administrator_User.reg" />
+    <None Include="beckhoff\RegFiles\Samples\Common\CeRemoteDisplay_Disable.reg" />
+    <None Include="beckhoff\RegFiles\Samples\Common\CeRemoteDisplay_Enable.reg" />
+    <None Include="beckhoff\RegFiles\Samples\Common\Config_FTP.reg" />
+    <None Include="beckhoff\RegFiles\Samples\Common\Config_RAS.reg" />
+    <None Include="beckhoff\RegFiles\Samples\Common\Config_RegionalSettings.reg" />
+    <None Include="beckhoff\RegFiles\Samples\Common\Config_Taskbar.reg" />
+    <None Include="beckhoff\RegFiles\Samples\Common\Config_Timebase.reg" />
+    <None Include="beckhoff\RegFiles\Samples\Common\DelayedStartServices.reg" />
+    <None Include="beckhoff\RegFiles\Samples\Common\DesktopBeckhoff.reg" />
+    <None Include="beckhoff\RegFiles\Samples\Common\DesktopDefault.reg" />
+    <None Include="beckhoff\RegFiles\Samples\Common\FirewallWEC7.reg" />
+    <None Include="beckhoff\RegFiles\Samples\Common\FirewallWEC7_Allow_all_Services.reg" />
+    <None Include="beckhoff\RegFiles\Samples\Common\FirewallWEC7_Allow_DHCP.reg" />
+    <None Include="beckhoff\RegFiles\Samples\Common\FirewallWEC7_Allow_TwinCAT_ADS.reg" />
+    <None Include="beckhoff\RegFiles\Samples\Common\FirewallWEC7_Default_Rules.reg" />
+    <None Include="beckhoff\RegFiles\Samples\Common\FT232R_USB_UART_COM3.reg" />
+    <None Include="beckhoff\RegFiles\Samples\Common\FT232R_USB_UART_COM5.reg" />
+    <None Include="beckhoff\RegFiles\Samples\Common\IPv6_Disable.reg" />
+    <None Include="beckhoff\RegFiles\Samples\Common\IPv6_Enable.reg" />
+    <None Include="beckhoff\RegFiles\Samples\Common\MT7_MultiTouch.reg" />
+    <None Include="beckhoff\RegFiles\Samples\Common\MT7_SingleTouch.reg" />
+    <None Include="beckhoff\RegFiles\Samples\Common\Numlock_Enable.reg" />
+    <None Include="beckhoff\RegFiles\Samples\Common\PCT_V03_V04_USB_MultitouchDriver_WEC7.reg" />
+    <None Include="beckhoff\RegFiles\Samples\Common\SetFontPath.reg" />
+    <None Include="beckhoff\RegFiles\Samples\Common\SetTimeServer_AdjustDaylight.reg" />
+    <None Include="beckhoff\RegFiles\Samples\Common\SMB_Shares.reg" />
+    <None Include="beckhoff\RegFiles\Samples\Common\SNMP_Disable.reg" />
+    <None Include="beckhoff\RegFiles\Samples\Common\SNMP_Enable.reg" />
+    <None Include="beckhoff\RegFiles\Samples\Common\SoftwareInputPanel_Disable.reg" />
+    <None Include="beckhoff\RegFiles\Samples\Common\SoftwareInputPanel_TurnOffAutoDeploy.reg" />
+    <None Include="beckhoff\RegFiles\Samples\Common\SQLServerCompact35_WEC7.reg" />
+    <None Include="beckhoff\RegFiles\Samples\Common\StorageMemory.reg" />
+    <None Include="beckhoff\RegFiles\Samples\Common\Telnet_Disable.reg" />
+    <None Include="beckhoff\RegFiles\Samples\Common\Telnet_Enable.reg" />
+    <None Include="beckhoff\RegFiles\Samples\Common\TimeZone_Berlin_AdjustDaylight.reg" />
+    <None Include="beckhoff\RegFiles\Samples\Common\TransportLayerSecurity_TLS.reg" />
+    <None Include="beckhoff\RegFiles\Samples\Common\TransportLayerSecurity_TLS_1_2_only.reg" />
+    <None Include="beckhoff\RegFiles\Samples\Common\UPnP_Disable.reg" />
+    <None Include="beckhoff\RegFiles\Samples\Common\UPnP_Enable.reg" />
+    <None Include="beckhoff\RegFiles\Samples\Common\VRoots_FTP.reg" />
+    <None Include="beckhoff\RegFiles\Samples\Common\VRoots_WWW.reg" />
+    <None Include="beckhoff\RegFiles\Samples\Common\WaitTimeAutoexec.reg" />
+    <None Include="beckhoff\RegFiles\Samples\Common\Wallpaper.reg" />
+    <None Include="beckhoff\RegFiles\Samples\CX9020\CX9020_Color_Depth_16.reg" />
+    <None Include="beckhoff\RegFiles\Samples\CX9020\CX9020_Color_Depth_32.reg" />
+    <None Include="beckhoff\RegFiles\Samples\CX9020\CX9020_DDC_Disable.reg" />
+    <None Include="beckhoff\RegFiles\Samples\CX9020\CX9020_Resolution_1024_768.reg" />
+    <None Include="beckhoff\RegFiles\Samples\CX9020\CX9020_Resolution_1280_1024.reg" />
+    <None Include="beckhoff\RegFiles\Samples\CX9020\CX9020_Resolution_1600_1200.reg" />
+    <None Include="beckhoff\RegFiles\Samples\CX9020\CX9020_Resolution_1920_1080.reg" />
+    <None Include="beckhoff\RegFiles\Samples\CX9020\CX9020_Resolution_640_480.reg" />
+    <None Include="beckhoff\RegFiles\Samples\CX9020\CX9020_Resolution_800_600.reg" />
+    <None Include="beckhoff\RegFiles\Samples\CX9020\FEC1_IP_Address.reg" />
+    <None Include="beckhoff\RegFiles\Samples\CX9020\USBPowerLimitationHandleInvalidAsZero.reg" />
+    <None Include="beckhoff\RegFiles\Samples\CX9020\USBPowerLimitationSafeHandling.reg" />
+    <None Include="beckhoff\RegFiles\TcEventLogger.reg" />
+    <None Include="beckhoff\RegFiles\Telnet_Disable.reg" />
+    <None Include="beckhoff\System\Autoexec.cmd" />
+    <None Include="beckhoff\System\CxRunOnce.cmd" />
+    <None Include="beckhoff\System\Explorer.lnk" />
+    <None Include="beckhoff\System\FPGA\CB3011-B900.rbf" />
+    <None Include="beckhoff\System\FPGA\CX9020-B000.rbf" />
+    <None Include="beckhoff\System\FPGA\CX9020-B110.rbf" />
+    <None Include="beckhoff\System\FPGA\CX9020-B310.rbf" />
+    <None Include="beckhoff\System\FPGA\CX9020-B510.rbf" />
+    <None Include="beckhoff\System\FPGA\CX9020-B930.rbf" />
+    <None Include="beckhoff\System\NotepadCE.lnk" />
+    <None Include="beckhoff\System\PingNG.lnk" />
+    <None Include="beckhoff\System\Regedit.lnk" />
+    <None Include="beckhoff\System\TcAmsRemoteMgr.lnk" />
+    <None Include="beckhoff\TwinCAT\Boot\CurrentConfig.tsm" />
+    <None Include="beckhoff\TwinCAT\Boot\CurrentConfigBinary1.bin" />
+    <None Include="beckhoff\TwinCAT\Boot\CurrentConfigBinary10.bin" />
+    <None Include="beckhoff\TwinCAT\Boot\CurrentConfigBinary2.bin" />
+    <None Include="beckhoff\TwinCAT\Boot\CurrentConfigBinary3.bin" />
+    <None Include="beckhoff\TwinCAT\Boot\CurrentConfigBinary4.bin" />
+    <None Include="beckhoff\TwinCAT\Boot\CurrentConfigBinary5.bin" />
+    <None Include="beckhoff\TwinCAT\Boot\CurrentConfigBinary6.bin" />
+    <None Include="beckhoff\TwinCAT\Boot\CurrentConfigBinary7.bin" />
+    <None Include="beckhoff\TwinCAT\Boot\CurrentConfigBinary8.bin" />
+    <None Include="beckhoff\TwinCAT\Boot\CurrentConfigBinary9.bin" />
+    <None Include="beckhoff\TwinCAT\Boot\TCPLC_P_1.wbp" />
+    <None Include="beckhoff\TwinCAT\Boot\TCPLC_R_1.wbp" />
+    <None Include="beckhoff\TwinCAT\Boot\TCPLC_T_1.wb~" />
+    <None Include="beckhoff\Windows\Keys\DEFAULT.MKY" />
+    <None Include="beckhoff\Windows\Keys\System.mky" />
+    <None Include="beckhoff\WWW\TcAdsWebService\TcAdsWebService.WSDL" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -177,6 +424,192 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="beckhoff\AgvSwVersion.txt" />
+    <Content Include="beckhoff\ApmKonfigLoader\ApmKonfigLoader.exe" />
+    <Content Include="beckhoff\ApmKonfigLoader\MSVCR90.DLL" />
+    <Content Include="beckhoff\ApmKonfigLoader\QtCore4.dll" />
+    <Content Include="beckhoff\ApmKonfigLoader\QtGui4.dll" />
+    <Content Include="beckhoff\ApmKonfigLoader\QtXml4.dll" />
+    <Content Include="beckhoff\BkIpcDiag\DataStore\System.xml" />
+    <Content Include="beckhoff\BkIpcDiag\DataStore\User.xml" />
+    <Content Include="beckhoff\BkIpcDiag\UA\DevMgrSvr-Secu.xml" />
+    <Content Include="beckhoff\BkIpcDiag\UA\DevMgrSvr-UA.xml" />
+    <Content Include="beckhoff\BkIpcDiag\UA\libeay32_v101s.dll" />
+    <Content Include="beckhoff\BkIpcDiag\UA\libxml2_v291.dll" />
+    <Content Include="beckhoff\BkIpcDiag\UA\ssleay32_v101s.dll" />
+    <Content Include="beckhoff\BkIpcDiag\UA\uastack_v155.dll" />
+    <Content Include="beckhoff\BkIpcDiag\UA\_DevMgrSvr-UA-CE.exe" />
+    <Content Include="beckhoff\Ftp\ApmPlusConfigEks3.xml" />
+    <Content Include="beckhoff\Splash.bmp" />
+    <Content Include="beckhoff\System\ATLCE400.DLL" />
+    <Content Include="beckhoff\System\Background-Agv.jpg" />
+    <Content Include="beckhoff\System\Backlight.exe" />
+    <Content Include="beckhoff\System\BlurEffect.dll" />
+    <Content Include="beckhoff\System\CxAddUser.exe" />
+    <Content Include="beckhoff\System\CXConfig.exe" />
+    <Content Include="beckhoff\System\CXConfigCore.dll" />
+    <Content Include="beckhoff\System\CxRegFiles.exe" />
+    <Content Include="beckhoff\System\CxStartRas.exe" />
+    <Content Include="beckhoff\System\CxSuspend.exe" />
+    <Content Include="beckhoff\System\DrawTest.exe" />
+    <Content Include="beckhoff\System\DropShadowEffect.dll" />
+    <Content Include="beckhoff\System\eGalaxTouch.exe" />
+    <Content Include="beckhoff\System\FirewallWEC.dll" />
+    <Content Include="beckhoff\System\FTDI_SER.DLL" />
+    <Content Include="beckhoff\System\MDP.DLL" />
+    <Content Include="beckhoff\System\MdpApi.dll" />
+    <Content Include="beckhoff\System\mdpmessage.xml" />
+    <Content Include="beckhoff\System\MFCCE400.DLL" />
+    <Content Include="beckhoff\System\NotepadCE.exe" />
+    <Content Include="beckhoff\System\PingNG.exe" />
+    <Content Include="beckhoff\System\PlayMediaCE.exe" />
+    <Content Include="beckhoff\System\PlayWnd.exe" />
+    <Content Include="beckhoff\System\Regedit.exe" />
+    <Content Include="beckhoff\System\RippleEffect.dll" />
+    <Content Include="beckhoff\System\sqlceca35.dll" />
+    <Content Include="beckhoff\System\sqlcecompact35.dll" />
+    <Content Include="beckhoff\System\sqlceme35.dll" />
+    <Content Include="beckhoff\System\sqlceoledb35.dll" />
+    <Content Include="beckhoff\System\sqlceqp35.dll" />
+    <Content Include="beckhoff\System\sqlcese35.dll" />
+    <Content Include="beckhoff\System\SSBacklight.dll" />
+    <Content Include="beckhoff\System\StartManTscApp.exe" />
+    <Content Include="beckhoff\System\Startup.exe" />
+    <Content Include="beckhoff\System\StartupManager.dll" />
+    <Content Include="beckhoff\System\StartupManager.exe" />
+    <Content Include="beckhoff\System\TaskMan.exe" />
+    <Content Include="beckhoff\System\TcAdsDllCe.dll" />
+    <Content Include="beckhoff\System\TcAdsTest.exe" />
+    <Content Include="beckhoff\System\TcAmsLog.exe" />
+    <Content Include="beckhoff\System\TcAmsLogger.dll" />
+    <Content Include="beckhoff\System\TcAmsRemoteMgr.exe" />
+    <Content Include="beckhoff\System\TcAmsSerial.dll" />
+    <Content Include="beckhoff\System\TcEventFormatter.dll" />
+    <Content Include="beckhoff\System\TcEventLogAdsProxy.dll" />
+    <Content Include="beckhoff\System\TcEventLoggerCE.exe" />
+    <Content Include="beckhoff\System\TcpIpServer.exe" />
+    <Content Include="beckhoff\System\TcScriptCe.dll" />
+    <Content Include="beckhoff\System\Touch.dll" />
+    <Content Include="beckhoff\System\UpnpControl.dll" />
+    <Content Include="beckhoff\System\USBTouch.dll" />
+    <Content Include="beckhoff\System\WEC72FingerTouch.exe" />
+    <Content Include="beckhoff\System\xamlruntime.dll" />
+    <Content Include="beckhoff\System\xamlruntimecore.dll" />
+    <Content Include="beckhoff\System\XCOPYCE.EXE" />
+    <Content Include="beckhoff\System\XMLLITE.DLL" />
+    <Content Include="beckhoff\TwinCAT\Boot\CurrentConfig.xml" />
+    <Content Include="beckhoff\TwinCAT\Boot\SystemConfig.xml" />
+    <Content Include="beckhoff\TwinCAT\DefaultConfig.xml" />
+    <Content Include="beckhoff\TwinCAT\Driver\TcCCatMp.dll" />
+    <Content Include="beckhoff\TwinCAT\Driver\TcIoBACnetR9W32.dll" />
+    <Content Include="beckhoff\TwinCAT\Driver\TcVirtualMp.dll" />
+    <Content Include="beckhoff\TwinCAT\Driver\TcVirtualMpBus.dll" />
+    <Content Include="beckhoff\TwinCAT\Resource\TcEventSourceLocation.xml" />
+    <Content Include="beckhoff\TwinCAT\Resource\TcIoMessages.xml" />
+    <Content Include="beckhoff\TwinCAT\Resource\TcNcMessages.xml" />
+    <Content Include="beckhoff\TwinCAT\StartManConfig.xml" />
+    <Content Include="beckhoff\UPnP\Webservice\MDPWebService.dll" />
+    <Content Include="beckhoff\UPnP\Webservice\TwinCAT.css" />
+    <Content Include="beckhoff\UPnP\Website\communication\ERROR.JS" />
+    <Content Include="beckhoff\UPnP\Website\communication\MDP.JS" />
+    <Content Include="beckhoff\UPnP\Website\communication\moduleList.js" />
+    <Content Include="beckhoff\UPnP\Website\CONTROLS\controlLib.css" />
+    <Content Include="beckhoff\UPnP\Website\CONTROLS\controlLib.js" />
+    <Content Include="beckhoff\UPnP\Website\DeviceManager.js" />
+    <Content Include="beckhoff\UPnP\Website\HELPER\dataStream.js" />
+    <Content Include="beckhoff\UPnP\Website\HELPER\DEFINES.JS" />
+    <Content Include="beckhoff\UPnP\Website\HELPER\HELPER.JS" />
+    <Content Include="beckhoff\UPnP\Website\HELPER\SECWIZ.JS" />
+    <Content Include="beckhoff\UPnP\Website\INDEX.HTM" />
+    <Content Include="beckhoff\UPnP\Website\PAGES\page_Device_BootOptions.js" />
+    <Content Include="beckhoff\UPnP\Website\PAGES\page_Device_Connectivity.js" />
+    <Content Include="beckhoff\UPnP\Website\PAGES\page_Device_System.js" />
+    <Content Include="beckhoff\UPnP\Website\PAGES\page_Hardware_Equipment.js" />
+    <Content Include="beckhoff\UPnP\Website\PAGES\page_Hardware_HDD.js" />
+    <Content Include="beckhoff\UPnP\Website\PAGES\page_Hardware_Mainboard.js" />
+    <Content Include="beckhoff\UPnP\Website\PAGES\page_Hardware_Nic.js" />
+    <Content Include="beckhoff\UPnP\Website\PAGES\page_Hardware_RAID.js" />
+    <Content Include="beckhoff\UPnP\Website\PAGES\page_Security_AccessRights.js" />
+    <Content Include="beckhoff\UPnP\Website\PAGES\page_Security_Certificate.js" />
+    <Content Include="beckhoff\UPnP\Website\PAGES\page_Security_Wizard.js" />
+    <Content Include="beckhoff\UPnP\Website\PAGES\page_Software_FileSystem.js" />
+    <Content Include="beckhoff\UPnP\Website\PAGES\page_Software_OperatingSystem.js" />
+    <Content Include="beckhoff\UPnP\Website\PAGES\page_Software_SMB.js" />
+    <Content Include="beckhoff\UPnP\Website\PAGES\page_Software_SystemSettings.js" />
+    <Content Include="beckhoff\UPnP\Website\PAGES\page_TwinCAT_Connectivity.js" />
+    <Content Include="beckhoff\UPnP\Website\PAGES\page_TwinCAT_PLC.js" />
+    <Content Include="beckhoff\UPnP\Website\PAGES\page_TwinCAT_Status.js" />
+    <Content Include="beckhoff\UPnP\Website\PAGES\_template_page.js" />
+    <Content Include="beckhoff\UPnP\Website\RES\MODULES\ACTION\Configure.png" />
+    <Content Include="beckhoff\UPnP\Website\RES\MODULES\ACTION\Delete.png" />
+    <Content Include="beckhoff\UPnP\Website\RES\MODULES\ACTION\POWER.PNG" />
+    <Content Include="beckhoff\UPnP\Website\RES\MODULES\ACTION\Refresh.png" />
+    <Content Include="beckhoff\UPnP\Website\RES\MODULES\ACTION\Save.png" />
+    <Content Include="beckhoff\UPnP\Website\RES\MODULES\CPU\kachelicons-sw-groesse-1-cpu_32.png" />
+    <Content Include="beckhoff\UPnP\Website\RES\MODULES\IOT\bg-kachel-busterm-active.png" />
+    <Content Include="beckhoff\UPnP\Website\RES\MODULES\IOT\bg-kachel-busterm-normal.png" />
+    <Content Include="beckhoff\UPnP\Website\RES\MODULES\IOT\sec-iot-busterm.png" />
+    <Content Include="beckhoff\UPnP\Website\RES\MODULES\mainboard\kachelicons-sw-groesse-1-mainboard32.png" />
+    <Content Include="beckhoff\UPnP\Website\RES\MODULES\RAM\kachelicons-sw-groesse-1-ram_32.png" />
+    <Content Include="beckhoff\UPnP\Website\RES\WEBSITE\NAV\MAIN\bg-kachel-mainnav-active.png" />
+    <Content Include="beckhoff\UPnP\Website\RES\WEBSITE\NAV\MAIN\bg-kachel-mainnav-normal.png" />
+    <Content Include="beckhoff\UPnP\Website\RES\WEBSITE\NAV\MAIN\Device.png" />
+    <Content Include="beckhoff\UPnP\Website\RES\WEBSITE\NAV\MAIN\Hardware.png" />
+    <Content Include="beckhoff\UPnP\Website\RES\WEBSITE\NAV\MAIN\IoT.png" />
+    <Content Include="beckhoff\UPnP\Website\RES\WEBSITE\NAV\MAIN\IoT_B.png" />
+    <Content Include="beckhoff\UPnP\Website\RES\WEBSITE\NAV\MAIN\Security.png" />
+    <Content Include="beckhoff\UPnP\Website\RES\WEBSITE\NAV\MAIN\Software.png" />
+    <Content Include="beckhoff\UPnP\Website\RES\WEBSITE\NAV\MAIN\TwinCAT.png" />
+    <Content Include="beckhoff\UPnP\Website\RES\WEBSITE\NAV\SUB\bg-kachel-subnav-active.png" />
+    <Content Include="beckhoff\UPnP\Website\RES\WEBSITE\NAV\SUB\bg-kachel-subnav-normal.png" />
+    <Content Include="beckhoff\UPnP\Website\RES\WEBSITE\NAV\SUB\sec-nav-access.png" />
+    <Content Include="beckhoff\UPnP\Website\RES\WEBSITE\NAV\SUB\sec-nav-certificate.png" />
+    <Content Include="beckhoff\UPnP\Website\RES\WEBSITE\NAV\SUB\sec-nav-cloud.png" />
+    <Content Include="beckhoff\UPnP\Website\RES\WEBSITE\NAV\SUB\sec-nav-equipment.png" />
+    <Content Include="beckhoff\UPnP\Website\RES\WEBSITE\NAV\SUB\sec-nav-filesystem.png" />
+    <Content Include="beckhoff\UPnP\Website\RES\WEBSITE\NAV\SUB\sec-nav-hdd.png" />
+    <Content Include="beckhoff\UPnP\Website\RES\WEBSITE\NAV\SUB\sec-nav-mainboard.png" />
+    <Content Include="beckhoff\UPnP\Website\RES\WEBSITE\NAV\SUB\sec-nav-network.png" />
+    <Content Include="beckhoff\UPnP\Website\RES\WEBSITE\NAV\SUB\sec-nav-os.png" />
+    <Content Include="beckhoff\UPnP\Website\RES\WEBSITE\NAV\SUB\sec-nav-plc.png" />
+    <Content Include="beckhoff\UPnP\Website\RES\WEBSITE\NAV\SUB\sec-nav-raid.png" />
+    <Content Include="beckhoff\UPnP\Website\RES\WEBSITE\NAV\SUB\sec-nav-smb.png" />
+    <Content Include="beckhoff\UPnP\Website\RES\WEBSITE\NAV\SUB\sec-nav-status.png" />
+    <Content Include="beckhoff\UPnP\Website\RES\WEBSITE\NAV\SUB\sec-nav-sys-settings.png" />
+    <Content Include="beckhoff\UPnP\Website\RES\WEBSITE\NAV\SUB\sec-nav-verlauf.png" />
+    <Content Include="beckhoff\UPnP\Website\RES\WEBSITE\OTHER\BACKICON.PNG" />
+    <Content Include="beckhoff\UPnP\Website\RES\WEBSITE\OTHER\DIR.PNG" />
+    <Content Include="beckhoff\UPnP\Website\RES\WEBSITE\OTHER\DIR_BACK.PNG" />
+    <Content Include="beckhoff\UPnP\Website\RES\WEBSITE\OTHER\forwardicon.png" />
+    <Content Include="beckhoff\UPnP\Website\RES\WEBSITE\OTHER\Gradient-bot.png" />
+    <Content Include="beckhoff\UPnP\Website\RES\WEBSITE\OTHER\Gradient.png" />
+    <Content Include="beckhoff\UPnP\Website\RES\WEBSITE\OTHER\LOADING.GIF" />
+    <Content Include="beckhoff\UPnP\Website\RES\WEBSITE\OTHER\loading_big.gif" />
+    <Content Include="beckhoff\UPnP\Website\RES\WEBSITE\OTHER\main-icon.png" />
+    <Content Include="beckhoff\UPnP\Website\STYLE\STYLE.CSS" />
+    <Content Include="beckhoff\UPnP\Website\UPNP.JS" />
+    <Content Include="beckhoff\WWW\Config\APMWeb.css" />
+    <Content Include="beckhoff\WWW\Config\Batteriestand.JPG" />
+    <Content Include="beckhoff\WWW\Config\Display.JPG" />
+    <Content Include="beckhoff\WWW\Config\EKS-Model.jpg" />
+    <Content Include="beckhoff\WWW\Config\ERC-Model.jpg" />
+    <Content Include="beckhoff\WWW\Config\INDEX.HTM" />
+    <Content Include="beckhoff\WWW\Config\JH_Logo_4c.jpg" />
+    <Content Include="beckhoff\WWW\Config\Light.JPG" />
+    <Content Include="beckhoff\WWW\Config\Palette2.PNG" />
+    <Content Include="beckhoff\WWW\Config\SickAR.JPG" />
+    <Content Include="beckhoff\WWW\Config\SickLR.JPG" />
+    <Content Include="beckhoff\WWW\Config\TcAPMhandleData.js" />
+    <Content Include="beckhoff\WWW\Config\TcAPMhandleDataT.js" />
+    <Content Include="beckhoff\WWW\Config\Variablen.html" />
+    <Content Include="beckhoff\WWW\Config\Visualisierung.html" />
+    <Content Include="beckhoff\WWW\INDEX.HTM" />
+    <Content Include="beckhoff\WWW\TcAdsWebService\TcAdsSoap.dll" />
+    <Content Include="beckhoff\WWW\TcAdsWebService\TcAdsWebService.dll" />
+    <Content Include="beckhoff\WWW\TcAdsWebService\TwinCAT.css" />
+    <Content Include="beckhoff\WWW\TcPlcDataServiceCE.dll" />
+    <Content Include="beckhoff\WWW\TcPlcDataServiceCfg.xml" />
+    <Content Include="beckhoff\WWW\TcPlcDataServiceDa.dll" />
     <Content Include="JPG\cvc -14.png" />
     <Content Include="JPG\cvc-1.png" />
     <Content Include="JPG\cvc-10.png" />
@@ -201,6 +634,8 @@
     <Content Include="JPG\pobrane.ico" />
     <Content Include="JPG\X301.jpg" />
     <Content Include="pobrane.ico" />
+    <None Include="Resources\beckhof.bmp" />
+    <Content Include="StaticRoutes.xml" />
     <None Include="JPG\diodyTester.jpg" />
     <Content Include="JPG\Folie6.JPG" />
     <Content Include="JPG\Folie8.JPG" />
@@ -221,5 +656,23 @@
     <Content Include="JPG\cvc.jpg" />
     <Content Include="JPG\JH Start.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="beckhoff\TwinCAT\Boot\WebVisu\" />
+    <Folder Include="beckhoff\Windows\Application Data\KeyStorage\Microsoft\Crypto\Keys\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Ten projekt zawiera odwołania do pakietów NuGet, których nie ma na tym komputerze. Użyj przywracania pakietów NuGet, aby je pobrać. Aby uzyskać więcej informacji, zobacz http://go.microsoft.com/fwlink/?LinkID=322105. Brakujący plik: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.1.11.1\build\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.1.11.1\build\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.props'))" />
+    <Error Condition="!Exists('packages\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.1.11.1\build\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.1.11.1\build\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.targets'))" />
+    <Error Condition="!Exists('packages\Microsoft.VisualStudio.Azure.Kubernetes.Tools.Targets.1.1.0\build\Microsoft.VisualStudio.Azure.Kubernetes.Tools.Targets.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.VisualStudio.Azure.Kubernetes.Tools.Targets.1.1.0\build\Microsoft.VisualStudio.Azure.Kubernetes.Tools.Targets.props'))" />
+    <Error Condition="!Exists('packages\Microsoft.VisualStudio.Azure.Kubernetes.Tools.Targets.1.1.0\build\Microsoft.VisualStudio.Azure.Kubernetes.Tools.Targets.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.VisualStudio.Azure.Kubernetes.Tools.Targets.1.1.0\build\Microsoft.VisualStudio.Azure.Kubernetes.Tools.Targets.targets'))" />
+    <Error Condition="!Exists('packages\Microsoft.Extensions.Configuration.UserSecrets.5.0.0\build\netstandard2.0\Microsoft.Extensions.Configuration.UserSecrets.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.Extensions.Configuration.UserSecrets.5.0.0\build\netstandard2.0\Microsoft.Extensions.Configuration.UserSecrets.props'))" />
+    <Error Condition="!Exists('packages\Microsoft.Extensions.Configuration.UserSecrets.5.0.0\build\netstandard2.0\Microsoft.Extensions.Configuration.UserSecrets.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.Extensions.Configuration.UserSecrets.5.0.0\build\netstandard2.0\Microsoft.Extensions.Configuration.UserSecrets.targets'))" />
+  </Target>
+  <Import Project="packages\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.1.11.1\build\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.targets" Condition="Exists('packages\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.1.11.1\build\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.targets')" />
+  <Import Project="packages\Microsoft.VisualStudio.Azure.Kubernetes.Tools.Targets.1.1.0\build\Microsoft.VisualStudio.Azure.Kubernetes.Tools.Targets.targets" Condition="Exists('packages\Microsoft.VisualStudio.Azure.Kubernetes.Tools.Targets.1.1.0\build\Microsoft.VisualStudio.Azure.Kubernetes.Tools.Targets.targets')" />
+  <Import Project="packages\Microsoft.Extensions.Configuration.UserSecrets.5.0.0\build\netstandard2.0\Microsoft.Extensions.Configuration.UserSecrets.targets" Condition="Exists('packages\Microsoft.Extensions.Configuration.UserSecrets.5.0.0\build\netstandard2.0\Microsoft.Extensions.Configuration.UserSecrets.targets')" />
 </Project>

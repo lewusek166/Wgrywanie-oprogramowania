@@ -128,9 +128,19 @@ namespace Wgrywanie_Oprogramowania_JH
 
         private void Button5_Click(object sender, EventArgs e)
         {
-            Raport(3, @"C:\Raporty JH\");
+            Raport(rezultatWgrywania, @"C:\Raporty JH\");
             Application.Exit();
             
+        }
+
+        private void Button4_Click(object sender, EventArgs e)
+        {
+            Form1 f1 = new Form1();
+            f1.label2.Text = this.label2.Text;
+            f1.label4.Text = this.label4.Text;
+            f1.label5.Text = this.label5.Text;
+            f1.ShowDialog();
+            this.Close();
         }
     }
 }

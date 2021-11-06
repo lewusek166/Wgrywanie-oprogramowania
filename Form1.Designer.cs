@@ -216,6 +216,7 @@
             this.button4.TabIndex = 9;
             this.button4.Text = "Następna Skrzynia ";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.Button4_Click);
             // 
             // button5
             // 

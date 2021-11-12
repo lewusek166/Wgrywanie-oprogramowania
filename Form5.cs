@@ -11,7 +11,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using TwinCAT.Ads;
 
-
 namespace Wgrywanie_Oprogramowania_JH
 {
     public partial class Form5 : Form
@@ -19,13 +18,16 @@ namespace Wgrywanie_Oprogramowania_JH
         int z = 0;
         public int uchwyt;
         int ok = 0;
-       
+
+
+
         public Form5()
         {
              
             InitializeComponent();
         }
-
+        private TcAdsClient adss = new TcAdsClient();
+       
         private void Button2_Click(object sender, EventArgs e)
         {
            
@@ -40,7 +42,7 @@ namespace Wgrywanie_Oprogramowania_JH
                 case 1:
                     {
 
-                        label1.Text = "postępujemy zgodnie z instrukcją na zdjęciu (zmieniamy IP adress oraz wpisujemy Default Gateway. Po wprowadzeniu przyciskamy guzik Apply następnie guzik ok) . Następnie klikamy OK";
+                        label1.Text = "Postępujemy zgodnie z instrukcją na zdjęciu (zmieniamy IP adress oraz wpisujemy Default Gateway. Po wprowadzeniu przyciskamy guzik Apply następnie guzik ok) . Następnie klikamy OK";
                         pictureBox1.Image = global::Wgrywanie_Oprogramowania_JH.Properties.Resources.opt2;
                         checkBox1.BackColor = Color.Green;
                         checkBox2.BackColor = Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -60,7 +62,7 @@ namespace Wgrywanie_Oprogramowania_JH
                 case 3:
                     {
 
-                        label1.Text = "Postępujemy zgodnie z instrukcją na zdjęciach. Następnie klikamy OK";
+                        label1.Text = "Postępujemy zgodnie z instrukcją na zdjęciach. Następnie klikamy OK"; 
                         pictureBox1.Image = global::Wgrywanie_Oprogramowania_JH.Properties.Resources.opt4;
                         checkBox3.BackColor = Color.Green;
                         checkBox4.BackColor = Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -75,6 +77,11 @@ namespace Wgrywanie_Oprogramowania_JH
                         checkBox4.BackColor = Color.Green;
                         checkBox4.CheckState = CheckState.Checked;
                         button1.Text = "Przejście do głównego Menu";
+                        adss.Connect("5.12.8.70.1.2", 801);
+                        adss.WriteAny(adss.CreateVariableHandle("TransferOutputs.DO_4_01"), false);
+                        adss.WriteAny(adss.CreateVariableHandle("TransferOutputs.DO_4_02"), false);
+                        adss.WriteAny(adss.CreateVariableHandle("TransferOutputs.DO_4_03"), false);
+                        adss.Disconnect();
                         progressBar1.PerformStep(); break;
                         
                     }
@@ -82,8 +89,9 @@ namespace Wgrywanie_Oprogramowania_JH
                     {
                         if (Application.OpenForms["Form1"] != null)
                         {
-                            (Application.OpenForms["Form1"] as Form1).Raport(3, @"C:\Raporty JH\");
+                            (Application.OpenForms["Form1"] as Form1).Raport(3, @"C:\Raporty JH\"); 
                         }
+                        this.Dispose();
                         this.Close();break;
 
                     }
@@ -98,5 +106,6 @@ namespace Wgrywanie_Oprogramowania_JH
             System.IO.Directory.CreateDirectory(@"..\..\test");//////ścieżka do beckhofa
 
         }
+
     }
 }

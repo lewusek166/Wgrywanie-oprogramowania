@@ -221,20 +221,9 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="TwinCAT.Ads, Version=5.0.0.0, Culture=neutral, PublicKeyToken=180016cd49e5e8c3, processorArchitecture=MSIL">
-      <HintPath>packages\Beckhoff.TwinCAT.Ads.5.0.479\lib\net461\TwinCAT.Ads.dll</HintPath>
-    </Reference>
-    <Reference Include="TwinCAT.Ads.Abstractions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=180016cd49e5e8c3, processorArchitecture=MSIL">
-      <HintPath>packages\Beckhoff.TwinCAT.Ads.Abstractions.5.0.479\lib\net461\TwinCAT.Ads.Abstractions.dll</HintPath>
-    </Reference>
-    <Reference Include="TwinCAT.Ads.AdsRouterConsole, Version=5.0.0.0, Culture=neutral, PublicKeyToken=180016cd49e5e8c3, processorArchitecture=MSIL">
-      <HintPath>packages\Beckhoff.TwinCAT.Ads.AdsRouterConsole.5.0.479\lib\net461\TwinCAT.Ads.AdsRouterConsole.exe</HintPath>
-    </Reference>
-    <Reference Include="TwinCAT.Ads.Server, Version=5.0.0.0, Culture=neutral, PublicKeyToken=180016cd49e5e8c3, processorArchitecture=MSIL">
-      <HintPath>packages\Beckhoff.TwinCAT.Ads.Server.5.0.479\lib\net461\TwinCAT.Ads.Server.dll</HintPath>
-    </Reference>
-    <Reference Include="TwinCAT.Ads.TcpRouter, Version=5.0.0.0, Culture=neutral, PublicKeyToken=180016cd49e5e8c3, processorArchitecture=MSIL">
-      <HintPath>packages\Beckhoff.TwinCAT.Ads.TcpRouter.5.0.479\lib\net461\TwinCAT.Ads.TcpRouter.dll</HintPath>
+    <Reference Include="TwinCAT.Ads, Version=4.2.165.0, Culture=neutral, PublicKeyToken=180016cd49e5e8c3, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\TwinCAT\AdsApi\.NET\v2.0.50727\TwinCAT.Ads.dll</HintPath>
     </Reference>
     <Reference Include="WindowsBase" />
   </ItemGroup>
@@ -625,6 +614,8 @@
     <Content Include="JPG\cvc-6.png" />
     <Content Include="JPG\cvc-7.png" />
     <Content Include="JPG\cvc-9.png" />
+    <Content Include="JPG\cvc144.png" />
+    <Content Include="JPG\cvc2-33.png" />
     <Content Include="JPG\manual4.jpg" />
     <Content Include="JPG\ok.jpg" />
     <Content Include="JPG\opt1.png" />

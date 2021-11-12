@@ -253,6 +253,26 @@ namespace Wgrywanie_Oprogramowania_JH.Properties {
         /// <summary>
         ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cvc144 {
+            get {
+                object obj = ResourceManager.GetObject("cvc144", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cvc2_33 {
+            get {
+                object obj = ResourceManager.GetObject("cvc2-33", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Wyszukuje zlokalizowany zasób typu System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap diodyTester {
             get {
                 object obj = ResourceManager.GetObject("diodyTester", resourceCulture);

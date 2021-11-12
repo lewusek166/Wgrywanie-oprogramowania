@@ -39,7 +39,7 @@ namespace Wgrywanie_Oprogramowania_JH
             user = new string[10];
             roz = 0;
             
-            string path = @"C:\Users\plpha\source\repos\Wgrywanie oprogramowania\users\konta.txt";
+            string path = @"..\..\users\konta.txt";
             using (StreamReader sr = File.OpenText(path))
             {         
                 string s = "";
@@ -85,7 +85,7 @@ namespace Wgrywanie_Oprogramowania_JH
                     else
                     {
                         textBox2.BackColor = Color.Red;
-                        haslo.Text = "Błędne hało sprubuj ponownie";
+                        haslo.Text = "Błędne hało spróbuj ponownie";
                         haslo.ForeColor = Color.Red;
                         haslo.Visible = true;
                     }

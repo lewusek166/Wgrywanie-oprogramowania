@@ -67,9 +67,9 @@
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.25424F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 84.74577F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 450);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
@@ -77,10 +77,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(681, 59);
+            this.label1.Size = new System.Drawing.Size(681, 45);
             this.label1.TabIndex = 0;
             this.label1.Text = "Podłącz moduł z testera X301 do skrzyni i naciśnij OK ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -92,18 +92,18 @@
             this.tableLayoutPanel2.Controls.Add(this.progressBar1, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.pictureBox1, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 62);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 48);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(681, 324);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(681, 354);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // progressBar1
             // 
             this.progressBar1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.progressBar1.Location = new System.Drawing.Point(3, 296);
+            this.progressBar1.Location = new System.Drawing.Point(3, 326);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(675, 25);
             this.progressBar1.TabIndex = 0;
@@ -112,9 +112,9 @@
             // 
             this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button1.Location = new System.Drawing.Point(3, 392);
+            this.button1.Location = new System.Drawing.Point(3, 408);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(681, 55);
+            this.button1.Size = new System.Drawing.Size(681, 39);
             this.button1.TabIndex = 2;
             this.button1.Text = "OK";
             this.button1.UseVisualStyleBackColor = true;
@@ -124,9 +124,9 @@
             // 
             this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button2.Location = new System.Drawing.Point(690, 392);
+            this.button2.Location = new System.Drawing.Point(690, 408);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(107, 55);
+            this.button2.Size = new System.Drawing.Size(107, 39);
             this.button2.TabIndex = 3;
             this.button2.Text = "Wyjście";
             this.button2.UseVisualStyleBackColor = true;
@@ -147,7 +147,7 @@
             this.tableLayoutPanel3.Controls.Add(this.checkBox9, 0, 8);
             this.tableLayoutPanel3.Controls.Add(this.checkBox10, 0, 9);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(690, 62);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(690, 48);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 10;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
@@ -160,7 +160,7 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(107, 324);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(107, 354);
             this.tableLayoutPanel3.TabIndex = 4;
             // 
             // checkBox1
@@ -172,7 +172,7 @@
             this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.checkBox1.Location = new System.Drawing.Point(3, 3);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(101, 26);
+            this.checkBox1.Size = new System.Drawing.Size(101, 29);
             this.checkBox1.TabIndex = 0;
             this.checkBox1.Text = "Etap 1";
             this.checkBox1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -185,9 +185,9 @@
             this.checkBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.checkBox2.Enabled = false;
             this.checkBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.checkBox2.Location = new System.Drawing.Point(3, 35);
+            this.checkBox2.Location = new System.Drawing.Point(3, 38);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(101, 26);
+            this.checkBox2.Size = new System.Drawing.Size(101, 29);
             this.checkBox2.TabIndex = 1;
             this.checkBox2.Text = "Etap 2";
             this.checkBox2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -200,9 +200,9 @@
             this.checkBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.checkBox3.Enabled = false;
             this.checkBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.checkBox3.Location = new System.Drawing.Point(3, 67);
+            this.checkBox3.Location = new System.Drawing.Point(3, 73);
             this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(101, 26);
+            this.checkBox3.Size = new System.Drawing.Size(101, 29);
             this.checkBox3.TabIndex = 2;
             this.checkBox3.Text = "Etap 3";
             this.checkBox3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -215,9 +215,9 @@
             this.checkBox4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.checkBox4.Enabled = false;
             this.checkBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.checkBox4.Location = new System.Drawing.Point(3, 99);
+            this.checkBox4.Location = new System.Drawing.Point(3, 108);
             this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(101, 26);
+            this.checkBox4.Size = new System.Drawing.Size(101, 29);
             this.checkBox4.TabIndex = 3;
             this.checkBox4.Text = "Etap 4";
             this.checkBox4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -230,9 +230,9 @@
             this.checkBox5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.checkBox5.Enabled = false;
             this.checkBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.checkBox5.Location = new System.Drawing.Point(3, 131);
+            this.checkBox5.Location = new System.Drawing.Point(3, 143);
             this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(101, 26);
+            this.checkBox5.Size = new System.Drawing.Size(101, 29);
             this.checkBox5.TabIndex = 4;
             this.checkBox5.Text = "Etap 5";
             this.checkBox5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -245,9 +245,9 @@
             this.checkBox6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.checkBox6.Enabled = false;
             this.checkBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.checkBox6.Location = new System.Drawing.Point(3, 163);
+            this.checkBox6.Location = new System.Drawing.Point(3, 178);
             this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(101, 26);
+            this.checkBox6.Size = new System.Drawing.Size(101, 29);
             this.checkBox6.TabIndex = 5;
             this.checkBox6.Text = "Etap 6";
             this.checkBox6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -260,9 +260,9 @@
             this.checkBox7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.checkBox7.Enabled = false;
             this.checkBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.checkBox7.Location = new System.Drawing.Point(3, 195);
+            this.checkBox7.Location = new System.Drawing.Point(3, 213);
             this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(101, 26);
+            this.checkBox7.Size = new System.Drawing.Size(101, 29);
             this.checkBox7.TabIndex = 6;
             this.checkBox7.Text = "Etap 7";
             this.checkBox7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -275,9 +275,9 @@
             this.checkBox8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.checkBox8.Enabled = false;
             this.checkBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.checkBox8.Location = new System.Drawing.Point(3, 227);
+            this.checkBox8.Location = new System.Drawing.Point(3, 248);
             this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(101, 26);
+            this.checkBox8.Size = new System.Drawing.Size(101, 29);
             this.checkBox8.TabIndex = 7;
             this.checkBox8.Text = "Etap 8";
             this.checkBox8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -290,9 +290,9 @@
             this.checkBox9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.checkBox9.Enabled = false;
             this.checkBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.checkBox9.Location = new System.Drawing.Point(3, 259);
+            this.checkBox9.Location = new System.Drawing.Point(3, 283);
             this.checkBox9.Name = "checkBox9";
-            this.checkBox9.Size = new System.Drawing.Size(101, 26);
+            this.checkBox9.Size = new System.Drawing.Size(101, 29);
             this.checkBox9.TabIndex = 8;
             this.checkBox9.Text = "Etap 9";
             this.checkBox9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -305,9 +305,9 @@
             this.checkBox10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.checkBox10.Enabled = false;
             this.checkBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.checkBox10.Location = new System.Drawing.Point(3, 291);
+            this.checkBox10.Location = new System.Drawing.Point(3, 318);
             this.checkBox10.Name = "checkBox10";
-            this.checkBox10.Size = new System.Drawing.Size(101, 30);
+            this.checkBox10.Size = new System.Drawing.Size(101, 33);
             this.checkBox10.TabIndex = 9;
             this.checkBox10.Text = "Etap 10";
             this.checkBox10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -319,7 +319,7 @@
             this.pictureBox1.Image = global::Wgrywanie_Oprogramowania_JH.Properties.Resources.X301;
             this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(675, 287);
+            this.pictureBox1.Size = new System.Drawing.Size(675, 317);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;

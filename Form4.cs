@@ -15,6 +15,7 @@ using System.Threading;
 using System.IO;
 using TwinCAT.Ads;
 
+
 namespace Wgrywanie_Oprogramowania_JH
 {
     public partial class Form4 : Form
@@ -25,7 +26,6 @@ namespace Wgrywanie_Oprogramowania_JH
         {
             InitializeComponent();
             etap = 0;
-            
         }
         private TcAdsClient adss = new TcAdsClient();
         private void Button1_Click_1(object sender, EventArgs e)
@@ -107,7 +107,7 @@ namespace Wgrywanie_Oprogramowania_JH
                     }
                 case 6:
                     {
-                        pro=Process.Start("https://192.168.100.100");
+                        pro =Process.Start("https://192.168.100.100");
                         pictureBox1.Image = global::Wgrywanie_Oprogramowania_JH.Properties.Resources.cvc_1;
                         label1.Text = "Uruchomiła sie strona, przeciągamy przeglądarke internetową na drógi monitor aby ułatwić sobie pracę. Czy zgadza się z zdjęciem ?. Jeśli tak klikamy OK";
                         checkBox6.BackColor = Color.Green;
@@ -202,8 +202,8 @@ namespace Wgrywanie_Oprogramowania_JH
                     }
                 case 19:
                     {
-                        pro.CloseMainWindow();
-                        label1.Text = "Otworzyła się następna strona interentowa sprawdzamy czy zgadza się ze zdjęciem'. Następnie klikamy OK";
+
+                        label1.Text = "Otworzyła się następna strona interentowa sprawdzamy czy zgadza się ze zdjęciem jeżeli tak zakmykamy przeglądarkę internetową. Następnie klikamy OK";
                         pro=Process.Start("http://192.168.100.100/cgi-bin/login.cgi?request=/cgi-bin/backupfile.cgi");
                         pictureBox1.Image = global::Wgrywanie_Oprogramowania_JH.Properties.Resources.cvc_17;
                         checkBox10.BackColor = Color.Green;
@@ -216,7 +216,7 @@ namespace Wgrywanie_Oprogramowania_JH
                         label1.Text = "CVC zaprogramowane!!!";
                         button1.Text = "Przejście do kolejnego modułu programowania skrzynek JH";
                         pictureBox1.Image = global::Wgrywanie_Oprogramowania_JH.Properties.Resources.ok;
-                        pro.CloseMainWindow();
+                        
                         break;
                     }
                 case 21:

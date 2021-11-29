@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Net;
@@ -18,9 +19,7 @@ namespace Wgrywanie_Oprogramowania_JH
         int z = 0;
         public int uchwyt;
         int ok = 0;
-
-
-
+        Process pro;
         public Form5()
         {
              
@@ -53,6 +52,7 @@ namespace Wgrywanie_Oprogramowania_JH
                     {
 
                         label1.Text = "Postępujemy zgodnie z instrukcją na zdjęciach. Następnie klikamy OK";
+                        pro = Process.Start(@"C:\Users\tester\Desktop\HMI_Image_OPTx2\TransferClient.exe");
                         pictureBox1.Image = global::Wgrywanie_Oprogramowania_JH.Properties.Resources.opt3;
                         checkBox2.BackColor = Color.Green;
                         checkBox3.BackColor = Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -71,18 +71,33 @@ namespace Wgrywanie_Oprogramowania_JH
                     }
                 case 4:
                     {
-
                         label1.Text = "Wszystko zostało zaprogramowane można przytąpić do testu Skrzyni";
-                        pictureBox1.Image = global::Wgrywanie_Oprogramowania_JH.Properties.Resources.ok;
-                        checkBox4.BackColor = Color.Green;
-                        checkBox4.CheckState = CheckState.Checked;
-                        button1.Text = "Przejście do głównego Menu";
                         adss.Connect("5.12.8.70.1.2", 801);
-                        adss.WriteAny(adss.CreateVariableHandle("TransferOutputs.DO_4_01"), false);
-                        adss.WriteAny(adss.CreateVariableHandle("TransferOutputs.DO_4_02"), false);
-                        adss.WriteAny(adss.CreateVariableHandle("TransferOutputs.DO_4_03"), false);
-                        adss.Disconnect();
-                        progressBar1.PerformStep(); break;
+                        try
+                        {
+                            pro.CloseMainWindow();
+                            adss.WriteAny(adss.CreateVariableHandle("TransferOutputs.DO_4_01"), false);
+                            adss.WriteAny(adss.CreateVariableHandle("TransferOutputs.DO_4_02"), false);
+                            adss.WriteAny(adss.CreateVariableHandle("TransferOutputs.DO_4_03"), false);
+                            pictureBox1.Image = global::Wgrywanie_Oprogramowania_JH.Properties.Resources.ok;
+                            adss.Disconnect();
+                            progressBar1.PerformStep();
+                            checkBox4.BackColor = Color.Green;
+                            checkBox4.CheckState = CheckState.Checked;
+                            button1.Text = "Przejście do głównego Menu";
+
+                        }
+                        catch (AdsErrorException)
+                        {
+                            var result = MessageBox.Show("Sprawdź połączenie laptopa z testerem !!!", "UWAGA",
+                                 MessageBoxButtons.OK,
+                                 MessageBoxIcon.Error);
+                            ok = 3;
+                            pictureBox1.Image = global::Wgrywanie_Oprogramowania_JH.Properties.Resources.Noconnect;
+                            adss.Disconnect();
+
+                        }break;
+                       
                         
                     }
                 case 5:
@@ -96,9 +111,7 @@ namespace Wgrywanie_Oprogramowania_JH
 
                     }
             }
-            
-        
-            
+                        
         }
 
         private void Button3_Click(object sender, EventArgs e)

@@ -85,7 +85,7 @@ namespace Wgrywanie_Oprogramowania_JH
                     else
                     {
                         textBox2.BackColor = Color.Red;
-                        haslo.Text = "Błędne hało spróbuj ponownie";
+                        haslo.Text = "Błędne hasło spróbuj ponownie";
                         haslo.ForeColor = Color.Red;
                         haslo.Visible = true;
                     }

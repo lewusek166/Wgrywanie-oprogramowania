@@ -599,6 +599,7 @@
     <Content Include="beckhoff\WWW\TcPlcDataServiceCE.dll" />
     <Content Include="beckhoff\WWW\TcPlcDataServiceCfg.xml" />
     <Content Include="beckhoff\WWW\TcPlcDataServiceDa.dll" />
+    <None Include="JPG\connect.jpg" />
     <Content Include="JPG\cvc -14.png" />
     <Content Include="JPG\cvc-1.png" />
     <Content Include="JPG\cvc-10.png" />
@@ -617,6 +618,7 @@
     <Content Include="JPG\cvc144.png" />
     <Content Include="JPG\cvc2-33.png" />
     <Content Include="JPG\manual4.jpg" />
+    <None Include="JPG\Noconnect.jpg" />
     <Content Include="JPG\ok.jpg" />
     <Content Include="JPG\opt1.png" />
     <Content Include="JPG\opt2.png" />

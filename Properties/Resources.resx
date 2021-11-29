@@ -133,9 +133,6 @@
   <data name="Folie8" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\JPG\Folie8.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="JH Start" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\JPG\JH Start.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="cvc-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\JPG\cvc-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -196,11 +193,14 @@
   <data name="cvc-10" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\JPG\cvc-10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="kasowanie" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\JPG\kasowanie.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="JH Start" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\JPG\JH Start.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cvc-15" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\JPG\cvc-15.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cvc2-33" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\JPG\cvc2-33.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pobrane" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\JPG\pobrane.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -213,6 +213,9 @@
   </data>
   <data name="manual4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\JPG\manual4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="kasowanie" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\JPG\kasowanie.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cvc-4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\JPG\cvc-4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -235,13 +238,16 @@
   <data name="manual" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\JPG\manual.JPG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="connect" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\JPG\connect.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="opt3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\JPG\opt3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cvc" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\JPG\cvc.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cvc2-33" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\JPG\cvc2-33.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Noconnect" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\JPG\Noconnect.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -19,7 +19,7 @@ namespace Wgrywanie_Oprogramowania_JH
 {
     public partial class Form4 : Form
     {
-       
+        Process pro;
         int etap;
         public Form4()
         {
@@ -29,6 +29,7 @@ namespace Wgrywanie_Oprogramowania_JH
         }
         private TcAdsClient adss = new TcAdsClient();
         private void Button1_Click_1(object sender, EventArgs e)
+        
         {
             etap++;
             switch (etap)
@@ -66,12 +67,31 @@ namespace Wgrywanie_Oprogramowania_JH
                 
                 case 4:
                     {
-                        adss.Connect("5.12.8.70.1.2", 801);
-                        adss.WriteAny(adss.CreateVariableHandle("TransferOutputs.DO_4_01"), true);
-                        adss.WriteAny(adss.CreateVariableHandle("TransferOutputs.DO_4_02"), true);
-                        adss.WriteAny(adss.CreateVariableHandle("TransferOutputs.DO_4_03"), true);
-                        adss.Disconnect();
-                        progressBar1.PerformStep();
+                            adss.Connect("5.12.8.70.1.2", 801);
+                        try
+                        {
+                            adss.WriteAny(adss.CreateVariableHandle("TransferOutputs.DO_4_01"), true);
+                            adss.WriteAny(adss.CreateVariableHandle("TransferOutputs.DO_4_02"), true);
+                            adss.WriteAny(adss.CreateVariableHandle("TransferOutputs.DO_4_03"), true);
+                            label1.Text = "Połączono z testerem zakończone sukcesem, naciśnij OK ";
+                            pictureBox1.Image = global::Wgrywanie_Oprogramowania_JH.Properties.Resources.connect;
+                            adss.Disconnect();
+                            progressBar1.PerformStep();
+                            checkBox4.BackColor = Color.Green;
+                            checkBox5.BackColor = Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+                            checkBox4.CheckState = CheckState.Checked;
+
+                        }
+                        catch (AdsErrorException)
+                        {
+                            var result = MessageBox.Show("Sprawdź połączenie laptopa z testerem !!!", "UWAGA",
+                                 MessageBoxButtons.OK,
+                                 MessageBoxIcon.Error);
+                            etap = 3;
+                            pictureBox1.Image = global::Wgrywanie_Oprogramowania_JH.Properties.Resources.Noconnect;
+                            adss.Disconnect();
+
+                        }  
                         break;
                     }
 
@@ -87,7 +107,7 @@ namespace Wgrywanie_Oprogramowania_JH
                     }
                 case 6:
                     {
-                        Process.Start("https://192.168.100.100");
+                        pro=Process.Start("https://192.168.100.100");
                         pictureBox1.Image = global::Wgrywanie_Oprogramowania_JH.Properties.Resources.cvc_1;
                         label1.Text = "Uruchomiła sie strona, przeciągamy przeglądarke internetową na drógi monitor aby ułatwić sobie pracę. Czy zgadza się z zdjęciem ?. Jeśli tak klikamy OK";
                         checkBox6.BackColor = Color.Green;
@@ -182,8 +202,9 @@ namespace Wgrywanie_Oprogramowania_JH
                     }
                 case 19:
                     {
+                        pro.CloseMainWindow();
                         label1.Text = "Otworzyła się następna strona interentowa sprawdzamy czy zgadza się ze zdjęciem'. Następnie klikamy OK";
-                        Process.Start("http://192.168.100.100/cgi-bin/login.cgi?request=/cgi-bin/backupfile.cgi");
+                        pro=Process.Start("http://192.168.100.100/cgi-bin/login.cgi?request=/cgi-bin/backupfile.cgi");
                         pictureBox1.Image = global::Wgrywanie_Oprogramowania_JH.Properties.Resources.cvc_17;
                         checkBox10.BackColor = Color.Green;
                         checkBox10.CheckState = CheckState.Checked;
@@ -195,6 +216,7 @@ namespace Wgrywanie_Oprogramowania_JH
                         label1.Text = "CVC zaprogramowane!!!";
                         button1.Text = "Przejście do kolejnego modułu programowania skrzynek JH";
                         pictureBox1.Image = global::Wgrywanie_Oprogramowania_JH.Properties.Resources.ok;
+                        pro.CloseMainWindow();
                         break;
                     }
                 case 21:

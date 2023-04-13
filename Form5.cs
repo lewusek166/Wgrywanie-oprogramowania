@@ -32,7 +32,14 @@ namespace Wgrywanie_Oprogramowania_JH
            
             this.Close();
         }
-
+        public void ExecuteAsAdmin(string fileName)
+        {
+            Process proc = new Process();
+            proc.StartInfo.FileName = fileName;
+            proc.StartInfo.UseShellExecute = true;
+            proc.StartInfo.Verb = "runas";
+            proc.Start();
+        }
         private void Button1_Click(object sender, EventArgs e)
         {
             ok++;
@@ -52,7 +59,8 @@ namespace Wgrywanie_Oprogramowania_JH
                     {
 
                         label1.Text = "Postępujemy zgodnie z instrukcją na zdjęciach. Następnie klikamy OK";
-                        pro = Process.Start(@"C:\Users\tester\Desktop\HMI_Image_OPTx2\TransferClient.exe");
+                        ExecuteAsAdmin(@"C:\Users\tester\Desktop\HMI_Image_OPTx2\TransferClient.exe");
+                        //pro = Process.Start(@"C:\Users\tester\Desktop\HMI_Image_OPTx2\TransferClient.exe");
                         pictureBox1.Image = global::Wgrywanie_Oprogramowania_JH.Properties.Resources.opt3;
                         checkBox2.BackColor = Color.Green;
                         checkBox3.BackColor = Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
